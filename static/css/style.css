@@ -10754,8 +10754,6 @@ p.checkout-coupon input[type="text"] {
 
 	left: 0;
 
-	width: 319px;
-
 	height: 319px;
 
 	margin: 0 auto;
@@ -10776,7 +10774,7 @@ p.checkout-coupon input[type="text"] {
 
 	position: absolute;
 
-	left: -55px;
+	left: -85px;
 
 	z-index: 1;
 
