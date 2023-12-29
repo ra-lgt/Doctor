@@ -357,6 +357,52 @@
                 </div>
             </div>
         </section>
+        <style>
+            /* Add this CSS to your existing styles */
+            .col-xl-4.col-lg-6.col-md-6 {
+              opacity: 0;
+              transform: translateY(20px);
+              transition: opacity 4s, transform 4s;
+            }
+        
+            .col-xl-4.col-lg-6.col-md-6.visible {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          </style>
+        </head>
+        <body>
+        
+          <!-- Your existing HTML code -->
+        
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Get all service box containers
+              const serviceContainers = document.querySelectorAll('.col-xl-4.col-lg-6.col-md-6');
+        
+              // Function to handle the animation
+              function handleAnimation() {
+                serviceContainers.forEach((container, index) => {
+                  const containerTop = container.getBoundingClientRect().top;
+                  const windowHeight = window.innerHeight;
+        
+                  // Check if the container is in the viewport
+                  if (containerTop < windowHeight) {
+                    // Introduce a delay based on the index
+                    setTimeout(() => {
+                      container.classList.add('visible');
+                    }, index * 200); // Adjust the delay (in milliseconds) as needed
+                  }
+                });
+              }
+        
+              // Add scroll event listener to trigger the animation
+              document.addEventListener('scroll', handleAnimation);
+        
+              // Initial check in case containers are already in the viewport
+              handleAnimation();
+            });
+          </script>
         <!-- services-area end -->
         <!-- team-area start -->
         <section class="team-area pt-115 pb-55">
@@ -458,6 +504,50 @@
                 </div>
             </div>
         </section>
+        <style>
+            /* Add this CSS to your existing styles */
+            .col-xl-4.col-lg-4.col-md-6 {
+              opacity: 0;
+              transform: translateX(50px);
+              transition: opacity 2s, transform 2s;
+            }
+        
+            .col-xl-4.col-lg-4.col-md-6.visible {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          </style>
+        
+          <!-- Your existing HTML code -->
+        
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Get all team box containers
+              const teamBoxes = document.querySelectorAll('.col-xl-4.col-lg-4.col-md-6');
+        
+              // Function to handle the animation
+              function handleAnimation() {
+                teamBoxes.forEach((box, index) => {
+                  const boxTop = box.getBoundingClientRect().top;
+                  const windowHeight = window.innerHeight;
+        
+                  // Check if the box is in the viewport
+                  if (boxTop < windowHeight) {
+                    // Introduce a delay based on the index
+                    setTimeout(() => {
+                      box.classList.add('visible');
+                    }, index * 200); // Adjust the delay (in milliseconds) as needed
+                  }
+                });
+              }
+        
+              // Add scroll event listener to trigger the animation
+              document.addEventListener('scroll', handleAnimation);
+        
+              // Initial check in case boxes are already in the viewport
+              handleAnimation();
+            });
+          </script>
         <!-- team-area end -->
         <!-- fact-area start -->
         <section class="fact-area fact-map primary-bg pos-rel pt-115 pb-60">
@@ -493,142 +583,7 @@
                 </div>
             </div>
         </section>
-        <!-- fact-area end -->
-        <!-- pricing-area start -->
-        <section class="pricing-area gray-bg pt-115 pb-90">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-5 col-lg-6 col-md-12">
-                        <div class="section-title pos-rel mb-75">
-                            <div class="section-icon">
-                                <img class="section-back-icon back-icon-left" src="img/section/section-back-icon.png" alt="">
-                            </div>
-                            <div class="section-text pos-rel">
-                                <h5>Our Plans</h5>
-                                <h1>Pricing &amp; Plans</h1>
-                            </div>
-                            <div class="section-line pos-rel">
-                                <img src="img/shape/section-title-line.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-7 col-lg-6 col-md-12">
-                        <div class="pricing-menu f-right">
-                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
-                                        aria-selected="true">monthly</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
-                                        aria-selected="false">yearly</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                <div class="row">
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="pricing-box mb-30">
-                                            <div class="pricing-thumb mb-45">
-                                                <img src="img/pricing/pricing-thumb-1.png" alt="">
-                                            </div>
-                                            <div class="pricing-content">
-                                                <h1>Professional</h1>
-                                                <p>Ut enim ad minim veniam, quis istomw nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                    commodo.</p>
-                                                <a data-animation="fadeInLeft" data-delay=".6s" href="#" class="btn btn-icon ml-0"><span>+</span>Price:
-                                                    $489.00</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="pricing-box mb-30">
-                                            <div class="pricing-thumb mb-45">
-                                                <img src="img/pricing/pricing-thumb-2.png" alt="">
-                                            </div>
-                                            <div class="pricing-content">
-                                                <h1>Advanced</h1>
-                                                <p>Ut enim ad minim veniam, quis istomw nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                    commodo.</p>
-                                                <a data-animation="fadeInLeft" data-delay=".6s" href="#" class="btn btn-icon ml-0"><span>+</span>Price:
-                                                    $489.00</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="pricing-box mb-30">
-                                            <div class="pricing-thumb mb-45">
-                                                <img src="img/pricing/pricing-thumb-3.png" alt="">
-                                            </div>
-                                            <div class="pricing-content">
-                                                <h1>Advantage</h1>
-                                                <p>Ut enim ad minim veniam, quis istomw nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                    commodo.</p>
-                                                <a data-animation="fadeInLeft" data-delay=".6s" href="#" class="btn btn-icon ml-0"><span>+</span>Price:
-                                                    $489.00</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                <div class="row">
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="pricing-box mb-30">
-                                            <div class="pricing-thumb mb-45">
-                                                <img src="img/pricing/pricing-thumb-1.png" alt="">
-                                            </div>
-                                            <div class="pricing-content">
-                                                <h1>Professional</h1>
-                                                <p>Ut enim ad minim veniam, quis istomw nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                    commodo.</p>
-                                                <a data-animation="fadeInLeft" data-delay=".6s" href="#" class="btn btn-icon ml-0"><span>+</span>Price:
-                                                    $489.00</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="pricing-box mb-30">
-                                            <div class="pricing-thumb mb-45">
-                                                <img src="img/pricing/pricing-thumb-2.png" alt="">
-                                            </div>
-                                            <div class="pricing-content">
-                                                <h1>Advanced</h1>
-                                                <p>Ut enim ad minim veniam, quis istomw nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                    commodo.</p>
-                                                <a data-animation="fadeInLeft" data-delay=".6s" href="#" class="btn btn-icon ml-0"><span>+</span>Price:
-                                                    $489.00</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="pricing-box mb-30">
-                                            <div class="pricing-thumb mb-45">
-                                                <img src="img/pricing/pricing-thumb-3.png" alt="">
-                                            </div>
-                                            <div class="pricing-content">
-                                                <h1>Advantage</h1>
-                                                <p>Ut enim ad minim veniam, quis istomw nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                    commodo.</p>
-                                                <a data-animation="fadeInLeft" data-delay=".6s" href="#" class="btn btn-icon ml-0"><span>+</span>Price:
-                                                    $489.00</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- pricing-area end -->
-        <!-- cta-area start -->
+
         <section class="cta-area pos-rel pt-115 pb-120" data-background="img/slider/slider-bg-1.jpg">
             <div class="container">
                 <div class="row">
@@ -648,92 +603,7 @@
                 </div>
             </div>
         </section>
-        <!-- cta-area end -->
-        <!-- latest-news-area start -->
-        <section class="latest-news-area pt-115 pb-20">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-7">
-                        <div class="section-title pos-rel mb-75">
-                            <div class="section-icon">
-                                <img class="section-back-icon back-icon-left" src="img/section/section-back-icon.png" alt="">
-                            </div>
-                            <div class="section-text pos-rel">
-                                <h5>News</h5>
-                                <h1>Get Every Single Updates Here.</h1>
-                            </div>
-                            <div class="section-line pos-rel">
-                                <img src="img/shape/section-title-line.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-5 d-none d-lg-block">
-                        <div class="section-button text-right pt-80">
-                            <a data-animation="fadeInLeft" data-delay=".6s" href="blog.html" class="btn btn-icon ml-0"><span>+</span>our blog</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="latest-news-box mb-30">
-                            <div class="latest-news-thumb mb-35">
-                                <img src="img/blog/blog-thumb-1.jpg" alt="">
-                            </div>
-                            <div class="latest-news-content">
-                                <div class="news-meta mb-10">
-                                    <span><a href="#" class="news-tag">Medical,</a></span>
-                                    <span><a href="#" class="news-tag">Medicine</a></span>
-                                </div>
-                                <h3><a href="news-details.html">Lorem ipsum dolor sit amet, cons ectetur adidis dicolo wiran.</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna
-                                    aliqua. Ut enim ad minim veniam.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="latest-news-box mb-30">
-                            <div class="latest-news-thumb mb-35">
-                                <img src="img/blog/blog-thumb-2.jpg" alt="">
-                            </div>
-                            <div class="latest-news-content">
-                                <div class="news-meta mb-10">
-                                    <span><a href="#" class="news-tag">Medical,</a></span>
-                                    <span><a href="#" class="news-tag">Medicine</a></span>
-                                </div>
-                                <h3><a href="news-details.html">Lorem ipsum dolor sit amet, cons ectetur adidis dicolo wiran.</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna
-                                    aliqua. Ut enim ad minim veniam.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-12 col-md-12">
-                        <div class="recent-news-list mb-120">
-                            <div class="latest-news-content singl-news news-border-bottom">
-                                <h3><a href="news-details.html">Lorem ipsum dolor sit amet, consectetur adidis.</a></h3>
-                                <span class="meta-date"><i class="far fa-calendar"></i>23rd Jan 2019</span>
-                                <span class="meta-date"><a href="#"><i class="far fa-comments"></i>33 Comments</a></span>
-                            </div>
-                            <div class="latest-news-content singl-news news-border-bottom">
-                                <h3><a href="news-details.html">Lorem ipsum dolor sit amet, consectetur adidis.</a></h3>
-                                <span class="meta-date"><i class="far fa-calendar"></i>23rd Jan 2019</span>
-                                <span class="meta-date"><a href="#"><i class="far fa-comments"></i>33 Comments</a></span>
-                            </div>
-                            <div class="latest-news-content singl-news ">
-                                <h3><a href="news-details.html">Lorem ipsum dolor sit amet, consectetur adidis.</a></h3>
-                                <span class="meta-date"><i class="far fa-calendar"></i>23rd Jan 2019</span>
-                                <span class="meta-date"><a href="#"><i class="far fa-comments"></i>33 Comments</a></span>
-                            </div>
-                        </div>
-                        <div class="mk-call-btn f-right mb-30">
-                            <a data-animation="fadeInLeft" data-delay=".6s" href="contact.html" class="btn btn-icon btn-icon-green ml-0"><span><i class="fas fa-phone"></i></span>make call</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- latest-news-area end -->
+
 
         <footer>
             <div class="footer-top primary-bg pt-115 pb-90">
