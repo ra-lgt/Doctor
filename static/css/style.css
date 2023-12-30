@@ -238,7 +238,7 @@ h6 {
 
     font-family: 'Poppins', sans-serif;
 
-    color: #223645;
+    color:#1985D3;;
 
     margin-top: 0px;
 
@@ -560,17 +560,14 @@ label {
 
 	padding-bottom: 22px;
 
-	background-color: rgb(225, 36, 84);
+	background-color: #1985D3;
 
-	box-shadow: 0px 8px 16px 0px rgba(225, 36, 84, 0.2);
 
 }
 
 .btn-icon-green {
 
-	background-color: rgb(143, 181, 105);
-
-	box-shadow: 0px 8px 16px 0px rgba(143, 181, 105, 0.3);
+	background-color: #1985D3;
 
 }
 
@@ -578,9 +575,9 @@ label {
 
 .btn-icon:hover {
 
-	background-color: rgb(143, 181, 105);
+	background-color: #161A30;
 
-	box-shadow: 0px 8px 16px 0px rgba(125, 178, 73, 0.2);
+	box-shadow: 0px 8px 16px 0px #a2aef2;
 
 	color: #fff;
 
@@ -588,9 +585,11 @@ label {
 
 .btn-icon-green:hover {
 
-	background-color: rgb(225, 36, 84);
+	background-color: #161A30;
 
-	box-shadow: 0px 8px 16px 0px rgba(225, 36, 84, 0.2);
+	box-shadow: 0px 8px 16px 0px #a2aef2;
+	color: #fff;
+
 
 }
 
@@ -840,7 +839,7 @@ label {
 
 #scrollUp {
 
-	background: #E12454;
+	background: #1985D3;
 
 	height: 50px;
 
@@ -868,7 +867,7 @@ label {
 
 #scrollUp:hover {
 
-    background: #8FB569;
+    background: #242C59;
 
 }
 
@@ -994,7 +993,7 @@ label {
 
 .header__menu ul li a {
 
-	color: #647589;
+	color:#1985D3;
 
 	font-weight: 500;
 
@@ -1002,7 +1001,7 @@ label {
 
 	display: block;
 
-	font-size: 14px;
+	font-size: 17px;
 
 }
 
@@ -1856,7 +1855,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .author-desination h6 {
 
-	color: #e12454;
+	color: #404040;
 
 	text-transform: uppercase;
 
@@ -2368,7 +2367,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .service-link {
 
-	color: #647589;
+	color: #242C59;
 
 	font-weight: 500;
 
@@ -2420,13 +2419,13 @@ input.main-search-input:-ms-input-placeholder {
 
 .service-box .service-content h3 a:hover {
 
-    color: #8fb569;
+    color: #242C59;
 
 }
 
 .service-box .service-link:hover {
 
-    color: #8fb569;
+    color:#1985D3;
 
 }
 
@@ -2798,7 +2797,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .team-content h6 {
 
-	color: #e12454;
+	color: #404040;
 
 	text-transform: uppercase;
 
@@ -10786,7 +10785,7 @@ p.checkout-coupon input[type="text"] {
 
 	width: 110px;
 
-	background: #e12454;
+	background: #1985D3;
 
 	text-align: center;
 
