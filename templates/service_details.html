@@ -264,20 +264,47 @@
                           opacity: 1;
                         }
                       </style>
-
+                      
                       <script>
                         document.addEventListener('DOMContentLoaded', function () {
                           var listItems = document.querySelectorAll('.more-service-list li');
                       
-                          setTimeout(function () {
-                            listItems.forEach(function (item, index) {
-                              setTimeout(function () {
-                                item.classList.add('visible');
-                              }, index * 300); // Adjust the delay as needed (e.g., 300 milliseconds)
+                          var observer = new IntersectionObserver(function (entries, observer) {
+                            entries.forEach(function (entry, index) {
+                              if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+                                setTimeout(function () {
+                                  entry.target.classList.add('visible');
+                                }, index * 300); // Adjust the delay as needed (e.g., 300 milliseconds)
+                                observer.unobserve(entry.target);
+                              }
                             });
-                          }, 1000); // Adjust the initial delay as needed (e.g., 1000 milliseconds)
+                          }, { threshold: 0.5 }); // Adjust the threshold as needed
+                      
+                          listItems.forEach(function (item) {
+                            observer.observe(item);
+                          });
+                      
+                          // Check if the section is in the viewport initially
+                          var section = document.querySelector('.your-section-class'); // Replace with the actual class or ID of your section
+                          var sectionObserver = new IntersectionObserver(function (entries) {
+                            if (entries[0].isIntersecting) {
+                              // If the section is in the viewport, trigger the animation
+                              listItems.forEach(function (item, index) {
+                                setTimeout(function () {
+                                  item.classList.add('visible');
+                                }, index * 2000); // Adjust the delay as needed (e.g., 300 milliseconds)
+                              });
+                              // Disconnect the observer once the animation is triggered
+                              sectionObserver.disconnect();
+                            }
+                          }, { threshold: 0.5 }); // Adjust the threshold as needed
+                      
+                          // Observe the section
+                          sectionObserver.observe(section);
                         });
                       </script>
+                      
+                      
                       
                     <div class="col-xl-5 col-lg-4">
                         <div class="service-widget mb-50">

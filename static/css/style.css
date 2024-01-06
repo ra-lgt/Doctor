@@ -166,7 +166,7 @@ a:focus,
 
 a:hover{
 
-    color: #8fb569;
+    color: #E12454;
 
     text-decoration: none;
 
@@ -540,7 +540,7 @@ label {
 
 .btn:hover {
 
-	background: #8fb569;
+	background: #E12454;
 
 	color: #fff;
 
@@ -719,7 +719,7 @@ label {
 
 	border-radius: 30px;
 
-	background: #8fb569;
+	background: #E12454;
 
 	color: #fff;
 
@@ -2129,7 +2129,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .section-text-green h5 {
 
-	color: #8fb569;
+	color: #E12454;
 
 	font-weight: 400;
 
@@ -2503,7 +2503,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .ser-fea-list ul li i {
 
-	color: #8fb569;
+	color: #E12454;
 
 	margin-right: 5px;
 
@@ -2699,7 +2699,7 @@ input.main-search-input:-ms-input-placeholder {
 
 	font-size: 14px;
 
-	color: #8fb569;
+	color: #E12454;
 
 	top: 20px;
 
@@ -2961,7 +2961,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .team-activation .slick-dots li.slick-active button {
 
-  background: #8fb569;
+  background: #E12454;
 
 }
 
@@ -3019,7 +3019,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .single-satisfied h1 {
 
-	color: #8fb569;
+	color: #E12454;
 
 	float: left;
 
@@ -3149,7 +3149,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .price-box-flat:hover .price-btn-2 a {
 
-	background: #8fb569;
+	background: #E12454;
 
 	color:#ffff;
 
@@ -3397,13 +3397,13 @@ li.price-del i {
 
 .latest-news-box-2 .news-tag {
 
-	color: #8fb569;
+	color: #E12454;
 
 }
 
 .latest-news-box-2 .latest-news-content h3 a:hover {
 
-	color: #8fb569;
+	color: #E12454;
 
 }
 
@@ -3605,7 +3605,7 @@ li.price-del i {
 
 .footer-menu ul li a:hover {
 
-	color: #8fb569;
+	color: #E12454;
 
 	text-decoration: underline;
 
@@ -4023,13 +4023,13 @@ li.price-del i {
 
 	border-radius: 50%;
 
-	color: #8fb569;
+	color: #E12454;
 
 	margin-right: 20px;
 
 	float: left;
 
-	border: 2px solid #8fb569;
+	border: 2px solid #E12454;
 
 	font-size: 12px;
 
@@ -4039,7 +4039,7 @@ li.price-del i {
 
 .professinals-list li:hover i {
 
-	background: #8fb569;
+	background: #E12454;
 
 	color: #fff;
 
@@ -4119,7 +4119,7 @@ li.price-del i {
 
 	font-weight: 500;
 
-	color: #8fb569;
+	color: #E12454;
 
 	text-transform: uppercase;
 
@@ -4317,7 +4317,7 @@ li.price-del i {
 
 .analysis-area .nav-item:nth-child(2) a.nav-link::after {
 
-	background: #8fb569;
+	background: #E12454;
 
 }
 
@@ -4349,7 +4349,7 @@ li.price-del i {
 
 .analysis-area ul li.nav-item:nth-child(2) a.nav-link {
 
-	background: #8fb569;
+	background: #E12454;
 
 }
 
@@ -4599,7 +4599,7 @@ li.price-del i {
 
 	box-shadow: 0px 8px 16px 0px rgba(200, 183, 255, 0.2);
 
-	border-top: 6px solid #8fb569;
+	border-top: 6px solid #E12454;
 
 	padding-top: 41px;
 
@@ -5569,7 +5569,7 @@ li.price-del i {
 
 .read-more:hover {
 
-  color: #8fb569;
+  color: #E12454;
 
 }
 
@@ -5809,7 +5809,7 @@ li.price-del i {
 
 	box-shadow: 0px 8px 16px 0px rgba(200, 183, 255, 0.2);
 
-	border-top: 4px solid #8fb569;
+	border-top: 4px solid #E12454;
 
 }
 
@@ -5959,7 +5959,7 @@ li.price-del i {
 
 	margin: 0 8px;
 
-	color: #8fb569;
+	color: #E12454;
 
 }
 
@@ -7021,7 +7021,7 @@ ul.cat li a:hover {
 
 .contact i {
 
-	background: #8fb569;
+	background: #E12454;
 
 	font-size: 40px;
 
@@ -7309,7 +7309,7 @@ ul.cat li a:hover {
 
 .pro-cat a {
 
-  color: #8fb569;
+  color: #E12454;
 
   font-size: 14px;
 
@@ -7593,7 +7593,7 @@ ul.cat li a:hover {
 
   color: white;
 
-  background: #8fb569;
+  background: #E12454;
 
 }
 
@@ -7737,7 +7737,7 @@ ul.cat li a:hover {
 
 .details-price span {
 
-	color: #8fb569;
+	color: #E12454;
 
 	font-size: 20px;
 
@@ -7789,7 +7789,7 @@ ul.cat li a:hover {
 
 .product-cat a:hover {
 
-  color: #8fb569;
+  color: #E12454;
 
 }
 
@@ -7835,7 +7835,7 @@ ul.cat li a:hover {
 
 .product-social a:hover {
 
-  background: #8fb569;
+  background: #E12454;
 
   color: #ffffff;
 
@@ -7881,7 +7881,7 @@ ul.cat li a:hover {
 
 .action-btn {
 
-	background: #8fb569;
+	background: #E12454;
 
 	padding: 20px 25px;
 
@@ -8037,7 +8037,7 @@ ul.cat li a:hover {
 
   font-size: 100px;
 
-  color: #8fb569;
+  color: #E12454;
 
   margin-bottom: 30px;
 
@@ -8067,9 +8067,9 @@ ul.cat li a:hover {
 
 .shop-cat a:hover {
 
-  background: #8fb569;
+  background: #E12454;
 
-  border-color: #8fb569;
+  border-color: #E12454;
 
 }
 
@@ -10193,7 +10193,7 @@ p.checkout-coupon input[type="text"] {
 
 	color: #fff;
 
-	background: #8fb569;
+	background: #E12454;
 
 	height: 50px;
 
@@ -10271,7 +10271,7 @@ p.checkout-coupon input[type="text"] {
 
 .h4service-active .slick-dots li.slick-active button {
 
-	background: #8fb569;
+	background: #E12454;
 
 }
 
@@ -10321,7 +10321,7 @@ p.checkout-coupon input[type="text"] {
 
 .team-box:hover .h4team-thumb>img {
 
-	border-color: #8fb569;
+	border-color: #E12454;
 
 }
 
@@ -10952,7 +10952,7 @@ p.checkout-coupon input[type="text"] {
 
 	font-size: 22px;
 
-	color: #8fb569;
+	color: #E12454;
 
 	overflow: hidden;
 
@@ -10984,7 +10984,7 @@ p.checkout-coupon input[type="text"] {
 
 .h4events-list ul li>span.close-days {
 
-	color: #8fb569;
+	color: #E12454;
 
 }
 
@@ -11288,7 +11288,7 @@ p.checkout-coupon input[type="text"] {
 
 .routine__table .table tbody td.active-doctor {
 
-	background: #8fb569;
+	background: #E12454;
 
 }
 
@@ -11388,7 +11388,7 @@ p.checkout-coupon input[type="text"] {
 
 .h5gallery-content>a>i:hover {
 
-	color: #8fb569;
+	color: #E12454;
 
 }
 
@@ -11610,7 +11610,7 @@ p.checkout-coupon input[type="text"] {
 
 	font-size: 40px;
 
-	color: #8fb569;
+	color: #E12454;
 
 	margin-bottom: 25px;
 
