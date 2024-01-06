@@ -54,66 +54,13 @@
                         <div class="header__menu f-right">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li><a href="index.html">Home</a>
-                                        <ul class="submenu">
-                                            <li><a href="index.html">Home style 1</a></li>
-                                            <li><a href="index-2.html">Home style 2</a></li>
-                                            <li><a href="index-3.html">Home style 3</a></li>
-                                            <li><a href="index-4.html">Home style 4</a></li>
-                                            <li><a href="index-5.html">Home style 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="services.html">Department</a>
-                                        <ul class="submenu">
-                                            <li><a href="services.html">Services 01</a></li>
-                                            <li><a href="services-2.html">Services 02</a></li>
-                                            <li><a href="services-details.html">Services Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="doctor.html">Doctors</a>
-                                        <ul class="submenu">
-                                            <li><a href="doctor.html">Doctors 01</a></li>
-                                            <li><a href="doctor-2.html">Doctors 02</a></li>
-                                            <li><a href="doctor-details.html">Doctors Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="shop.html">Shop</a>
-                                        <ul class="submenu">
-                                            <li><a href="shop.html">Shop Page</a></li>
-                                            <li><a href="product-details.html">Shop Details</a></li>
-                                            <li><a href="cart.html">Shopping Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="wishlist.html">Wishlist</a></li>
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="register.html">Register</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="blog.html">News</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog.html">Blog Right Sidebar</a></li>
-                                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                            <li><a href="blog-no-sidebar.html">Blog No Sidebar</a></li>
-                                            <li><a href="blog-2-col.html">Blog 2 Column</a></li>
-                                            <li><a href="blog-2-col-mas.html">Blog 2 Col Masonry</a></li>
-                                            <li><a href="blog-3-col.html">Blog 3 Column</a></li>
-                                            <li><a href="blog-3-col-mas.html">Blog 3 Col Masonry</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                            <li><a href="blog-details-left-sidebar.html">Details Left Sidebar</a></li>
-                                            <li><a href="blog-details-audio.html">Details Audio</a></li>
-                                            <li><a href="blog-details-video.html">Details Video</a></li>
-                                            <li><a href="blog-details-gallery.html">Details Gallery</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="submenu">
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="appoinment.html">Appoinment</a></li>
-                                            <li><a href="portfolio-2-col.html">Portfolio 2 column</a></li>
-                                            <li><a href="portfolio.html">Portfolio 3 column</a></li>
-                                            <li><a href="portfolio-slider.html">Portfolio Slider</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                        </ul>
-                                    </li>
+                                    <ul>
+                                        <li><a href="{{url_for('Home')}}">Home</a> </li>
+                                        <li><a href="{{url_for('about')}}">About</a></li>
+                                        <li><a href="{{url_for('services')}}">Services</a></li>
+                                        <li><a href="{{url_for('gallery')}}">Gallery</a></li>
+                                        <li><a href="{{url_for('contact')}}">Contact Us</a> </li>
+                                    </ul>
                                 </ul>
                             </nav>
                         </div>
@@ -163,14 +110,17 @@
                         <div class="contact text-center mb-30" style="height:92%;">
                             <i class="fas fa-envelope"></i>
                             <h3>G-mail</h3>
-                            <p style="font-weight:bold;">sitapurnethralaya@gmail.com</p>
+                            <p style="font-weight:bold;"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=sitapurnethralaya@gmail.com&subject=Request%20for%20Eye%20Consultation%20Appointment&body=Dear%20[Doctor's%20Name],%0A%0AI%20hope%20this%20message%20finds%20you%20well.%20My%20name%20is%20[Your%20Name],%20and%20I%20am%20writing%20to%20request%20a%20consultation%20with%20you%20regarding%20my%20eye%20health.%0A%0AI%20have%20been%20experiencing%20[brief%20description%20of%20your%20eye%20concerns%20or%20symptoms]%2C%20and%20I%20believe%20it%20is%20essential%20to%20seek%20professional%20advice%20to%20address%20these%20issues.%20After%20researching%20and%20considering%20various%20healthcare%20professionals%2C%20I%20am%20impressed%20with%20your%20expertise%20and%20reputation%20in%20the%20field.%0A%0AI%20would%20appreciate%20it%20if%20we%20could%20schedule%20a%20consultation%20at%20your%20earliest%20convenience%20to%20discuss%20my%20symptoms%2C%20undergo%20a%20thorough%20eye%20examination%2C%20and%20explore%20potential%20treatment%20options.%20I%20am%20available%20[mention%20your%20preferred%20days%20and%20times%2C%20if%20any%2C%20for%20the%20appointment].%20However%2C%20I%20am%20flexible%20and%20willing%20to%20adjust%20my%20schedule%20to%20accommodate%20yours.%0A%0AAdditionally%2C%20please%20let%20me%20know%20if%20there%20are%20any%20specific%20preparations%20or%20information%20you%20require%20from%20me%20before%20the%20consultation.%0A%0AThank%20you%20for%20considering%20my%20request%2C%20and%20I%20look%20forward%20to%20the%20opportunity%20to%20meet%20with%20you%20and%20discuss%20my%20eye%20health.%20Your%20guidance%20and%20expertise%20are%20highly%20valued.%0A%0ABest%20regards%2C%0A%0A[Your%20Full%20Name]%0A[Your%20Contact%20Information]" target="_blank">sitapurnethralaya@gmail.com</a>
+
+
+                            </p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="contact text-center mb-30">
                             <i class="fas fa-map-marker-alt"id="icon"></i>
                             <h3>Location</h3>
-                            <p style="font-size:14px;font-weight:bold;">Sitapur Nethralaya,
+                            <p style="font-size:14px;font-weight:bold;color:black">Sitapur Nethralaya,
                                 318 Vijay Laxmi Nagar
                                 Sitapur,261001
                           Uttar Pradesh</p>
@@ -180,14 +130,64 @@
                         <div class="contact text-center mb-30" style="height:92%;">
                             <i class="fas fa-phone"></i>
                             <h3 >Phone no</h3>
-                            <p style="font-weight:bold;">+91 9044304604</p>
+                            <h6 style="font-weight:bold; color:black"><a href="tel:+1234567890">+91 9044304604</a></h6>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- contact-area end -->
-
+        <style>
+            /* Add this CSS to your existing styles */
+            .contact {
+              opacity: 0;
+              transform: translateY(20px);
+              transition: opacity 1s, transform 1s;
+            }
+          
+            .contact.visible {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          </style>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Get all contact divs
+              const contacts = document.querySelectorAll('.contact');
+          
+              function isElementInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                  rect.top >= 0 &&
+                  rect.left >= 0 &&
+                  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+              }
+          
+              function handleAnimation() {
+                contacts.forEach((contact, index) => {
+                  const contactTop = contact.getBoundingClientRect().top;
+                  const windowHeight = window.innerHeight;
+          
+                  // Check if the contact div is in the viewport
+                  if (contactTop < windowHeight) {
+                    // Introduce a delay based on the index
+                    setTimeout(() => {
+                      contact.classList.add('visible');
+                    }, index * 1000); // Adjust the delay (in milliseconds) as needed
+                  }
+                });
+              }
+          
+              // Add scroll event listener to trigger the animation
+              document.addEventListener('scroll', handleAnimation);
+          
+              // Initial check in case contact divs are already in the viewport
+              handleAnimation();
+            });
+          </script>
+                    
         <!-- contact-form-area start -->
         <section class="contact-form-area gray-bg pt-100 pb-100">
             <div class="container">
@@ -247,7 +247,75 @@
             </div>
         </section>
         <!-- contact-form-area end -->
-
+        <style>
+            /* Add this CSS to your existing styles */
+            .form-box {
+              opacity: 0;
+              transform: translateX(-20px);
+              transition: opacity 4s, transform 4s;
+            }
+          
+            .form-box.visible {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          
+            .section-link {
+              opacity: 0;
+              transform: translateX(20px);
+              transition: opacity 4s, transform 4s;
+            }
+          
+            .section-link.visible {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          </style>
+          
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Get form elements and section link button
+              const formBoxes = document.querySelectorAll('.form-box');
+              const sectionLink = document.querySelector('.section-link');
+          
+              function isElementInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                  rect.top >= 0 &&
+                  rect.left >= 0 &&
+                  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+              }
+          
+              function handleAnimation() {
+                formBoxes.forEach((formBox) => {
+                  const formBoxTop = formBox.getBoundingClientRect().top;
+                  const windowHeight = window.innerHeight;
+          
+                  // Check if the form box is in the viewport
+                  if (formBoxTop < windowHeight) {
+                    formBox.classList.add('visible');
+                  }
+                });
+          
+                const sectionLinkTop = sectionLink.getBoundingClientRect().top;
+          
+                // Check if the section link is in the viewport
+                if (sectionLinkTop < window.innerHeight) {
+                  sectionLink.classList.add('visible');
+                }
+              }
+          
+              // Add scroll event listener to trigger the animation
+              document.addEventListener('scroll', handleAnimation);
+          
+              // Initial check in case form boxes and section link are already in the viewport
+              handleAnimation();
+            });
+          </script>
+          
+                    
         <section class="map-area">
             <div id="contact-map" class="contact-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.989360259849!2d80.67984167529532!3d27.562840676265672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399ed7e1edec62ff%3A0x7e53be5efe97b1d1!2sSITAPUR%20NETRALAYA!5e0!3m2!1sen!2sin!4v1704177353229!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

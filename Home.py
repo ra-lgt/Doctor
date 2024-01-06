@@ -20,6 +20,10 @@ def services():
 def service_details():
     return render_template('service_details.html')
 
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html')
+
 @app.route('/about')
 def about():
     return render_template('about_us.html')

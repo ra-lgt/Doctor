@@ -53,66 +53,13 @@
                         <div class="header__menu f-right">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li><a href="index.html">Home</a>
-                                        <ul class="submenu">
-                                            <li><a href="index.html">Home style 1</a></li>
-                                            <li><a href="index-2.html">Home style 2</a></li>
-                                            <li><a href="index-3.html">Home style 3</a></li>
-                                            <li><a href="index-4.html">Home style 4</a></li>
-                                            <li><a href="index-5.html">Home style 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="services.html">Department</a>
-                                        <ul class="submenu">
-                                            <li><a href="services.html">Services 01</a></li>
-                                            <li><a href="services-2.html">Services 02</a></li>
-                                            <li><a href="services-details.html">Services Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="doctor.html">Doctors</a>
-                                        <ul class="submenu">
-                                            <li><a href="doctor.html">Doctors 01</a></li>
-                                            <li><a href="doctor-2.html">Doctors 02</a></li>
-                                            <li><a href="doctor-details.html">Doctors Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="shop.html">Shop</a>
-                                        <ul class="submenu">
-                                            <li><a href="shop.html">Shop Page</a></li>
-                                            <li><a href="product-details.html">Shop Details</a></li>
-                                            <li><a href="cart.html">Shopping Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="wishlist.html">Wishlist</a></li>
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="register.html">Register</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="blog.html">News</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog.html">Blog Right Sidebar</a></li>
-                                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                            <li><a href="blog-no-sidebar.html">Blog No Sidebar</a></li>
-                                            <li><a href="blog-2-col.html">Blog 2 Column</a></li>
-                                            <li><a href="blog-2-col-mas.html">Blog 2 Col Masonry</a></li>
-                                            <li><a href="blog-3-col.html">Blog 3 Column</a></li>
-                                            <li><a href="blog-3-col-mas.html">Blog 3 Col Masonry</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                            <li><a href="blog-details-left-sidebar.html">Details Left Sidebar</a></li>
-                                            <li><a href="blog-details-audio.html">Details Audio</a></li>
-                                            <li><a href="blog-details-video.html">Details Video</a></li>
-                                            <li><a href="blog-details-gallery.html">Details Gallery</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="submenu">
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="appoinment.html">Appoinment</a></li>
-                                            <li><a href="portfolio-2-col.html">Portfolio 2 column</a></li>
-                                            <li><a href="portfolio.html">Portfolio 3 column</a></li>
-                                            <li><a href="portfolio-slider.html">Portfolio Slider</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                        </ul>
-                                    </li>
+                                    <ul>
+                                        <li><a href="{{url_for('Home')}}">Home</a> </li>
+                                        <li><a href="{{url_for('about')}}">About</a></li>
+                                        <li><a href="{{url_for('services')}}">Services</a></li>
+                                        <li><a href="{{url_for('gallery')}}">Gallery</a></li>
+                                        <li><a href="{{url_for('contact')}}">Contact Us</a> </li>
+                                    </ul>
                                 </ul>
                             </nav>
                         </div>
