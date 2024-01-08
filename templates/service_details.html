@@ -115,27 +115,14 @@
                                 </div>
                                 <div class="section-text pos-rel">
                                     <h5 class="green-color text-up-case">Dental Care</h5>
-                                    <h1>We are here to help when you need us.</h1>
+                                    <h1>Transformative Squint Surgery Unveiled</h1>
                                 </div>
                                 <div class="section-line pos-rel">
                                     <img src="img/shape/section-title-line.png" alt="">
                                 </div>
                             </div>
                             <div class="service-details-text mb-30">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
-                                unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                                illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                                numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
-                                unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                {{ description | safe }}
                             </div>
                             <div class="service-details-feature fix mb-35">
                                 <div class="ser-fea-box f-left">
@@ -143,26 +130,28 @@
                                         <img src="img/services/ser-fea-icon-1.png" alt="">
                                     </div>
                                     <div class="ser-fea-list fix">
-                                        <h3>Personal care</h3>
+                                        <h3>Why Choose Us</h3>
                                         <ul>
-                                            <li><i class="fas fa-check"></i>Cillum dolore eu fugiat nulla.</li>
-                                            <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet.</li>
-                                            <li><i class="fas fa-check"></i>Consectetur adipisicing elit,</li>
-                                            <li><i class="fas fa-check"></i>Sed do eiusmod tempor inci.</li>
+                                            {% for i in why_choose_us %}
+                                            <li><i class="fas fa-check"></i>{{i | safe}}</li>
+                                            {% endfor %}
+                                            
                                         </ul>
                                     </div>
                                 </div>
+
                                 <div class="ser-fea-box f-left mr-0">
                                     <div class="ser-fea-icon f-left">
                                         <img src="img/services/ser-fea-icon-2.png" alt="">
                                     </div>
                                     <div class="ser-fea-list fix">
-                                        <h3>Lifestyle support</h3>
+                                        <br>
+                                        <br>
+                                        <h3>Squint Correction Services We Offer</h3>
                                         <ul>
-                                            <li><i class="fas fa-check"></i>Didunt ut labore et dolore magna.</li>
-                                            <li><i class="fas fa-check"></i>Aliqua. Ut enim ad minim veniam.</li>
-                                            <li><i class="fas fa-check"></i>Quis nostrud exercitation ullamco.</li>
-                                            <li><i class="fas fa-check"></i>Laboris nisi ut aliquip ex ea.</li>
+                                            {% for i in services %}
+                                            <li><i class="fas fa-check"></i>{{i|safe}}</li>
+                                            {% endfor %}
                                         </ul>
                                     </div>
                                 </div>
@@ -235,23 +224,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="testi-box text-center pos-rel mb-0">
-                                <div class="testi-content testi-service-content pos-rel">
-                                    <div class="testi-quato-icon">
-                                        <img src="img/testimonials/testi-quato-icon.png" alt="">
-                                    </div>
-                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut
-                                    perspiciatis unde omnis iste natus error sit voluptatem.</p>
-                                    <span></span>
-                                </div>
-                                <div class="testi-author">
-                                    <h2 class="testi-author-title">Rosalina D. Williamson</h2>
-                                    <span class="testi-author-desination">founder, uithemes</span>
-                                </div>
-                                <div class="test-author-icon mb-10">
-                                    <img src="img/testimonials/testi-author-icon.png" alt="">
-                                </div>
-                            </div>
+                            
                         </article>
                     </div>
                     <style>
