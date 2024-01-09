@@ -1,20 +1,68 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <!-- Font Awesome Pro CSS -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-</head>
-<body>
-    <!-- Solid style icon -->
-    <i class="fas fa-envelope"></i>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-    <!-- Regular style icon -->
-    <i class="far fa-envelope"></i>
+          <span class='pseudo-link' data-target='#modal_choose_regions' data-toggle='modal'>Click to open modal</span>
 
-    <!-- Light style icon -->
-    <i class="fal fa-envelope"></i>
+  <div aria-hidden='true' class='modal fade' id='modal_choose_regions' role='dialog' tabindex='-1'>
+    <div class='modal-dialog modal-scroll'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+          <button aria-hidden='true' class='close' data-dismiss='modal' type='button'>&times;</button>
+          <h4 class='modal-title'>Title</h4>
+          <br>
+          <input class='form-control' placeholder='Search …' type='search'>
+        </div>
 
-    <!-- Brand style icon -->
-    <i class="fab fa-font-awesome"></i>
-</body>
-</html>
+    
+          <div class='modal-footer'>
+            <button class='btn btn-default' data-dismiss='modal' type='button'>Cancel</button>
+            <button class='btn btn-success' data-submit='modal' type='button'>Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+<style>
+    
+    .list-tree {
+        padding-left: 0;
+        list-style: none;
+      }
+      .list-tree li {
+        white-space: nowrap;
+        padding-left: 30px;
+      }
+      .list-tree li button[type="button"] {
+        position: absolute;
+        margin-left: -30px;
+      }
+      .list-tree ul {
+        padding-left: 0;
+        list-style: none;
+      }
+      .pseudo-link {
+        color: #428bca;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .pseudo-link:hover {
+        color: #2a6496;
+        text-decoration: underline;
+      }
+      .btn-sm .fa,
+      .btn-xs .fa,
+      small .fa,
+      .btn-group-sm .fa,
+      .btn-group-xs .fa,
+      .input-group-sm .fa,
+      .input-group-xs .fa {
+        font-size: 14px;
+      }
+      .modal-scroll .modal-body {
+        max-height: 300px;
+        overflow-y: auto;
+      }
+      
+</style>  
