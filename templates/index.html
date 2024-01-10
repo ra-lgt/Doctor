@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>MediDove - Medical and Health HTML5 Template </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
@@ -43,7 +42,7 @@
                 <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
                         <div class="logo logo-circle pos-rel">
-                            <a href="index.html"><img src="img/logo/logo.png" alt=""></a>
+                            <a href="index.html"><img src="{{url_for('static',filename='images/Logo.png')}}" width="60%" height="60%" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-9 col-lg-9 col-md-9">
@@ -122,7 +121,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-5 slide-right">
                         <div class="medical-icon-brand-2">
-                            <img src="img/about/medical-brand-icon-border.png" alt="">
+                            
                         </div>
                         <div class="about-left-side pos-rel mb-30">
                             <div class="about-front-img">
@@ -216,7 +215,7 @@
                                 <img class="section-back-icon back-icon-left" src="img/section/section-back-icon.png" alt="">
                             </div>
                             <div class="section-text pos-rel">
-                                <h5>Departments</h5>
+                                <h5>Services</h5>
                                 <h1>Managed Your Heathcare Services</h1>
                             </div>
                             <div class="section-line pos-rel">
@@ -224,12 +223,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-5 col-lg-4">
-                        <div class="section-button text-right d-none d-lg-block pt-80">
-                            <a data-animation="fadeInLeft" data-delay=".6s" href="services.html"
-                                class="btn btn-icon ml-0"><span>+</span>more services</a>
-                        </div>
-                    </div>
+                   
                 </div>
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-6">
@@ -250,75 +244,75 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="service-box-3 mb-30 text-center">
                             <div class="service-thumb">
-                                <a href="service-details.html"><img src="{{url_for('static',filename='images/squirnt.jpg')}}" alt=""></a>
+                                <a href="{{url_for('squint_surgery')}}"><img src="{{url_for('static',filename='images/squirnt_surgery.png')}}" alt=""></a>
                             </div>
                             <div class="service-content-box">
                                 <div class="service-content">
-                                    <h3><a href="#">Squint Surgery</a></h3>
+                                    <h3><a href="{{url_for('squint_surgery')}}">Squint Surgery</a></h3>
                                 <p>Clearing the Way for Confidence: Expert Squint Surgery at SitapurNethralaya. Trust Us for Precise and Friendly Care.</p>
                                 
                                 </div>
-                                <a href="#" class="service-link">Read More</a>
+                                <a href="{{url_for('squint_surgery')}}" class="service-link">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="service-box-3 mb-30 text-center">
                             <div class="service-thumb">
-                                <a href="service-details.html"><img src="{{url_for('static',filename='images/galucoma_surgery.png')}}"></a>
+                                <a href="{{url_for('galucoma_surgery')}}"><img src="{{url_for('static',filename='images/galucoma_surgery.png')}}"></a>
                             </div>
                             <div class="service-content-box">
                                 <div class="service-content">
-                                    <h3><a href="#">Glaucoma Surgery</a></h3>
+                                    <h3><a href="{{url_for('galucoma_surgery')}}">Glaucoma Surgery</a></h3>
                                 <p>Restoring Vision Expert Glaucoma Surgery at SitapurNethralaya.Discover Clear Paths to Better Eye Health</p>
                                
                                 </div>
-                                <a href="#" class="service-link">Read More</a>
+                                <a href="{{url_for('galucoma_surgery')}}" class="service-link">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="service-box-3 mb-30 text-center">
                             <div class="service-thumb">
-                                <a href="service-details.html"><img src="{{url_for('static',filename='images/corneal.png')}}" alt=""></a>
+                                <a href="{{url_for('corneal_surgery')}}"><img src="{{url_for('static',filename='images/corneal.png')}}" alt=""></a>
                             </div>
                             <div class="service-content-box">
                                 <div class="service-content">
-                                    <h3><a href="#">Corneal Surgery</a></h3>
+                                    <h3><a href="{{url_for('corneal_surgery')}}">Corneal Surgery</a></h3>
                                     <p>Precision in Every Layer: Specialized Corneal Surgery at SitapurNethralaya Elevate Your Vision with Expertise </p>
                                     
                                 </div>
-                                <a href="#" class="service-link">Read More</a>
+                                <a href="{{url_for('corneal_surgery')}}" class="service-link">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="service-box-3 mb-30 text-center">
                             <div class="service-thumb">
-                                <a href="service-details.html"><img src="{{url_for('static',filename='images/refractive_surgery.png')}}" alt=""></a>
+                                <a href="{{url_for('refractive_surgery')}}"><img src="{{url_for('static',filename='images/refractive_surgery.png')}}" alt=""></a>
                             </div>
                             <div class="service-content-box">
                                 <div class="service-content">
-                                    <h3><a href="#">Refractive Surgery</a></h3>
+                                    <h3><a href="{{url_for('refractive_surgery')}}">Refractive Surgery</a></h3>
                                     <p>Seize Crystal-Clear Vision Personalized Refractive Surgery at SitapurNethralaya Redefine Your View </p>
                                     
                                 </div>
-                                <a href="#" class="service-link">Read More</a>
+                                <a href="{{url_for('refractive_surgery')}}" class="service-link">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="service-box-3 mb-30 text-center">
                             <div class="service-thumb">
-                                <a href="service-details.html"><img src="{{url_for('static',filename='images/retina_surgery.png')}}" alt=""></a>
+                                <a href="{{url_for('retina_injection')}}"><img src="{{url_for('static',filename='images/retina_surgery.png')}}" alt=""></a>
                             </div>
                             <div class="service-content-box">
                                 <div class="service-content">
-                                    <h3><a href="#">Retina Injection</a></h3>
+                                    <h3><a href="{{url_for('retina_injection')}}">Retina Injection</a></h3>
                                     <p>Preserving Sight One Precise Injection at a Time: Specialized Retina Injections at SitapurNethralaya</p>
                                     
                                 </div>
-                                <a href="#" class="service-link">Read More</a>
+                                <a href="{{url_for('retina_injection')}}" class="service-link">Read More</a>
                             </div>
                         </div>
                     </div>
