@@ -365,10 +365,15 @@
 
 
 .mb-30 {
-
     margin-bottom: 30px;
-
+    transition: transform 0.3s ease-in-out; /* Adding a transition for a smoother effect */
 }
+
+.mb-30:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Scale the element on hover (you can adjust the scaling factor) */
+}
+
 
 
 
