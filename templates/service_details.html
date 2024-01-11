@@ -105,10 +105,9 @@
         <div aria-hidden='true' class='modal fade' id='modal_choose_regions' role='dialog' tabindex='-1'>
             <div class='modal-dialog modal-scroll'>
               <div class='modal-content'>
+                <h4 style="text-align: center;">{{surgery}} Services</h4>
                 <div class='modal-header'>
-                  <button aria-hidden='true' class='close' data-dismiss='modal' type='button'>&times;</button>
-                  <h4 class='modal-title'>Title</h4>
-                  <br>
+
                   <input id="search" class='form-control' placeholder='Search …' type='search' oninput="performSearch()">
                 </div>
 
@@ -119,8 +118,7 @@
                     </div>
             
                   <div class='modal-footer'>
-                    <button class='btns btn-default' data-dismiss='modal' type='button'>Cancel</button>
-                    <button class='btns btn-success' data-submit='modal' type='button'>Submit</button>
+                    <button class='btns btn-default' style="background-color: red; color:white" data-dismiss='modal' type='button'>Cancel</button>
                 </div>
               </div>
             </div>
@@ -128,6 +126,24 @@
           </div>
         <style>
             
+                #search {
+                  width: 50%; /* Set the initial width */
+                  transition: width 0.3s ease; /* Add transition for smooth animation */
+                  
+                }
+              
+                #search:hover {
+                  width:90%; /* Set the width on hover */
+                }
+              
+                /* Optional: Add other styles for better visual appearance */
+                #search {
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                  padding: 15px;
+                  outline: none;
+                }
+              
             .list-tree {
                 padding-left: 0;
                 list-style: none;
@@ -325,6 +341,25 @@
                                 });
                               </script>
                               <style>
+                                .btns {
+                                    display: inline-block;
+                                    padding: 6px 12px;
+                                    margin-bottom: 0;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 1.42857143;
+                                    text-align: center;
+                                    white-space: nowrap;
+                                    vertical-align: middle;
+                                    cursor: pointer;
+                                    -webkit-user-select: none;
+                                    -moz-user-select: none;
+                                    -ms-user-select: none;
+                                    user-select: none;
+                                    background-image: none;
+                                    border: 1px solid transparent;
+                                    border-radius: 4px
+                                }
   
                                 button {
                                   margin: 20px;
@@ -588,7 +623,7 @@
                         <div class="service-widget mb-50 border-0 p-0">
                             <div class="banner-widget">
                                 <a href="#">
-                                    <img src="img/services/services-banner.png" alt="">
+                                    <img src="{{url_for('static',filename='images/services-banner.png')}}" alt="">
                                 </a>
                             </div>
                         </div>

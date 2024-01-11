@@ -1,68 +1,79 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/>
 
-          <span class='pseudo-link' data-target='#modal_choose_regions' data-toggle='modal'>Click to open modal</span>
-
-  <div aria-hidden='true' class='modal fade' id='modal_choose_regions' role='dialog' tabindex='-1'>
-    <div class='modal-dialog modal-scroll'>
-      <div class='modal-content'>
-        <div class='modal-header'>
-          <button aria-hidden='true' class='close' data-dismiss='modal' type='button'>&times;</button>
-          <h4 class='modal-title'>Title</h4>
-          <br>
-          <input class='form-control' placeholder='Search …' type='search'>
-        </div>
-
-    
-          <div class='modal-footer'>
-            <button class='btn btn-default' data-dismiss='modal' type='button'>Cancel</button>
-            <button class='btn btn-success' data-submit='modal' type='button'>Submit</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+<div class="container d-flex justify-content-center">
+	<div class="card mt-5 p-4">
+		<div class="input-group mb-3">
+			<input type="text" class="form-control">
+			<div class="input-group-append"><button class="btn btn-primary"><i class="fas fa-search"></i></button></div>
+		</div>
+		<span class="text mb-4">88 branding projects</span>
+	
+		
+	</div>	
+</div>
 <style>
-    
-    .list-tree {
-        padding-left: 0;
-        list-style: none;
-      }
-      .list-tree li {
-        white-space: nowrap;
-        padding-left: 30px;
-      }
-      .list-tree li button[type="button"] {
-        position: absolute;
-        margin-left: -30px;
-      }
-      .list-tree ul {
-        padding-left: 0;
-        list-style: none;
-      }
-      .pseudo-link {
-        color: #428bca;
-        text-decoration: none;
-        cursor: pointer;
-      }
-      .pseudo-link:hover {
-        color: #2a6496;
-        text-decoration: underline;
-      }
-      .btn-sm .fa,
-      .btn-xs .fa,
-      small .fa,
-      .btn-group-sm .fa,
-      .btn-group-xs .fa,
-      .input-group-sm .fa,
-      .input-group-xs .fa {
-        font-size: 14px;
-      }
-      .modal-scroll .modal-body {
-        max-height: 300px;
-        overflow-y: auto;
-      }
-      
-</style>  
+  @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+
+
+.card{
+	width: 500px;
+	border: none;
+	border-radius: 20px;
+}
+.form-control{
+	border-radius: 7px;
+	border: 1.5px solid #E3E6ED;
+}
+input.form-control:focus{
+	box-shadow: none;
+	border: 1.5px solid #E3E6ED;
+	background-color: #F7F8FD;
+	letter-spacing: 1px;
+}
+.btn-primary{
+	background-color: #5878FF!important;
+	border-radius: 7px;
+}
+.btn-primary:focus{
+	box-shadow: none;
+}
+.text{
+	font-size: 13px;
+	color: #9CA1A4;
+}
+.price{
+	background: #F5F8FD;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	width: 97px;
+}
+.flex-row{
+	border: 1px solid #F2F2F4;
+	border-radius: 10px; 
+	margin: 0 1px 0;
+}
+.flex-column p{
+	font-size: 14px;
+}
+span.mb-2{
+	font-size: 12px;
+	color: #8896BD;
+}
+h5 span{
+	color: #869099;
+}
+@media screen and (max-width: 450px){
+	.card{
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+	.price{
+		border: none;
+		margin: 0 auto;
+	}
+}
+</style>

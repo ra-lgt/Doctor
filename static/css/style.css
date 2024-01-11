@@ -2987,14 +2987,15 @@ input.main-search-input:-ms-input-placeholder {
 }
 
 /* 8. Fact */
-
 .fact-map::before {
+	color: white;
 
 	position: absolute;
 
 	content: "";
 
-	background-image: url(../img/fact/map.png);
+	background-image: url(../images/temp.png);
+	background-color: #1985D3;
 
 	width: 100%;
 

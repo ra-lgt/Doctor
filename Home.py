@@ -43,7 +43,7 @@ def squint_surgery():
               "<strong>squint vertical</strong>(both / single)",
               "<strong>squint correction</strong> (2 muscles horizontal) (both / single eye)",
               "<strong>squint</strong> correction vertical + horizontal (both / single)"]
-    return render_template('service_details.html',heading=heading,description=description,why_choose_us=why_choose_us,services=services)
+    return render_template('service_details.html',surgery="Squint Surgery",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services)
 
 
 @app.route('/galucoma_surgery')
@@ -93,7 +93,7 @@ def galucoma_surgery():
 
 
     
-    return render_template('service_details.html',heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services)
+    return render_template('service_details.html',surgery="Galucoma Surgery",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services)
 
 @app.route('/corneal_surgery')
 def corneal_surgery():
@@ -183,7 +183,7 @@ def corneal_surgery():
     "<strong>CG + BCL</strong> (Cyanoacrylate Glue + BCL)"
 
     ]
-    return render_template('service_details.html',heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services)
+    return render_template('service_details.html',surgery="Corneal Surgery",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services)
 
 @app.route('/refractive_surgery')
 def refractive_surgery():
@@ -263,7 +263,7 @@ def refractive_surgery():
     "<strong>SCLERAL SHELL</strong>",
 ]
 
-    return render_template('service_details.html',heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services,count=len(services))
+    return render_template('service_details.html',surgery="Refractive Surgrey",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services,count=len(services))
 
 @app.route('/retina_injection')
 def retina_injection():
@@ -311,7 +311,7 @@ def retina_injection():
     "<strong>Short GA</strong>",
     "<strong>E.U.A.</strong>",
 ]
-    return render_template('service_details.html',heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services,count=len(services))
+    return render_template('service_details.html',surgery="Retina Injection",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services,count=len(services))
 
 
 
