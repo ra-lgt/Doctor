@@ -12,10 +12,6 @@ def Home():
 def doctor_profile():
     return render_template('doctor_profile.html')
 
-@app.route('/services')
-def services():
-    return render_template('services.html')
-
 @app.route('/squint_surgery')
 def squint_surgery():
     heading="Transformative Squint Surgery Unveiled"

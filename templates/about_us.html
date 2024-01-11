@@ -35,6 +35,7 @@
 </head>
 
 <body>
+    
 
     <!-- header begin -->
     <header>
@@ -45,7 +46,7 @@
                 <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
                         <div class="logo logo-circle pos-rel">
-                            <a href="index.html"><img src="img/logo/logo.png" alt=""></a>
+                            <a href="index.html"><img src="{{url_for('static',filename='images/Logo.png')}}" width="60%" height="60%" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-9 col-lg-9 col-md-9">
@@ -56,7 +57,7 @@
                                     <ul>
                                         <li><a href="{{url_for('Home')}}">Home</a> </li>
                                         <li><a href="{{url_for('about')}}">About</a></li>
-                                        <li><a href="{{url_for('services')}}">Services</a></li>
+                                        
                                         <li><a href="{{url_for('gallery')}}">Gallery</a></li>
                                         <li><a href="{{url_for('contact')}}">Contact Us</a> </li>
                                     </ul>
@@ -164,10 +165,13 @@
         });
       </script>
     <!-- header end -->
+    <style>
+
+    </style>
 
     <main>
         <!-- hero-area start -->
-        <section class="breadcrumb-bg pt-200 pb-180" style="opacity: 0.5;" data-background="{{url_for('static',filename='images/header.jpg')}}">
+        <section class="breadcrumb-bg pt-200 pb-180" data-background="{{url_for('static',filename='images/navbar_1.jpg')}}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-9">

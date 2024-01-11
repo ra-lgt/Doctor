@@ -37,6 +37,7 @@
 
 <body>
 
+
     <!-- header begin -->
     <header>
 
@@ -46,7 +47,7 @@
                 <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
                         <div class="logo logo-circle pos-rel">
-                            <a href="index.html"><img src="img/logo/logo.png" alt=""></a>
+                            <a href="index.html"><img src="{{url_for('static',filename='images/Logo.png')}}" width="60%" height="60%" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-9 col-lg-9 col-md-9">
@@ -57,7 +58,7 @@
                                     <ul>
                                         <li><a href="{{url_for('Home')}}">Home</a> </li>
                                         <li><a href="{{url_for('about')}}">About</a></li>
-                                        <li><a href="{{url_for('services')}}">Services</a></li>
+                                        
                                         <li><a href="{{url_for('gallery')}}">Gallery</a></li>
                                         <li><a href="{{url_for('contact')}}">Contact Us</a> </li>
                                     </ul>
@@ -76,7 +77,7 @@
 
     <main>
         <!-- hero-area start -->
-        <section class="breadcrumb-bg pt-200 pb-180" data-background="{{url_for('static',filename='images/page-bg.jpg')}}">
+        <section class="breadcrumb-bg pt-200 pb-180" data-background="{{url_for('static',filename='images/navbar_3.jpg')}}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-9">
@@ -123,6 +124,25 @@
                 </div>
                 <div id="portfolio-grid" class="row row-portfolio">
                     <div class="col-lg-4 col-md-6 grid-sizer"></div>
+                     <div class="col-lg-4 col-md-6 grid-item  cat1">
+                        <div class="portfolio-item mb-30">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-image">
+                                    <img src="{{url_for('static',filename='images/rahul_water.png')}}" alt="" width="150%" height="150%"/>
+                                    <div class="view-icon">
+                                        <a class="popup-image" href="{{url_for('static',filename='images/rahul_water.jpg')}}">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-caption">
+                                    <h4>Sitapur Nethralaya</h4>
+                                    <p>Team</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-lg-4 col-md-6 grid-item  cat1">
                         <div class="portfolio-item mb-30">
                             <div class="portfolio-wrapper">
@@ -219,9 +239,9 @@
                         <div class="portfolio-item mb-30">
                             <div class="portfolio-wrapper">
                                 <div class="portfolio-image">
-                                    <img src="{{url_for('static',filename='images/surgery_3.jpg')}}" alt="" width="150%" height="150%"/>
+                                    <img src="{{url_for('static',filename='images/service_water.jpg')}}" alt="" width="150%" height="150%"/>
                                     <div class="view-icon">
-                                        <a class="popup-image" href="{{url_for('static',filename='images/surgery_3.jpg')}}">
+                                        <a class="popup-image" href="{{url_for('static',filename='images/service_water.jpg')}}">
                                             <i class="fas fa-plus"></i>
                                         </a>
                                     </div>
@@ -352,6 +372,25 @@
                             <div class="portfolio-wrapper">
                                 <div class="portfolio-image">
                                     <img src="{{url_for('static',filename='images/patient_2.jpg')}}" alt="" width="150%" height="150%"/>
+                                    <div class="view-icon">
+                                        <a class="popup-image" href="{{url_for('static',filename='images/patient_2.jpg')}}">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-caption">
+                                    <h4>Sitapur Nethralaya</h4>
+                                    <p>Patients</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-lg-4 col-md-6 grid-item cat4">
+                        <div class="portfolio-item mb-30">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-image">
+                                    <img src="{{url_for('static',filename='images/patient_3.jpg')}}" alt="" width="150%" height="150%"/>
                                     <div class="view-icon">
                                         <a class="popup-image" href="{{url_for('static',filename='images/patient_2.jpg')}}">
                                             <i class="fas fa-plus"></i>

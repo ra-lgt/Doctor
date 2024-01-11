@@ -32,6 +32,44 @@
 </head>
 
 <body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a onclick="send_message()" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+<script>
+    function send_message(){
+        let message=`Hi Dr. Rahul Bhardwaj,
+
+        I hope this message finds you well. My name is [Your Name] and I am currently experiencing some concerns related to my eyesight. I would like to schedule a consultation with you to discuss my symptoms and seek your professional advice.
+        
+        Could you please let me know the available time slots for a consultation? Additionally, if you require any specific information or details beforehand, feel free to ask.
+        
+        Looking forward to your guidance and expertise.`
+
+        let whatsapp="https://api.whatsapp.com/send?phone=+918004489931&text="+encodeURIComponent(message)
+        window.location.href=whatsapp
+    }
+</script>
+<style>
+    .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+      font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+      z-index:100;
+    }
+    
+    .my-float{
+        margin-top:16px;
+    }
+</style>
 
     <!-- header begin -->
       <header>
@@ -52,7 +90,6 @@
                                 <ul>
                                     <li><a href="{{url_for('Home')}}">Home</a> </li>
                                     <li><a href="{{url_for('about')}}">About</a></li>
-                                    <li><a href="{{url_for('services')}}">Services</a></li>
                                     <li><a href="{{url_for('gallery')}}">Gallery</a></li>
                                     <li><a href="{{url_for('contact')}}">Contact Us</a> </li>
                                 </ul>
@@ -84,27 +121,26 @@
                                             <p data-animation="fadeInUp" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                         </div>
                                         <div class="hero-slider-btn">
-                                            <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html" class="btn btn-icon ml-0"><span>+</span>Make Appointment</a>
-                                            <a data-animation="fadeInRight" data-delay="1.0s" href="https://www.youtube.com/watch?v=eXQgPCsd83c" class="play-btn popup-video"><i class="fas fa-play"></i></a>
+                                            <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html" class="btn btn-icon ml-0"><span>+</span>Make Appointment</a>                                           
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="single-slider slider-height d-flex align-items-center" data-background="{{url_for('static',filename='images/slider-bg-2in1.jpg')}}">
+                    <div class="single-slider slider-height d-flex align-items-center" data-background="{{url_for('static',filename='images/modi.jpg')}}">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-6 col-lg-8 col-md-10">
                                     <div class="hero-text">
                                         <div class="hero-slider-caption ">
                                             <h5 data-animation="fadeInUp" data-delay=".2s">We are here for your care.</h5>
-                                            <h1 data-animation="fadeInUp" data-delay=".4s">Best Care & Better Doctor.</h1>
-                                            <p data-animation="fadeInUp" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <h1 data-animation="fadeInUp" data-delay=".4s">आयुष्मान भारत योजना</h1>
+                                            <p data-animation="fadeInUp" data-delay=".6s">पंडित दीनदयाल उपाध्याय राज्य कर्मचारी कैशलेस चिकित्सा योजना के कार्ड धारकों का नि:शुल्क इलाज।</p>
                                         </div>
                                         <div class="hero-slider-btn">
                                             <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html" class="btn btn-icon ml-0"><span>+</span>Make Appointment</a>
-                                            <a data-animation="fadeInRight" data-delay="1.0s" href="https://www.youtube.com/watch?v=eXQgPCsd83c" class="play-btn popup-video"><i class="fas fa-play"></i></a>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -144,7 +180,7 @@
                             </div>
                             <div class="about-author d-flex align-items-center">
                                 <div class="author-ava">
-                                    <img src="img/about/author-ava.png" alt="">
+                                    <img class="rounded-image" src="{{url_for('static',filename='images/rahul_profile.jpg')}}" alt="">
                                 </div>
                                 <div class="author-desination">
                                     <h4>DR. RAHUL BHARDWAJ </h4>
@@ -157,6 +193,16 @@
             </div>
         </section>
         <style>
+            .rounded-image {
+                border-radius: 50%;
+                width: 50px; /* Adjust the size as needed */
+                height: 50px; /* Adjust the size as needed */
+              }
+              .rounded-image_care {
+                border-radius: 50%;
+                width: 300px; /* Adjust the size as needed */
+                height:300px; /* Adjust the size as needed */
+              }
             /* Add this CSS to your existing styles */
             .slide-left {
               opacity: 0;
@@ -405,11 +451,11 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="team-box text-center mb-60">
                             <div class="team-thumb mb-45 pos-rel">
-                                <img src="img/team/member1.png" alt="">
-                                <a class="team-link" href="doctor-details.html">+</a>
+                                <img class="rounded-image_care" src="{{url_for('static',filename='images/rahul_profile.jpg')}}" alt="">
+                                <a class="team-link" href="{{url_for('doctor_profile')}}">+</a>
                             </div>
                             <div class="team-content">
-                                <h3>Rosalina D. Williamson</h3>
+                                <h3>Dr. Rahul Bhardwaj</h3>
                                 <h6>Founder</h6>
                             </div>
                         </div>
@@ -847,7 +893,6 @@
     <script src="{{url_for('static',filename='js/ajax-form.js')}}"></script>
     <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
     <script src="{{url_for('static',filename='js/jquery.nice-select.min.js')}}"></script>
-    <script src="{{url_for('static',filename='js/jquery.scrollUp.min.js')}}"></script>
     <script src="{{url_for('static',filename='js/jquery.meanmenu.min.js')}}"></script>
     <script src="{{url_for('static',filename='js/jquery.counterup.min.js')}}"></script>
     <script src="{{url_for('static',filename='js/waypoints.min.js')}}"></script>
