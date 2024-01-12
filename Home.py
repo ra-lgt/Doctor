@@ -1,4 +1,9 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request,url_for,redirect
+from jinja2 import Environment,FileSystemLoader
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import smtplib
+
 
 app = Flask(__name__)
 
@@ -39,7 +44,7 @@ def squint_surgery():
               "<strong>squint vertical</strong>(both / single)",
               "<strong>squint correction</strong> (2 muscles horizontal) (both / single eye)",
               "<strong>squint</strong> correction vertical + horizontal (both / single)"]
-    return render_template('service_details.html',surgery="Squint Surgery",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services)
+    return render_template('service_details.html',surgery="Squint Surgery",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services,count=len(services))
 
 
 @app.route('/galucoma_surgery')
@@ -89,7 +94,7 @@ def galucoma_surgery():
 
 
     
-    return render_template('service_details.html',surgery="Galucoma Surgery",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services)
+    return render_template('service_details.html',surgery="Galucoma Surgery",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services,count=len(services))
 
 @app.route('/corneal_surgery')
 def corneal_surgery():
@@ -179,7 +184,7 @@ def corneal_surgery():
     "<strong>CG + BCL</strong> (Cyanoacrylate Glue + BCL)"
 
     ]
-    return render_template('service_details.html',surgery="Corneal Surgery",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services)
+    return render_template('service_details.html',surgery="Corneal Surgery",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services,count=len(services))
 
 @app.route('/refractive_surgery')
 def refractive_surgery():
@@ -309,11 +314,50 @@ def retina_injection():
 ]
     return render_template('service_details.html',surgery="Retina Injection",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services,count=len(services))
 
+def mail_to_doctor(data):
+    try:
+        email="raviajay9344@gmail.com"
+        env = Environment(loader=FileSystemLoader('./templates'))
+        template_vars = {'data': data}
+        template = env.get_template('email.html')
+        output_html = template.render(template_vars)
+        message=MIMEMultipart('alternative')
+        message['subject']="Appointment Reminder"
+        message["from"]="skillstormofficial01@gmail.com"
+        message["to"]=email
 
+        html_mail=MIMEText(output_html,'html')
+        message.attach(html_mail)
+        server=smtplib.SMTP_SSL("smtp.gmail.com",465)
+        server.login("skillstormofficial01@gmail.com","wgrrwnsolhyfiyrg")
+        server.sendmail("skillstormofficial01@gmail.com",email,message.as_string())
+        return True
+    except:
+        return False
+
+
+@app.route('/thanks')
+def thanks():
+    return render_template('thanks.html')
 
     
-    
-
+@app.route('/send_email',methods=['POST'])
+def send_email():
+    if(request.method=='POST'):
+        data={}
+        data['service']=request.form['service']
+        data['name']=request.form['name']
+        data['phone']=request.form['phone']
+        data['date']=request.form['date']
+        data['time']=request.form['time']
+        data['type']=request.form['type']
+        data['special_request']=request.form['Special_request']
+        
+        print(data)
+        
+        return_code=mail_to_doctor(data)
+        if(return_code==True):
+            return redirect(url_for('thanks'))
 @app.route('/gallery')
 def gallery():
     return render_template('gallery.html')

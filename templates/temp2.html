@@ -1,79 +1,99 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Time</title>
+  <style>
+    #clock {
+      width: 200px;
+      height: 200px;
+      border: 2px solid #333;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+    }
 
-<div class="container d-flex justify-content-center">
-	<div class="card mt-5 p-4">
-		<div class="input-group mb-3">
-			<input type="text" class="form-control">
-			<div class="input-group-append"><button class="btn btn-primary"><i class="fas fa-search"></i></button></div>
-		</div>
-		<span class="text mb-4">88 branding projects</span>
-	
-		
-	</div>	
+    .hand {
+      position: absolute;
+      width: 50%;
+      height: 2px;
+      background-color: #333;
+      top: 50%;
+      transform-origin: 100% 50%;
+      transform: rotate(90deg);
+    }
+
+    #hourHand {
+      height: 6px;
+      background-color: #333;
+    }
+
+    #minuteHand {
+      height: 3px;
+      background-color: #666;
+    }
+
+    #secondHand {
+      height: 1px;
+      background-color: #ff0000;
+    }
+
+    #timeInput {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="clock">
+  <div id="hourHand" class="hand"></div>
+  <div id="minuteHand" class="hand"></div>
+  <div id="secondHand" class="hand"></div>
 </div>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
 
+<div id="timeInput">
+  <label for="time">Select Time:</label>
+  <input type="time" id="time" onchange="updateClockFromInput()">
+</div>
 
-.card{
-	width: 500px;
-	border: none;
-	border-radius: 20px;
-}
-.form-control{
-	border-radius: 7px;
-	border: 1.5px solid #E3E6ED;
-}
-input.form-control:focus{
-	box-shadow: none;
-	border: 1.5px solid #E3E6ED;
-	background-color: #F7F8FD;
-	letter-spacing: 1px;
-}
-.btn-primary{
-	background-color: #5878FF!important;
-	border-radius: 7px;
-}
-.btn-primary:focus{
-	box-shadow: none;
-}
-.text{
-	font-size: 13px;
-	color: #9CA1A4;
-}
-.price{
-	background: #F5F8FD;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-	width: 97px;
-}
-.flex-row{
-	border: 1px solid #F2F2F4;
-	border-radius: 10px; 
-	margin: 0 1px 0;
-}
-.flex-column p{
-	font-size: 14px;
-}
-span.mb-2{
-	font-size: 12px;
-	color: #8896BD;
-}
-h5 span{
-	color: #869099;
-}
-@media screen and (max-width: 450px){
-	.card{
-		display: flex;
-		justify-content: center;
-		text-align: center;
-	}
-	.price{
-		border: none;
-		margin: 0 auto;
-	}
-}
-</style>
+<script>
+  function updateClock() {
+    var now = new Date();
+    var hours = now.getHours() % 12;
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    var hourRotation = (hours * 30) + (minutes / 2);
+    var minuteRotation = minutes * 6;
+    var secondRotation = seconds * 6;
+
+    document.getElementById("hourHand").style.transform = "rotate(" + hourRotation + "deg)";
+    document.getElementById("minuteHand").style.transform = "rotate(" + minuteRotation + "deg)";
+    document.getElementById("secondHand").style.transform = "rotate(" + secondRotation + "deg)";
+  }
+
+  function updateClockFromInput() {
+    var inputTime = document.getElementById("time").value;
+    var [hours, minutes] = inputTime.split(":").map(Number);
+
+    var hourRotation = (hours % 12) * 30 + (minutes / 2);
+    var minuteRotation = minutes * 6;
+    var secondRotation = 0;
+
+    document.getElementById("hourHand").style.transform = "rotate(" + hourRotation + "deg)";
+    document.getElementById("minuteHand").style.transform = "rotate(" + minuteRotation + "deg)";
+    document.getElementById("secondHand").style.transform = "rotate(" + secondRotation + "deg)";
+  }
+
+  // Update the clock every second
+  setInterval(updateClock, 1000);
+
+  // Initial call to display the time immediately
+  updateClock();
+</script>
+
+</body>
+</html>

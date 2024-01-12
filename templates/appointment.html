@@ -104,10 +104,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-5 slide-right">
                         <div class="about-left-side pos-rel mb-30">
-                            <div class="about-front-img pos-rel">
-                                <img src="img/about/about-img.jpg" alt="">
-                                <a class="popup-video about-video-btn white-video-btn" href="https://www.youtube.com/watch?v=I3u3lFA9GX4"><i class="fas fa-play"></i></a>
-                            </div>
+
                             <div class="about-shape">
                                 <img src="{{url_for('static',filename='images/our_team_2.jpg')}}" alt="">
                             </div>
@@ -149,9 +146,10 @@
         </section>
 
         <!-- calculate-area start -->
-        <section class="appointment-area appointment-area-3 pos-rel pt-115 pb-120" data-background="{{url_for('static',filename='images/appointment-bg.jpg')}}">
+        <section class="appointment-area appointment-area-3 pos-rel pt-115 pb-120" data-background="{{url_for('static',filename='images/appoinment_bg.jpg')}}">
             <div class="container">
                 <div class="row">
+                    <form method="POST" action="{{url_for('send_email')}}">
                     <div class="col-xl-7 col-lg-8">
                         <div class="calculate-box white-bg">
                             <div class="calculate-content">
@@ -165,55 +163,85 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <select>
+                                        <select name="service">
                                             <option value="1">Services</option>
-                                            <option value="2">Surgery and Radiology</option>
-                                            <option value="2">SPediatrics</option>
+                                            <option value="Squint Surgery">Squint Surgery</option>
+                                            <option value="Galucoma Surgery">Galucoma Surgery</option>
+                                            <option value="Corneal Surgery">Corneal Surgery</option>
+                                            <option value="Refractive Surgrey">Refractive Surgrey</option>
+                                            <option value="Retina Injection">Retina Injection</option>
+                                            <option value="No Idea">No Idea</option>
                                         </select>
                                     </div>
+
                                     <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <select>
-                                            <option value="1">Doctor</option>
-                                            <option value="2">Doctor Name</option>
-                                            <option value="2">Doctor Name Two</option>
-                                        </select>
+                                        <div class="calculate-form appointment-form-3 mb-20">
+                                            <input name="name" type="text" placeholder="Your Name">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        
+
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <select>
-                                            <option value="1">Your Name</option>
-                                            <option value="2">Name One</option>
-                                            <option value="2">Name Two</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <form class="calculate-form appointment-form-3 mb-20" action="#">
-                                            <input type="text" placeholder="Your Phone number">
+                                        <div class="calculate-form appointment-form-3 mb-20" action="#">
+                                            <input name="phone" type="number" placeholder="Your Phone number">
                                             <i class="fas fa-phone"></i>
-                                        </form>
+                                        </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <form class="calculate-form appointment-form-3 mb-20" action="#">
-                                            <input type="text" placeholder="Select date">
+                                        <div class="calculate-form appointment-form-3 mb-20">
+                                            <input name="date" type="date" placeholder="Select date">
                                             <i class="far fa-calendar"></i>
-                                        </form>
+                                            
+                                        </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6">
-                                        <form class="calculate-form appointment-form-3 mb-20" action="#">
-                                            <input type="text" placeholder="Add time">
+                                        <div class="calculate-form appointment-form-3 mb-20">
+                                            <input name="time" type='time' value='now' placeholder="Add time">
                                             <i class="far fa-clock"></i>
-                                        </form>
+                                        </div>
                                     </div>
+                                    <style>
+                                        input[type="date"]::-webkit-calendar-picker-indicator {
+                                            background: none;
+                                            padding: 0;
+                                            cursor: pointer;
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            left: 0;
+                                          }
+                                        /* Remove default arrow/clock icon in Chrome, Safari, and Edge */
+                                        input[type="time"]::-webkit-calendar-picker-indicator {
+                                          display: none;
+                                        }
+                                    
+                                        /* Remove default arrow/clock icon in Firefox */
+                                        input[type="time"],input[type="date"] {
+                                          -moz-appearance: textfield;
+                                        }
+                                      </style>
+                                    <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <select name="type">
+                                            <option value="Type">Type</option>
+                                            <option value="new patient">new patient</option>
+                                            <option value="returning patient">returning patient</option>
+                                            </select>
+                                            </div>
+                                    
                                     <div class="col-xl-12">
-                                        <form class="calculate-form appointment-form-3 mb-20" action="#">
-                                            <textarea name="Special request" cols="30" rows="10" placeholder="Special request"></textarea>
+                                        <div class="calculate-form appointment-form-3 mb-20">
+                                            <textarea name="Special_request" cols="30" rows="10" placeholder="Special request"></textarea>
                                             <i class="far fa-edit"></i>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="" class="btn mt-40">submit query</a>
+                            <button style="width: 100%;" class="btn mt-40">submit query</button>
                         </div>
                     </div>
+                </form>
                 </div>
             </div>
         </section>
@@ -320,6 +348,18 @@
             </div>
         </div>
     </footer>
+    <script>
+        $(function(){     
+            var d = new Date(),        
+                h = d.getHours(),
+                m = d.getMinutes();
+            if(h < 10) h = '0' + h; 
+            if(m < 10) m = '0' + m; 
+            $('input[type="time"][value="now"]').each(function(){ 
+              $(this).attr({'value': h + ':' + m});
+            });
+          });
+    </script>
     <!-- footer end -->
 
     <!-- JS here -->
