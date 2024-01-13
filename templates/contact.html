@@ -219,15 +219,15 @@ ul {
   
   
   <ul class="links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Pages</a></li>
-    <li><a href="#">Contact Us</a></li>
+    <li><a href="{{url_for('Home')}}">Home</a></li>
+    <li><a href="{{url_for('about')}}">About</a></li>
+    <li><a href="{{url_for('gallery')}}">Gallery</a></li>
+    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
   </ul>
   
   
   <div class="right">
-    <button id="nav-butt">Dashboard</button>
+    <button id="nav-butt"><a href="{{url_for('appointment')}}">Appointment</a></button>
   </div>
   
   <div class="toggle">
