@@ -268,12 +268,19 @@
       })
       </script>
     <!-- header end -->
+    <style type="text/css">
+        
+        .temp_cont{
+            width: 75%;
+            margin-left: 0%;
+        }
+    </style>
 
     <main>
 
         <!-- hero-area start -->
         
-        <section class="breadcrumb-bg pt-200 pb-180" data-background="{{url_for('static',filename='images/page-bg.jpg')}}">
+        <section class="breadcrumb-bg pt-200 pb-180" data-background="{{url_for('static',filename='images/navbar_5.png')}}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-9 col-12">
@@ -346,7 +353,7 @@
 
         <!-- calculate-area start -->
         <section class="appointment-area appointment-area-3 pos-rel pt-115 pb-120" data-background="{{url_for('static',filename='images/appoinment_bg.jpg')}}">
-            <div class="container">
+            <div class="container temp_cont">
                 <div class="row">
                     <form method="POST" action="{{url_for('send_email')}}">
                     <div class="col-xl-7 col-lg-8">
