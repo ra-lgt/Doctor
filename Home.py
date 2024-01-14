@@ -3,19 +3,96 @@ from jinja2 import Environment,FileSystemLoader
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import smtplib
+from flask_caching import Cache
 
 
 app = Flask(__name__)
 
+cache = Cache(app, config={'CACHE_TYPE': 'simple'}) 
+def cache_key():
+    # Function to generate the cache key
+    return f"{request.endpoint}-{hash(frozenset(request.args.items()))}"
 
 
 @app.route('/')
+@cache.cached(timeout=3600)
 def Home():
+    cached_data = cache.get(cache_key())
+    
+    if cached_data:
+        print("Data retrieved from cache.")
+    else:
+        print("Data not found in cache. Executing the route.")
     return render_template('index.html')
 
 @app.route('/doctor_profile')
 def doctor_profile():
     return render_template('doctor_profile.html')
+
+
+@app.route('/cataract_surgery')
+def cataract_surgery():
+    heading="Vision Clarity Revealed"
+    side_heading="Discover Our Advanced Cataract Surgery Expertise"
+    description="""
+    <p>Embark on a transformative journey to visual clarity with SitapurNethralaya's specialized Cataract Surgery services. As a leading provider, we understand the impact of age-related cataracts on daily life, causing blurred vision and discomfort. Our expert surgeons, armed with a wealth of experience, ensure optimal outcomes for each patient, prioritizing not only visual restoration but also an enhanced overall quality of life.<br><br>
+    At SitapurNethralaya, we take pride in our commitment to cutting-edge technology, ensuring unparalleled precision throughout your Cataract Surgery journey. Our state-of-the-art facilities provide a seamless experience, coupled with a personalized care approach that tailors the treatment plan to your unique needs. Rely on our proven track record of successful Cataract Surgeries and choose SitapurNethralaya for a clearer, brighter vision that reflects the perfect synergy of expertise and personalized care.</p>
+    """
+    why_choose_us=["<b>Expert Team:</b> Skilled surgeons dedicated to Cataract Surgery excellence",
+               "<b>Advanced Techniques:</b> Cutting-edge methods for precision and excellence",
+               "<b>Personalized Solutions:</b> Tailored treatments for your unique needs",
+               "<b>Proven Success:</b> Join our satisfied patients who've achieved clear, brighter vision"]
+    
+    services=["<strong>ECCE:</strong> ECCE + SICS Packages",
+          "<strong>ICCE:</strong> Cataract Extraction/ICCE/ECCE/SICS",
+          "<strong>Ext:</strong> Cataract Ext ECCE/SICS .+ IOL",
+          "<strong>ICCE:</strong> ICCE wth Ant Vit  WITH ACIOL",
+          "<strong>SICS:</strong> SICS+HYDROPHOBIC FOREIGN LENS(SENSAR 3 PEC.LENS)",
+          "<strong>SICS:</strong> SICS with Foreign Lens",
+          "<strong>SIC:</strong> SIC+IOL Square Edge",
+          "<strong>SICS:</strong> SICS With ACIOL",
+          "<strong>Phaco:</strong> PHACO EMULSIFICTION",
+          "<strong>Phaco:</strong> Phaco with Indian Lenses",
+          "<strong>PHACO:</strong> PHACO WITH NON FOLDABLE",
+          "<strong>Phaco:</strong> Phaco Foldable Lens",
+          "<strong>Phaco:</strong> Phaco with Foldable Aspheric Lens",
+          "<strong>PHACO:</strong> PHACO  FOLDABLE LENS (Hydrophobic)",
+          "<strong>Phaco:</strong> Phaco Foldable Foreign",
+          "<strong>PHACO:</strong> PHACO Multifocal WITH TORIC LENS",
+          "<strong>PHACO:</strong> PHACO Multifocal Lens(IQ)  Restor",
+          "<strong>Phaco:</strong> PHACO EMULSIFICATION WITH TORIC LENS",
+          "<strong>Phaco:</strong> Phaco+Foldable Alcon IQ + MICRO PHACO",
+          "<strong>Phaco:</strong> Phaco+ Technis /Micro Phaco",
+          "<strong>Phaco:</strong> Phaco+HYDROPHOBIC FOREIGN LENS( SENSAR 1 SINGLE PIECE)",
+          "<strong>SECONDARY:</strong> SECONDARY IOL",
+          "<strong>SECONDARY A/C:</strong> SECONDARY A/C IOL",
+          "<strong>SECONDARY P/C:</strong> SECONDARY P/C IOL",
+          "<strong>SECONDARY FOLDABLE IOL (PC):</strong> SECONDARY FOLDABLE IOL (PC)",
+          "<strong>SECONDARY FOLDABLE IQ (PC):</strong> SECONDARY FOLDABLE IQ (PC)",
+          "<strong>Phaco+ MULTIFOCAL IOL(AUROVUE):</strong> PHACO+ MULTIFOCAL IOL(AUROVUE)",
+          "<strong>SCLERAL FIXATED IOL:</strong> SCLERAL FIXATED IOL",
+          "<strong>ANIRIDIA IOL:</strong> ANIRIDIA IOL",
+          "<strong>PEDIATRIC:</strong> PEDIATRIC CATARACT",
+          "<strong>Phaco+FOLDABLE ALCON IQ+ANT. VITRECTOMY:</strong> PHACO+FOLDABLE ALCON IQ+ANT. VITRECTOMY",
+          "<strong>Phaco TECNIS/MICRO PHACO+ANT. VITRECTOMY:</strong> PHACO TECNIS/MICRO PHACO+ANT. VITRECTOMY",
+          "<strong>Phaco FOLDABLE LENS(HYDROPHOBIC)+ANT. VITRECTOMY:</strong> PHACO FOLDABLE LENS(HYDROPHOBIC)+ANT. VITRECTOMY",
+          "<strong>Phaco FOLDABLE ASPHERIC+ANT. VITRECTOMY:</strong> PHACO FOLDABLE ASPHERIC+ANT. VITRECTOMY",
+          "<strong>Phaco FOLDABLE LENS+ANT. VITRECTOMY:</strong> PHACO FOLDABLE LENS+ANT. VITRECTOMY",
+          "<strong>PEDIATRIC Phaco pacakage (IQ) + G.A.:</strong> PEDIATRIC Phaco pacakage (IQ) + G.A.",
+          "<strong>Phaco ASP.+ANT. VIT+PCCC+IOL FOREIGN (EXC. Non Foladable IOL):</strong> PHACO ASP.+ANT. VIT+PCCC+IOL FOREIGN (EXC. Non Foladable IOL)",
+          "<strong>Phaco+ANTERIOR VITRECTOMY:</strong> PHACO+ANTERIOR VITRECTOMY",
+          "<strong>SICS HYDROPHOBIC SENSAR 3 PEC LENS+ANT. VITRECTOMY:</strong> SICS HYDROPHOBIC SENSAR 3 PEC LENS+ANT. VITRECTOMY",
+          "<strong>SICS FOREIGN LENS+ANT. VITRECTOMY:</strong> SICS FOREIGN LENS+ANT. VITRECTOMY",
+          "<strong>SQUARE EDGE+ANT. VITRECTOMY:</strong> SQUARE EDGE+ANT. VITRECTOMY",
+          "<strong>Ant. Vitrectomy:</strong> Ant. Vitrectomy",
+          "<strong>ANT. Vitrectomy + PI:</strong> ANT. Vitrectomy + PI",
+          "<strong>IOL EXPLANT:</strong> IOL EXPLANT",
+          "<strong>REDIALING:</strong> REDIALING",
+          "<strong>CAPSULOT0MY:</strong> CAPSULOT0MY"]
+    
+    return render_template('service_details.html',surgery="Cataract Surgery",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services,count=len(services))
+
+
 
 @app.route('/squint_surgery')
 def squint_surgery():
