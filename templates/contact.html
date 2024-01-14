@@ -31,6 +31,49 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/responsive.css')}}">
 </head>
 <style>
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .float {
+    animation: floatAnimation 2s infinite;
+  }
+  
+  /* Add styles for the icon */
+  .my-float {
+    font-size: 24px;
+    color: #fff;
+    /* Add other styles as needed */
+  }
+  
+    .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+      font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+      z-index:100;
+    }
+    
+    .my-float{
+        margin-top:16px;
+    }
+</style>
+<style>
   @import url("https://fonts.googleapis.com/css?family=Nunito|Lacquer");
 
 ul {
@@ -45,11 +88,15 @@ ul {
   display: flex;
   height:80px;
   align-items: center;
+  padding-top: 0px;
 }
 
 .navbar .logo {
   cursor: pointer;
   font-family: Lacquer;
+}
+a,button{
+    color: white;
 }
 
 .navbar ul.links {
@@ -59,6 +106,7 @@ ul {
   display: flex;
   align-items: center;
   transition: 0.4s ease all, 0s ease background;
+  padding-top: 10px;
 }
 .navbar ul.links li {
   text-transform: uppercase;
@@ -201,16 +249,14 @@ ul {
 }
 </style>
 
-<body>
-
     <!-- header begin -->
-   <header>
+      <header>
 
         <!-- menu-area -->
-       <div class="navbar">
+        <div class="navbar">
   
   <div class="logo">
-    <h2>BRAND</h2>
+    <img src="{{url_for('static',filename='images/Logo.png')}}" height=65px style="padding-top:0px;">
   </div>
   
   
@@ -222,7 +268,7 @@ ul {
   </ul>
   
   
-  <div class="right">
+  <div class="right" style="padding-top:10px;">
     <button id="nav-butt"><a href="{{url_for('appointment')}}">Appointment</a></button>
   </div>
   
@@ -234,6 +280,7 @@ ul {
   
   
 </div>
+
        
     </header>
         <script>

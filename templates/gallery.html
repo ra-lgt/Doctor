@@ -35,211 +35,257 @@
 
 
     <!-- header begin -->
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Nunito|Lacquer");
-      
-      ul {
-        padding: 0;
-        margin: 0;
-      }
-      
-      .navbar {
-        background:linear-gradient(to right, rgba(255,0,0,0), rgba(158,203,236,255));
-        color: #fff;
-        width: 100%;
-        display: flex;
-        height:80px;
-        align-items: center;
-      }
-      
-      .navbar .logo {
-        cursor: pointer;
-        font-family: Lacquer;
-      }
-      a,button{
-          color: white;
-      }
-      
-      .navbar ul.links {
-        margin-left: auto;
-        margin-right: 50px;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        transition: 0.4s ease all, 0s ease background;
-      }
-      .navbar ul.links li {
-        text-transform: uppercase;
-        padding: 0 20px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.4s ease all, 0s ease margin;
-      }
-      .navbar ul.links li a {
-        text-decoration: none;
-        color: #fff;
-      }
-      .navbar ul.links li:hover {
-        background: #1985D3;
-        cursor: pointer;
-        border-radius: 25px
-      }
-      .navbar ul.links li:hover a {
-        color: #080808;
-      }
-      
-      #nav-butt {
-        background: #1985D3;
-        outline: none;
-        font-weight: bold;
-        padding: 10px 18px;
-        border-radius: 25px;
-        border: 1px solid #223645;
-        letter-spacing: 1px;
-      }
-      #nav-butt:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        color: white;
-        background: #223645;
-        border-color: black;
-      }
-      
-      .navbar.sticky {
-        position: fixed;
-        z-index: 40;
-      }
-      .navbar.sticky ~ main {
-        position: relative;
-        z-index: 20;
-        top: 65px;
-      }
-      
-      @media screen and (max-width: 750px) {
-        .navbar .right {
-          height: 0;
-          overflow: hidden;
-        }
-      
-        .toggle {
-          position: absolute;
-          top: 32.5px;
-          right: 20px;
-          z-index: 99;
-          transform: translateY(-50%);
-          cursor: pointer;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        .toggle > * {
-          width: 80%;
-          height: 2px;
-          background: #fff;
-          margin: 3px 0;
-        }
-      
-        .navbar.collapsed .toggle .line1 {
-          transform: rotate(-45deg) translate(-4px, 5px);
-        }
-        .navbar.collapsed .toggle .line2 {
-          opacity: 0;
-        }
-        .navbar.collapsed .toggle .line3 {
-          transform: rotate(45deg) translate(-5px, -6px);
-        }
-      
-        .navbar.collapsed .logo {
-          position: absolute;
-          z-index: 44;
-        }
-      
-        .navbar .links {
-          position: fixed;
-          background:rgba(158,203,236,255);
-          z-index: 40;
-          top: 0;
-          left: -100%;
-          flex-direction: column;
-          width: 45vw;
-          height: 100vh;
-        }
-        .navbar .links li:first-child {
-          margin-top: 80px;
-        }
-      
-        .navbar.collapsed .links {
-          left: 0;
-        }
-        .navbar.collapsed .links a {
-          color: #fff;
-        }
-        .navbar.collapsed .links li {
-          width: 100%;
-        }
-        .navbar.collapsed .links li:hover a {
-          color: #080808;
-        }
-      
-        .navbar.collapsed .right {
-          position: fixed;
-          width: 45vw;
-          text-align: center;
-          height: auto;
-          bottom: 40px;
-          left: 22.5vw;
-          transform: translateX(-50%);
-          z-index: 45;
-        }
-      
-        .navbar.collapsed ~ main {
-          filter: blur(1px);
-          opacity: 0.8;
-        }
-      
-        .navbar.sticky {
-          position: fixed;
-          z-index: 40;
-        }
-      }
-      </style>
-      
-          <!-- header begin -->
-            <header>
-      
-              <!-- menu-area -->
-              <div class="navbar">
-        
-        <div class="logo">
-          <h2>BRAND</h2>
-        </div>
-        
-        
-        <ul class="links">
-          <li><a href="{{url_for('Home')}}">Home</a></li>
-          <li><a href="{{url_for('about')}}">About</a></li>
-          <li><a href="{{url_for('gallery')}}">Gallery</a></li>
-          <li><a href="{{url_for('contact')}}">Contact Us</a></li>
-        </ul>
-        
-        
-        <div class="right">
-          <button id="nav-butt"><a href="{{url_for('appointment')}}">Appointment</a></button>
-        </div>
-        
-        <div class="toggle">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        
-        
-      </div>
+<style>
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .float {
+    animation: floatAnimation 2s infinite;
+  }
+  
+  /* Add styles for the icon */
+  .my-float {
+    font-size: 24px;
+    color: #fff;
+    /* Add other styles as needed */
+  }
+  
+    .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+      font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+      z-index:100;
+    }
+    
+    .my-float{
+        margin-top:16px;
+    }
+</style>
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Nunito|Lacquer");
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  background:linear-gradient(to right, rgba(255,0,0,0), rgba(158,203,236,255));
+  color: #fff;
+  width: 100%;
+  display: flex;
+  height:80px;
+  align-items: center;
+  padding-top: 0px;
+}
+
+.navbar .logo {
+  cursor: pointer;
+  font-family: Lacquer;
+}
+a,button{
+    color: white;
+}
+
+.navbar ul.links {
+  margin-left: auto;
+  margin-right: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transition: 0.4s ease all, 0s ease background;
+  padding-top: 10px;
+}
+.navbar ul.links li {
+  text-transform: uppercase;
+  padding: 0 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease all, 0s ease margin;
+}
+.navbar ul.links li a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar ul.links li:hover {
+  background: #1985D3;
+  cursor: pointer;
+  border-radius: 25px
+}
+.navbar ul.links li:hover a {
+  color: #080808;
+}
+
+#nav-butt {
+  background: #1985D3;
+  outline: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid #223645;
+  letter-spacing: 1px;
+}
+#nav-butt:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: white;
+  background: #223645;
+  border-color: black;
+}
+
+.navbar.sticky {
+  position: fixed;
+  z-index: 40;
+}
+.navbar.sticky ~ main {
+  position: relative;
+  z-index: 20;
+  top: 65px;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar .right {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .toggle {
+    position: absolute;
+    top: 32.5px;
+    right: 20px;
+    z-index: 99;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle > * {
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    margin: 3px 0;
+  }
+
+  .navbar.collapsed .toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+  .navbar.collapsed .toggle .line2 {
+    opacity: 0;
+  }
+  .navbar.collapsed .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .navbar.collapsed .logo {
+    position: absolute;
+    z-index: 44;
+  }
+
+  .navbar .links {
+    position: fixed;
+    background:rgba(158,203,236,255);
+    z-index: 40;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    width: 45vw;
+    height: 100vh;
+  }
+  .navbar .links li:first-child {
+    margin-top: 80px;
+  }
+
+  .navbar.collapsed .links {
+    left: 0;
+  }
+  .navbar.collapsed .links a {
+    color: #fff;
+  }
+  .navbar.collapsed .links li {
+    width: 100%;
+  }
+  .navbar.collapsed .links li:hover a {
+    color: #080808;
+  }
+
+  .navbar.collapsed .right {
+    position: fixed;
+    width: 45vw;
+    text-align: center;
+    height: auto;
+    bottom: 40px;
+    left: 22.5vw;
+    transform: translateX(-50%);
+    z-index: 45;
+  }
+
+  .navbar.collapsed ~ main {
+    filter: blur(1px);
+    opacity: 0.8;
+  }
+
+  .navbar.sticky {
+    position: fixed;
+    z-index: 40;
+  }
+}
+</style>
+
+    <!-- header begin -->
+      <header>
+
+        <!-- menu-area -->
+        <div class="navbar">
+  
+  <div class="logo">
+    <img src="{{url_for('static',filename='images/Logo.png')}}" height=65px style="padding-top:0px;">
+  </div>
+  
+  
+  <ul class="links">
+    <li><a href="{{url_for('Home')}}">Home</a></li>
+    <li><a href="{{url_for('about')}}">About</a></li>
+    <li><a href="{{url_for('gallery')}}">Gallery</a></li>
+    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+  </ul>
+  
+  
+  <div class="right" style="padding-top:10px;">
+    <button id="nav-butt"><a href="{{url_for('appointment')}}">Appointment</a></button>
+  </div>
+  
+  <div class="toggle">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+  
+  
+</div>
+
       
              
           </header>
