@@ -3,26 +3,20 @@ from jinja2 import Environment,FileSystemLoader
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import smtplib
-from flask_caching import Cache
+# from flask_caching import Cache
 
 
 app = Flask(__name__)
 
-cache = Cache(app, config={'CACHE_TYPE': 'simple'}) 
-def cache_key():
-    # Function to generate the cache key
-    return f"{request.endpoint}-{hash(frozenset(request.args.items()))}"
+# cache = Cache(app, config={'CACHE_TYPE': 'simple'}) 
+# def cache_key():
+#     # Function to generate the cache key
+#     return f"{request.endpoint}-{hash(frozenset(request.args.items()))}"
 
 
 @app.route('/')
-@cache.cached(timeout=3600)
+# @cache.cached(timeout=3600)
 def Home():
-    cached_data = cache.get(cache_key())
-    
-    if cached_data:
-        print("Data retrieved from cache.")
-    else:
-        print("Data not found in cache. Executing the route.")
     return render_template('index.html')
 
 @app.route('/doctor_profile')

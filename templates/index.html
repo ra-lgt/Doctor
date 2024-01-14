@@ -104,6 +104,7 @@ ul {
   display: flex;
   height:80px;
   align-items: center;
+  padding-top: 0px;
 }
 
 .navbar .logo {
@@ -121,6 +122,7 @@ a,button{
   display: flex;
   align-items: center;
   transition: 0.4s ease all, 0s ease background;
+  padding-top: 10px;
 }
 .navbar ul.links li {
   text-transform: uppercase;
@@ -270,7 +272,7 @@ a,button{
         <div class="navbar">
   
   <div class="logo">
-    <h2>BRAND</h2>
+    <img src="{{url_for('static',filename='images/Logo.png')}}" height=65px style="padding-top:0px;">
   </div>
   
   
@@ -282,7 +284,7 @@ a,button{
   </ul>
   
   
-  <div class="right">
+  <div class="right" style="padding-top:10px;">
     <button id="nav-butt"><a href="{{url_for('appointment')}}">Appointment</a></button>
   </div>
   
