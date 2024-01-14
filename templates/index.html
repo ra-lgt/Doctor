@@ -30,6 +30,7 @@
 <body>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <a onclick="send_message()" class="float" target="_blank">
+<div class="semicircle-text">Chat with me</div>
 <i class="fa fa-whatsapp my-float"></i>
 </a>
 <script>
@@ -47,6 +48,22 @@
     }
 </script>
 <style>
+     .semicircle-text {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      margin-bottom: 5%;
+      color: #FFF;
+      font-size: 16px;
+    }
+
+
+
   @keyframes floatAnimation {
     0% {
       transform: translateY(0);
@@ -915,7 +932,7 @@ window.addEventListener('scroll',(e)=>{
           </script>
 
 
-        <footer>
+
          <footer class="main-footer">
    <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
         <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
@@ -925,9 +942,9 @@ window.addEventListener('scroll',(e)=>{
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                         <div class="logo-widget footer-widget">
-                            <figure class="logo-box"><a href="#"><img src="https://i.ibb.co/QDy827D/ak-logo.png" alt=""></a></figure>
+                            <figure class="logo-box"><a href="#"><img src="{{url_for('static',filename='images/footer_bg.png')}}" alt=""></a></figure>
                             <div class="text">
-                                <p>>We are dedicated to providing comprehensive eye care with a focus on personalized attention and cutting-edge treatments. Led by the expertise of Dr. Rahul Bhardwaj MBBS, M.S.  our team is committed to enhancing and preserving your vision through state-of-the-art technology and compassionate care.</p>
+                                <p>We are dedicated to providing comprehensive eye care with a focus on personalized attention and cutting-edge treatments. Led by the expertise of Dr. Rahul Bhardwaj MBBS, M.S.  our team is committed to enhancing and preserving your vision through state-of-the-art technology and compassionate care.</p>
                             </div>
                             <ul class="footer-social">
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
