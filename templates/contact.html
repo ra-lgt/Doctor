@@ -5,12 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>MediDove - Medical and Health HTML5 Template </title>
+    <title>Sitapur Nethralaya | Contact Us</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='images/Logo.png')}}">
     <!-- Place favicon.png in the root directory -->
 
     <!-- CSS here -->
@@ -323,7 +322,7 @@ window.addEventListener('scroll',(e)=>{
         <!-- hero-area end -->
 
         <!-- contact-area start -->
-        <section class="contact-area pt-120 pb-90" data-background="assets/img/bg/bg-map.png">
+        <section class="contact-area pt-120 pb-90">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-4">
@@ -427,7 +426,7 @@ window.addEventListener('scroll',(e)=>{
                         </div>
                     </div>
                     <div class="contact-form">
-                        <form id="contact-form" action="#">
+                        <form id="contact-form" action="{{url_for('suggestion')}}" method="POST">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-box user-icon mb-30">
@@ -461,7 +460,7 @@ window.addEventListener('scroll',(e)=>{
                                 </div>
                             </div>
                         </form>
-                        <p class="ajax-response text-center"></p>
+                        
                     </div>
                 </div>
             </div>
@@ -798,9 +797,7 @@ window.addEventListener('scroll',(e)=>{
     <!-- footer end -->
 
     <!-- JS here -->
-   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{{url_for('static',filename='js/modernizr-3.5.0.min.js')}}"></script>
     <script src="{{url_for('static',filename='js/jquery-1.12.4.min.js')}}"></script>
     <script src="{{url_for('static',filename='js/popper.min.js')}}"></script>
     <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
@@ -808,7 +805,6 @@ window.addEventListener('scroll',(e)=>{
     <script src="{{url_for('static',filename='js/isotope.pkgd.min.js')}}"></script>
     <script src="{{url_for('static',filename='js/one-page-nav-min.js')}}"></script>
     <script src="{{url_for('static',filename='js/slick.min.js')}}"></script>
-    <script src="{{url_for('static',filename='js/ajax-form.js')}}"></script>
     <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
     <script src="{{url_for('static',filename='js/jquery.nice-select.min.js')}}"></script>
     <script src="{{url_for('static',filename='js/jquery.scrollUp.min.js')}}"></script>

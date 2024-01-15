@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>MediDove - Medical and Health HTML5 Template </title>
+    <title>Sitapur Nethralaya | About Dr</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -448,33 +448,42 @@ window.addEventListener('scroll',(e)=>{
                             <div class="widget-title-box mb-30">
                                 <h3 class="widget-title">Get Some Advice?</h3>
                             </div>
-                            <form class="service-contact-form" action="">
+                            <form class="service-contact-form" action="{{url_for('request_call')}}" method="POST">
                                 <div class="row">
                                     <div class="col-xl-12">
                                         <div class="contact-input contact-icon contact-user mb-20">
-                                            <input type="text" placeholder="Enter your name">
+                                            <input name="name" type="text" placeholder="Enter your name">
                                         </div>
                                     </div>
                                     <div class="col-xl-12">
                                         <div class="contact-input contact-icon contact-mail mb-20">
-                                            <input type="text" placeholder="Enter your email">
+                                            <input name="email" type="text" placeholder="Enter your email">
                                         </div>
                                     </div>
+
+                                    
                                     <div class="col-xl-12">
                                         <div class="contact-input contact-icon contact-hourglass">
-                                            <select name="#" id="service-option">
-                                                <option value="1">Select type of care</option>
-                                                <option value="2">Select type of care</option>
-                                                <option value="2">Select type of care</option>
+                                            <select name="service" id="service-option">
+                                                <option disabled selected value="">Select type of care</option>
+                                                <option value="Eye Examination">Eye Examination</option>
+                                                <option value="Diagnosis and Treatment">Diagnosis and Treatment</option>
+                                                <option value="Prescription and Fitting">Prescription and Fitting</option>
+                                                <option value="Surgical Procedures">Surgical Procedures</option>
+                                                <option value="Medical Conditions">Medical Conditions</option>
+                                                <option value="Pediatric Eye Care">Pediatric Eye Care</option>
+                                                <option value="Emergency Eye Care">Emergency Eye Care</option>
+                                                <option value="Specialized Testing">Specialized Testing</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            
                             <div class="ser-form-btn text-center mt-40">
-                                <a data-animation="fadeInLeft" data-delay=".6s" href="#" class="btn btn-icon ml-0"
-                                    style="animation-delay: 0.6s;" tabindex="0"><span>+</span>Request for call</a>
+                               <button data-animation="fadeInLeft" data-delay=".6s" href="#" class="btn btn-icon ml-0"
+                               style="animation-delay: 0.6s;" tabindex="0"><span>+</span>Request for call</button>
                             </div>
+                            </form>
                         </div>
                         <div class="service-widget mb-50">
                             <div class="widget-title-box mb-30">
@@ -483,9 +492,7 @@ window.addEventListener('scroll',(e)=>{
                             <div class="doctor-detials-lan">
                                 <ul>
                                     <li><a href="#">en</a></li>
-                                    <li><a href="#">es</a></li>
-                                    <li><a href="#">bd</a></li>
-                                    <li><a href="#">la</a></li>
+                                    <li><a href="#">hi</a></li>
                                 </ul>
                             </div>
                         </div>

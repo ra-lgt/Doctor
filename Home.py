@@ -385,15 +385,15 @@ def retina_injection():
 ]
     return render_template('service_details.html',surgery="Retina Injection",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services,count=len(services))
 
-def mail_to_doctor(data):
+def mail_to_doctor(data,template,subject):
     try:
         email="raviajay9344@gmail.com"
         env = Environment(loader=FileSystemLoader('./templates'))
         template_vars = {'data': data}
-        template = env.get_template('email.html')
+        template = env.get_template(template)
         output_html = template.render(template_vars)
         message=MIMEMultipart('alternative')
-        message['subject']="Appointment Reminder"
+        message['subject']=subject
         message["from"]="skillstormofficial01@gmail.com"
         message["to"]=email
 
@@ -411,7 +411,40 @@ def mail_to_doctor(data):
 def thanks():
     return render_template('thanks.html')
 
-    
+
+@app.route('/suggestion',methods=['POST'])
+def suggestion():
+    if(request.method=='POST'):
+        data={}
+        data['name']=request.form['name']
+        data['phone']=request.form['phone']
+        data['email']=request.form['email']
+        data['subject']=request.form['subject']
+        data['message']=request.form['message']
+
+        return_code=mail_to_doctor(data,'suggestion.html','Suggestion')
+        
+        if(return_code==True):
+            return redirect(url_for('thanks'))
+        else:
+            return "Error"
+
+@app.route('/request_call',methods=['POST'])
+def request_call():
+    if(request.method=='POST'):
+        data={}
+        data['name']=request.form['name']
+        data['email']=request.form['email']
+        data['service']=request.form['service']
+        
+        return_code=mail_to_doctor(data,'request_call.html',"Request for Call")
+        
+        if(return_code==True):
+            return redirect(url_for('thanks'))
+        else:
+            return "Error"
+
+
 @app.route('/send_email',methods=['POST'])
 def send_email():
     if(request.method=='POST'):
@@ -424,9 +457,8 @@ def send_email():
         data['type']=request.form['type']
         data['special_request']=request.form['Special_request']
         
-        print(data)
         
-        return_code=mail_to_doctor(data)
+        return_code=mail_to_doctor(data,'email.html',"Appointment")
         if(return_code==True):
             return redirect(url_for('thanks'))
 @app.route('/gallery')
