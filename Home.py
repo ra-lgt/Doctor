@@ -3,25 +3,29 @@ from jinja2 import Environment,FileSystemLoader
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import smtplib
-# from flask_caching import Cache
+from datetime import datetime, timedelta
+from email.utils import formatdate
+
+today = datetime.utcnow()
+
+# Calculate the date one week later
+one_week_later = today + timedelta(days=7)
+
+# Format the date in the desired string format
+formatted_date = formatdate(one_week_later.timestamp(), localtime=False)
+
 
 
 app = Flask(__name__)
 
-# cache = Cache(app, config={'CACHE_TYPE': 'simple'}) 
-# def cache_key():
-#     # Function to generate the cache key
-#     return f"{request.endpoint}-{hash(frozenset(request.args.items()))}"
-
 
 @app.route('/')
-# @cache.cached(timeout=3600)
 def Home():
-    return render_template('index.html')
+    return render_template('index.html',date=formatted_date)
 
 @app.route('/doctor_profile')
 def doctor_profile():
-    return render_template('doctor_profile.html')
+    return render_template('doctor_profile.html',date=formatted_date)
 
 
 @app.route('/cataract_surgery')
@@ -463,16 +467,16 @@ def send_email():
             return redirect(url_for('thanks'))
 @app.route('/gallery')
 def gallery():
-    return render_template('gallery.html')
+    return render_template('gallery.html',date=formatted_date)
 
 @app.route('/about')
 def about():
-    return render_template('about_us.html')
+    return render_template('about_us.html',date=formatted_date)
 @app.route('/contact')
 def contact():
-    return  render_template('contact.html')
+    return  render_template('contact.html',date=formatted_date)
 @app.route('/appointment')
 def appointment():
-    return render_template('appointment.html')
+    return render_template('appointment.html',date=formatted_date)
 if __name__ == '__main__':
     app.run(debug=True)
