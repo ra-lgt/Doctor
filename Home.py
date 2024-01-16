@@ -389,12 +389,12 @@ def retina_injection():
 ]
     return render_template('service_details.html',surgery="Retina Injection",heading=heading,side_heading=side_heading,description=description,why_choose_us=why_choose_us,services=services,count=len(services))
 
-def mail_to_doctor(data,template,subject):
+def mail_to_doctor(data,templates,subject):
     try:
         email="raviajay9344@gmail.com"
         env = Environment(loader=FileSystemLoader('./templates'))
         template_vars = {'data': data}
-        template = env.get_template(template)
+        template = env.get_template(templates)
         output_html = template.render(template_vars)
         message=MIMEMultipart('alternative')
         message['subject']=subject
@@ -407,7 +407,7 @@ def mail_to_doctor(data,template,subject):
         server.login("skillstormofficial01@gmail.com","wgrrwnsolhyfiyrg")
         server.sendmail("skillstormofficial01@gmail.com",email,message.as_string())
         return True
-    except:
+    except Exception as e:
         return False
 
 
@@ -465,6 +465,8 @@ def send_email():
         return_code=mail_to_doctor(data,'email.html',"Appointment")
         if(return_code==True):
             return redirect(url_for('thanks'))
+        else:
+            return "Error"
 @app.route('/gallery')
 def gallery():
     return render_template('gallery.html',date=formatted_date)
