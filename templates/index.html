@@ -393,12 +393,12 @@ window.addEventListener('scroll',(e)=>{
                                     <div class="hero-text">
                                         <div class="hero-slider-caption ">
                                            <img src="{{url_for('static',filename='images/Ayushman_Bharat_logo.png')}}"height=100px width=100px style="margin-bottom:4%;margin-left:23%;">
-                                            <p data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;font-size:40px;">आयुष्मान भारत योजना </p>
-                                            <p data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;font-size:40px;">एवं</p>
+                                            <p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">आयुष्मान भारत योजना </p>
+                                            <p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">एवं</p>
 
-<p data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;font-size:40px;">पंडित दीनदयाल उपाध्याय राज्य</p>
-<p data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;font-size:40px;">कर्मचारी योजना के कार्ड धारकों का</p>
-<p data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;font-size:40px;">नि:शुल्क इलाज।</p>
+<p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">पंडित दीनदयाल उपाध्याय राज्य</p>
+<p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">कर्मचारी योजना के कार्ड धारकों का</p>
+<p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">नि:शुल्क इलाज।</p>
 
 
                                             <p data-animation="fadeInUp" data-delay=".6s">
@@ -685,10 +685,23 @@ window.addEventListener('scroll',(e)=>{
         <!-- team-area end -->
         <!-- fact-area start -->
         <style>
+          .hindi{
+            font-size: 40px;
+          }
           @media (max-width: 767px) {
             .fact-map::before{
               position: unset;
             }
+            .hindi{
+              font-size: 20px;
+
+            }
+            .single-slider {
+              background-size: 100% 100%; /* Adjust the values as needed */
+              background-position: center; /* Center the image */
+              height: 2vh;
+              
+          }
         }
           @media (max-width: 767px) {
             .gallery-box h2 {
@@ -1164,6 +1177,12 @@ ul {
 @media (max-width: 767px){
 .footer-content .contact-widget {
     margin-left: 0;
+}
+.hero-area{
+  padding-bottom: 0px;
+}
+.about-area{
+  padding-top: 0px;
 }
 }
 .footer-content .contact-widget .footer-title{

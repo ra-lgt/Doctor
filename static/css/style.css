@@ -5446,6 +5446,11 @@ li.price-del i {
     margin-right: 10px;
 
   }
+  .breadcrumb-bg{
+	background-size: 100% 100%; 
+	background-position: center;
+	height: 0.5vh;
+  }
 
 }
 
