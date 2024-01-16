@@ -10,8 +10,5 @@ one_week_later = today + timedelta(days=7)
 # Format the date in the desired string format
 formatted_date = formatdate(one_week_later.timestamp(), localtime=False)
 
-<<<<<<< HEAD
-print("hello")
-=======
 print("hellllllll")
->>>>>>> f6445d2 (testing ignore it)
+
