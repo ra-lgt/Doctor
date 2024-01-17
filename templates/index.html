@@ -39,8 +39,7 @@
 <body>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <a onclick="send_message()" class="float" target="_blank">
-<div class="semicircle-text glowing-text">Message me ✉️</div>
-<i class="fa fa-whatsapp my-float"></i>
+<img src="{{url_for('static',filename='images/whatsapp.png')}}">
 </a>
 <script>
     function send_message(){
@@ -117,16 +116,13 @@
   
     .float{
         position:fixed;
-        width:60px;
+        width:7%;
         height:60px;
         bottom:40px;
-        right:40px;
-        background-color:#25d366;
+        right:0%;
         color:#FFF;
         border-radius:50px;
-        text-align:center;
-      font-size:30px;
-        box-shadow: 2px 2px 3px #999;
+
       z-index:100;
     }
     
@@ -211,7 +207,7 @@ a,button{
 .navbar.sticky {
   position: fixed;
   z-index: 40;
-  background-color: rgba(158,203,236,255);
+  background-color: rgb(20 165 255)
 }
 .navbar.sticky ~ main {
   position: relative;
@@ -307,7 +303,7 @@ a,button{
   .navbar.sticky {
     position: fixed;
     z-index: 40;
-    background-color: rgba(158,203,236,255);
+    background-color: rgb(20 165 255)
   }
 }
 </style>
@@ -751,14 +747,14 @@ window.addEventListener('scroll',(e)=>{
                                 <h1 style="color: white;">50K+</h1>
                                 <h5> <i class="fas fa-user"></i> Patients Examined</h5>
                                 <p  style="color: white;">With over 50,000 patients examined, our commitment to eye care is a testament to our experience and dedication to your vision health.
-                                aliqua.</p>
+                                </p>
                             </div>
                             <div class="single-satisfied mb-50">
                                 <h1  style="color: white;">30K+</h1>
                                 <h5><i class="far fa-thumbs-up"></i> Patient Treated</h5>
                                 <p  style="color: white;">
                                   Having treated over 30,000 patients, our commitment to compassionate care and effective solutions underscores our reputation as a trusted destination for your health and well-being.
-                                aliqua.</p>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -813,7 +809,7 @@ window.addEventListener('scroll',(e)=>{
             </div>
         </section>
 
-         <div class="testimonials-area pt-115 pb-120">
+         <div class="testimonials-area pt-115 pb-120" style="margin-top:10%">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1 col-md-10 offset-md-1">
@@ -1087,7 +1083,6 @@ window.addEventListener('scroll',(e)=>{
 h1, h2, h3, h4, h5, h6 {
 }
 section {
-    padding: 60px 0;
     min-height: 100vh;
 }
 a, a:hover, a:focus, a:active {
