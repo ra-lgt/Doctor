@@ -2993,7 +2993,9 @@ input.main-search-input:-ms-input-placeholder {
 	position: absolute;
 
 	content: "";
-	background-color: #13232f;
+/*	background-color: #13232f;*/
+background-image: url(../images/temp.jpg);
+	background-color: white;
 
 	width: 100%;
 
