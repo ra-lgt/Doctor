@@ -400,7 +400,7 @@ window.addEventListener('scroll',(e)=>{
                                         <div class="hero-slider-caption ">
                                            <img src="{{url_for('static',filename='images/Ayushman_Bharat_logo.png')}}"height=100px width=100px style="margin-bottom:4%;margin-left:23%;">
                                             <p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">आयुष्मान भारत योजना </p>
-                                            <p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">एवं</p>
+                                            <p class="hindi" id="hindi-text"data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;padding-left:30%;">एवं</p>
 
 <p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">पंडित दीनदयाल उपाध्याय राज्य</p>
 <p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">कर्मचारी योजना के कार्ड धारकों का</p>
@@ -710,7 +710,8 @@ window.addEventListener('scroll',(e)=>{
               position: unset;
             }
             .hindi{
-              font-size: 20px;
+              font-size: 16px;
+              text-align:left;
 
             }
             .single-slider {
@@ -719,6 +720,28 @@ window.addEventListener('scroll',(e)=>{
               height: 2vh;
               
           }
+        }
+        @media (max-width: 767px){
+    .hero-slider-caption h1 {
+        font-size: 30px;
+       }
+}
+@media (max-width: 767px){
+    .btn-icon{
+            padding-left: 60px;
+    padding-right: 20px;
+    }
+}
+
+        @media (max-width: 767px){
+          .slider-height {
+          min-height:500px;
+              }
+          }
+         @media (max-width: 767px) {
+            #hindi-text{
+                padding-right:10%;
+            }
         }
           @media (max-width: 767px) {
             .gallery-box h2 {
