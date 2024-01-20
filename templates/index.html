@@ -469,7 +469,7 @@ window.addEventListener('scroll',(e)=>{
 
                                 </div>
                                 <div class="author-desination">
-                                    <a href="{{ url_for('doctor_profile') }}"><h4>DR. RAHUL BHARDWAJ </h4></a>
+                                    <a href="{{ url_for('doctor_profile') }}"><h4 id="doc">DR. RAHUL BHARDWAJ </h4></a>
                                     <h6>founder</h6>
                                 </div>
                             </div>
@@ -482,6 +482,10 @@ window.addEventListener('scroll',(e)=>{
           .hero-area{
             padding-top: 0;
           }
+          #doc:hover {
+            color: #E12454;
+          }
+          
             .rounded-image {
                 border-radius: 50%;
                 width: 50px; /* Adjust the size as needed */
@@ -838,7 +842,7 @@ window.addEventListener('scroll',(e)=>{
             </div>
         </section>
 
-         <div class="testimonials-area pt-115 pb-120" style="margin-top:10%">
+         <div class="testimonials-area pt-115 pb-120" style="margin-top:10%;padding-top: 0px;padding-bottom: 0px;">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1 col-md-10 offset-md-1">
@@ -1058,7 +1062,7 @@ window.addEventListener('scroll',(e)=>{
                                 <li><a href="https://www.facebook.com/profile.php?id=100095115407532&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                 
-                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="https://sitapurnethralaya.com"><i class="fab fa-google-plus-g"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -1096,7 +1100,9 @@ window.addEventListener('scroll',(e)=>{
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 column">
+                <div class="col-lg-6 col-md-6 col-sm-12 column" style="Display:flex;">
+                  <h4 style="color: white; margin-top:3%">Designed and Developed by</h4>
+                  <img src="{{url_for('static',filename='images/zensync.png')}}" width="30%" height="130%" style="margin-left: 10%;"/>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 column">
                     <ul class="footer-nav">
