@@ -43,14 +43,8 @@
 <img src="{{url_for('static',filename='images/whatsapp.png')}}">
 </a>
 <script>
-  // Push a new state and change the URL
-history.pushState(null, null, 'https://sitapurnethralaya.com/');
 
-// Listen for changes to the address bar
-window.onpopstate = function(event) {
-    // Handle changes to the address bar if needed
-    console.log('Address bar changed:', event.state);
-};
+
     function send_message(){
         let message=`Hi Dr. Rahul Bhardwaj,
 
