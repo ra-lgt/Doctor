@@ -391,7 +391,7 @@ def retina_injection():
 
 def mail_to_doctor(data,templates,subject):
     try:
-        email="raviajay9344@gmail.com"
+        email="sitapurnethralaya@gmail.com"
         env = Environment(loader=FileSystemLoader('./templates'))
         template_vars = {'data': data}
         template = env.get_template(templates)
