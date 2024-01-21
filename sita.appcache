@@ -1,0 +1,11 @@
+CACHE MANIFEST
+# Version 1.0
+
+CACHE:
+/templates/*
+/static/css/*
+/static/js/*
+/static/images/*
+
+NETWORK:
+*
