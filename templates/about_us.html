@@ -1,0 +1,910 @@
+
+<!doctype html>
+<html class="no-js" lang="en" manifest="../sita.appcache">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="max-age=3600, public">
+    <meta http-equiv="Expires" content="{{date}}">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sitapur Nethralaya | About Us</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='images/Logo.png')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <!-- Place favicon.png in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/meanmenu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/slick.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/default.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/responsive.css')}}">
+</head>
+<style>
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .float {
+    animation: floatAnimation 2s infinite;
+  }
+  
+  /* Add styles for the icon */
+  .my-float {
+    font-size: 24px;
+    color: #fff;
+    /* Add other styles as needed */
+  }
+  
+    .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+      font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+      z-index:100;
+    }
+    
+    .my-float{
+        margin-top:16px;
+    }
+</style>
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Nunito|Lacquer");
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  background:linear-gradient(to right, rgba(255,0,0,0), rgba(158,203,236,255));
+  color: #fff;
+  width: 100%;
+  display: flex;
+  height:80px;
+  align-items: center;
+  padding-top: 0px;
+}
+
+.navbar .logo {
+  cursor: pointer;
+  font-family: Lacquer;
+}
+a,button{
+    color: white;
+}
+
+.navbar ul.links {
+  margin-left: auto;
+  margin-right: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transition: 0.4s ease all, 0s ease background;
+  padding-top: 10px;
+}
+.navbar ul.links li {
+  text-transform: uppercase;
+  padding: 0 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease all, 0s ease margin;
+}
+.navbar ul.links li a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar ul.links li:hover {
+  background: #1985D3;
+  cursor: pointer;
+  border-radius: 25px
+}
+.navbar ul.links li:hover a {
+  color: #080808;
+}
+
+#nav-butt {
+  background: #1985D3;
+  outline: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid #223645;
+  letter-spacing: 1px;
+}
+#nav-butt:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: white;
+  background: #223645;
+  border-color: black;
+}
+
+.navbar.sticky {
+  position: fixed;
+  z-index: 40;
+  background-color: rgb(20 165 255)
+}
+.navbar.sticky ~ main {
+  position: relative;
+  z-index: 20;
+  top: 65px;
+
+}
+
+@media screen and (max-width: 750px) {
+  .navbar .right {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .toggle {
+    position: absolute;
+    top: 32.5px;
+    right: 20px;
+    z-index: 99;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle > * {
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    margin: 3px 0;
+  }
+
+  .navbar.collapsed .toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+  .navbar.collapsed .toggle .line2 {
+    opacity: 0;
+  }
+  .navbar.collapsed .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .navbar.collapsed .logo {
+    position: absolute;
+    z-index: 44;
+  }
+
+  .navbar .links {
+    position: fixed;
+    background:rgba(158,203,236,255);
+    z-index: 40;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    width: 45vw;
+    height: 100vh;
+  }
+  .navbar .links li:first-child {
+    margin-top: 80px;
+  }
+
+  .navbar.collapsed .links {
+    left: 0;
+  }
+  .navbar.collapsed .links a {
+    color: #fff;
+  }
+  .navbar.collapsed .links li {
+    width: 100%;
+  }
+  .navbar.collapsed .links li:hover a {
+    color: #080808;
+  }
+
+  .navbar.collapsed .right {
+    position: fixed;
+    width: 45vw;
+    text-align: center;
+    height: auto;
+    bottom: 40px;
+    left: 22.5vw;
+    transform: translateX(-50%);
+    z-index: 45;
+  }
+
+  .navbar.collapsed ~ main {
+    filter: blur(1px);
+    opacity: 0.8;
+  }
+
+  .navbar.sticky {
+    position: fixed;
+    z-index: 40;
+    background-color: rgb(20 165 255);
+  }
+}
+</style>
+
+    <!-- header begin -->
+      <header>
+
+        <!-- menu-area -->
+        <div class="navbar">
+  
+  <div class="logo">
+    <img src="{{url_for('static',filename='images/Logo.png')}}" height=65px style="padding-top:0px;">
+  </div>
+  
+  
+  <ul class="links">
+    <li><a href="{{url_for('Home')}}">Home</a></li>
+    <li><a href="{{url_for('about')}}">About</a></li>
+    <li><a href="{{url_for('gallery')}}">Gallery</a></li>
+    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+  </ul>
+  
+  
+  <div class="right" style="padding-top:10px;">
+    <button id="nav-butt"><a href="{{url_for('appointment')}}">Appointment</a></button>
+  </div>
+  
+  <div class="toggle">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+  
+  
+</div>
+
+    </header>
+    <style>
+        /* Add this CSS to your existing styles */
+        .slide-left {
+          opacity: 0;
+          transform: translateX(-50px);
+          transition: opacity 1s, transform 1s;
+        }
+    
+        .slide-right {
+          opacity: 0;
+          transform: translateX(50px);
+          transition: opacity 1s, transform 3s;
+        }
+    
+        .show {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        @media (max-width: 767px)
+        { .about-right-side {
+    padding-left: 0;
+    padding-top: 200px;
+}}
+@media (max-width: 767px){
+ .logo img {
+  width:auto;
+}
+}
+
+      </style>
+       <script>
+  const navbar = document.querySelector('.navbar')
+
+navbar.querySelector('.toggle').addEventListener('click',()=>{
+  
+  navbar.classList.toggle('collapsed')
+  
+})
+
+
+
+window.addEventListener('scroll',(e)=>{
+  
+  let windowY = window.pageYOffset
+  
+  let navbarHeight = document.querySelector('.navbar').offsetHeight
+  
+  if(windowY>navbarHeight) navbar.classList.add('sticky')
+  else navbar.classList.remove('sticky')  
+  
+})
+</script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // Get the elements to be animated
+          const leftElement = document.querySelector('.col-xl-6.col-lg-5');
+          const rightElement = document.querySelector('.col-xl-6.col-lg-7');
+    
+          // Function to handle the animation
+          function handleAnimation() {
+            const windowHeight = window.innerHeight;
+            const leftElementTop = leftElement.getBoundingClientRect().top;
+            const rightElementTop = rightElement.getBoundingClientRect().top;
+    
+            // Check if the elements are in the viewport
+            if (leftElementTop < windowHeight && leftElementTop > 0) {
+              leftElement.classList.add('show');
+            }
+    
+            if (rightElementTop < windowHeight && rightElementTop > 0) {
+              rightElement.classList.add('show');
+            }
+          }
+    
+          // Add scroll event listener to trigger the animation
+          document.addEventListener('scroll', handleAnimation);
+    
+          // Initial check in case elements are already in the viewport
+          handleAnimation();
+        });
+      </script>
+      <style>
+        /* Add this CSS to your existing styles */
+        .col-xl-4.col-lg-4.col-md-6 {
+          opacity: 0;
+          transform: translateX(50px);
+          transition: opacity 4s, transform 4s;
+        }
+    
+        .col-xl-4.col-lg-4.col-md-6.visible {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      </style>
+    
+      <!-- Your existing HTML code -->
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // Get all team box containers
+          const teamBoxes = document.querySelectorAll('.col-xl-4.col-lg-4.col-md-6');
+    
+          // Function to handle the animation
+          function handleAnimation() {
+            teamBoxes.forEach((box, index) => {
+              const boxTop = box.getBoundingClientRect().top;
+              const windowHeight = window.innerHeight;
+    
+              // Check if the box is in the viewport
+              if (boxTop < windowHeight) {
+                // Introduce a delay based on the index
+                setTimeout(() => {
+                  box.classList.add('visible');
+                }, index * 1000); // Adjust the delay (in milliseconds) as needed
+              }
+            });
+          }
+    
+          // Add scroll event listener to trigger the animation
+          document.addEventListener('scroll', handleAnimation);
+    
+          // Initial check in case boxes are already in the viewport
+          handleAnimation();
+        });
+      </script>
+    <!-- header end -->
+    <style>
+
+    </style>
+
+    <main>
+        <!-- hero-area start -->
+        <section class="breadcrumb-bg pt-200 pb-180" data-background="{{url_for('static',filename='images/navbar_1.png')}}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9">
+                        <div class="page-title">
+                            <p class="small-text pb-15">We Are Here For Your Eye Care.</p>
+                            <h1>About Us</h1>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- hero-area end -->
+        <!-- about-area start -->
+        <section class="about-area pt-120 pb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-5 slide-right">
+                        <div class="about-left-side pos-rel mb-30">
+                            
+                            <div class="about-shape">
+                                <img src="{{url_for('static',filename='images/our_team_2.jpeg')}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-7 slide-left">
+                        <div class="about-right-side pt-55 mb-30">
+                            <div class="about-title mb-20">
+                                <h5>About Us</h5>
+                                <h1>Short Story About SitapurNethralaya</h1>
+                            </div>
+                            <div class="about-text mb-50">
+                                <p>we are dedicated to providing comprehensive eye care with a focus on personalized attention and cutting-edge treatments. Led by the expertise of Dr. Rahul Bhardwaj MBBS, M.S.  our team is committed to enhancing and preserving your vision through state-of-the-art technology and compassionate care</p>
+                            </div>
+                            <div class="our-destination">
+                                <div class="single-item mb-30">
+                                    <div class="mv-icon f-left">
+                                        <img src="{{url_for('static',filename='images/destination-icon-1.png')}}" alt="">
+                                    </div>
+                                    <div class="mv-title fix">
+                                        <h3>Our Mission</h3>
+                                        <p>At the heart of our practice is a commitment to delivering exceptional eye care tailored to the unique needs of each patient. We strive to combine medical excellence with a warm and welcoming environment, ensuring our patients feel confident and comfortable throughout their eye care journey</p>
+                                    </div>
+                                </div>
+                                <div class="single-item">
+                                    <div class="mv-icon f-left">
+                                        <img src="{{url_for('static',filename='images/destination-icon-2.png')}}" alt="">
+                                    </div>
+                                    <div class="mv-title fix">
+                                        <h3>Our Vission</h3>
+                                        <p>At SitapurNethralaya, we aim to lead in eye care with top-notch service and the latest technology. Our goal is to make a real difference in people's lives by providing excellent care, contributing to global research, and reaching out to communities in need. We want to be the go-to place for clear vision and a brighter future.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-area end -->
+        <!-- Counter Section Satrt -->
+        <section class="counter-wraper pt-120 pb-90 gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-couter mb-30">
+                            <div class="counter-text-box">
+                                <h1><span class="counter">15000</span>+</h1>
+                                <h3>Total Eye Examinations</h3>
+                                <p>With a rich history of conducting over 15,000 comprehensive eye examinations, our expertise in vision care is unparalleled. Our commitment to precision and personalized service ensures that each eye examination is a testament to our unwavering dedication </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-couter mb-30">
+                            <div class="counter-text-box">
+                                <h1><span class="counter">3000</span>+</h1>
+                                <h3>Cataract Screening</h3>
+                                <p>Having conducted over 3,000 meticulous cataract screenings, our practice stands as a beacon of expertise in ocular health. This extensive experience underscores our unwavering commitment to early detection and proactive management</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-couter mb-30">
+                            <div class="counter-text-box">
+                                <h1><span class="counter">1000</span>+</h1>
+                                <h3>Ayushman Bharat Screening</h3>
+                                <p>Having screened over 1,000 patients under the Ayushman Bharat initiative, we proudly contribute to the government's vision of accessible healthcare for all. Our dedicated efforts in patient screening exemplify our commitment to advancing public health </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Counter Section end -->
+        <!-- appoinment Section end -->
+        <section class="appoinment-section pt-120 pb-120" data-background="{{url_for('static',filename='images/appointment.jpeg')}}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="appoinment-box white">
+                            <div class="appoinment-content">
+                                <span class="small-text">Our Approch</span>
+                                <h1>If you are a patient seeking quality.</h1>
+                                <p>to Sitapur Nethralaya is dedicated to providing a comprehensive approach to eye health. Our standard of care encompasses thorough eye examinations to detect and address issues early, specialized treatments for various eye conditions, on-site optical services offering precise prescriptions and stylish eyewear solutions, and a commitment to patient education for proactive preventive care. With a focus on leveraging advanced technology and delivering personalized attention, we strive to be a trusted partner in maintaining and enhancing the vision of our community.</p>
+                                <ul class="professinals-list pt-30">
+                                    <li>
+                                        <i class="fa fa-check"></i>
+                                        Comprehensive Eye Examinations
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i>
+                                        Specialized Treatment and Surgical Interventions
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i>
+                                        Optical Services and Eyewear Solutions
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-check"></i>
+                                        Patient Education and Preventive Care
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="{{url_for('appointment')}}" style="background-color: #1985D3;" class="btn mt-40">make appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <style>
+            /* Add this CSS to your existing styles */
+            .appoinment-box {
+              opacity: 0;
+              transform: translateX(100%);
+              transition: opacity 4s, transform 4s;
+            }
+          
+            .appoinment-box.active {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          </style>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Get the appoinment-box element
+              const appoinmentBox = document.querySelector('.appoinment-box');
+          
+              // Function to handle the animation
+              function handleAnimation() {
+                const appoinmentBoxTop = appoinmentBox.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+          
+                // Check if the appoinment-box is in the viewport
+                if (appoinmentBoxTop < windowHeight) {
+                  appoinmentBox.classList.add('active');
+                }
+              }
+          
+              // Add scroll event listener to trigger the animation
+              document.addEventListener('scroll', handleAnimation);
+          
+              // Initial check in case appoinment-box is already in the viewport
+              handleAnimation();
+            });
+          </script>
+                    
+                    
+        <!-- appoinment Section End -->
+        <!-- team-area start -->
+
+        
+        <!-- analysis-area end -->
+    </main>
+
+    <!-- footer start -->
+     
+<footer class="footer-section">
+  <div class="container">
+      <div class="footer-cta pt-5 pb-5" style="margin-left: 8%;">
+          <div class="row">
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <div class="cta-text">
+                          <h4>Find us</h4>
+                            <span>318 VIJAY LAXMI NAGAR ,<br>NEAR PUNJABI DHARAMSHALA,<br>SITAPUR,UTTAR PRADESH - 261001</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-phone"></i>
+                      <div class="cta-text">
+                          <h4>Call us</h4>
+                          <span>+91 9044304604</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="far fa-envelope-open"></i>
+                      <div class="cta-text">
+                          <h4>Mail us</h4>
+                          <span>sitapurnethralay@gmail.com</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+          <div class="row">
+              <div class="col-xl-4 col-lg-4 mb-50" style="margin-bottom: 0;">
+                  <div class="footer-widget">
+                      <div class="footer-logo">
+                          <a href="index.html"><img src="{{url_for('static',filename='images/footer_bg.png')}}" alt=""></a>
+                      </div>
+                      <div class="footer-text">
+                          <p>We are dedicated to providing comprehensive eye care with a focus on personalized attention and cutting-edge treatments. Led by the expertise of Dr. Rahul Bhardwaj MBBS, M.S.  our team is committed to enhancing and preserving your vision through state-of-the-art technology and compassionate care.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Useful Links</h3>
+                      </div>
+                      <ul class="foot">
+                          <li><a href="{{url_for('Home')}}">Home</a></li>
+                          <li><a href="{{url_for('about')}}">About Us</a></li>
+                          <li><a href="{{url_for('gallery')}}">Gallery</a></li>
+                          <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                          <li><a href="{{url_for('appointment')}}">Appointment</a></li>
+
+                      </ul>
+                       <div class="footer-widget-heading" style="margin-top:50%;">
+                          <h3>Working Hours</h3>
+                      </div>
+                      <ul class="foot">
+                          <li>Monday to Saturday</li><br>
+                          <li style="margin-right:10%;">9:00AM - 6:00PM</li>
+
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Services</h3>
+                          <ul class="foot">
+                            <li><a href="{{url_for('cataract_surgery')}}">Cataract Surgery</a></li>
+                            <li><a href="{{url_for('squint_surgery')}}">Squint Surgery</a></li>
+                            <li><a href="{{url_for('galucoma_surgery')}}">Galucoma Surgery</a></li>
+                            <li><a href="{{url_for('refractive_surgery')}}">Refractive Surgrey</a></li>
+                            <li><a href="{{url_for('corneal_surgery')}}">Corneal Surgery</a></li>
+                            <li><a href="{{url_for('retina_injection')}}">Retina Injection</a></li>
+                     </ul>
+                      </div>
+                       <div class="footer-social-icon" style="margin-top:50%;">
+                          <span>Follow us</span>
+                          <a href="https://www.facebook.com/profile.php?id=100095115407532&mibextid=ZbWKwL"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                          <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                          <a href="https://sitapurnethralaya.com"><i class="fab fa-google-plus-g google-bg"></i></a>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</footer>
+
+<style>
+  .foot {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #13232f;
+  position: relative;
+}
+.footer-content:before{
+  position: absolute;
+  content: '';
+  background: url(https://i.ibb.co/jyRLrBZ/world-map.png);
+  width: 744px;
+  height: 365px;
+  top: 50px;
+  right: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation-name: float-bob;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: float-bob;
+  -webkit-animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: float-bob;
+  -moz-animation-duration: 30s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: float-bob;
+  -ms-animation-duration: 30s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-animation-name: float-bob;
+  -o-animation-duration: 30s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #E12454;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #E12454;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #E12454;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #E12454;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+</style>
+    <!-- footer end -->
+
+    <!-- JS here -->
+    <script src="{{url_for('static',filename='js/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/one-page-nav-min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/slick.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/ajax-form.js')}}"></script>
+    <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.scrollUp.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.meanmenu.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.counterup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/waypoints.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/plugins.js')}}"></script>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+</body>
+
+</html>

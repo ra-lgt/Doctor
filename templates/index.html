@@ -1,0 +1,1322 @@
+
+<!doctype html>
+<html  lang="en" manifest="../sita.appcache">
+<head>
+    <meta charset="utf-8">
+    
+    <meta http-equiv="Cache-Control" content="max-age=3600, public">
+    <meta http-equiv="Expires" content="{{date}}">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='images/Logo.png')}}">
+    <!-- Place favicon.png in the root directory -->
+<!-- Add these to include Bootstrap and jQuery -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- CSS here -->
+    <title>Sitapur Nethralaya | Eye Care Hospital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/meanmenu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/slick.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/default.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/responsive.css')}}">
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a onclick="send_message()" class="float" target="_blank">
+<img src="{{url_for('static',filename='images/whatsapp.png')}}">
+</a>
+<script>
+
+
+    function send_message(){
+        let message=`Hi Dr. Rahul Bhardwaj,
+
+        I hope this message finds you well. My name is [Your Name] and I am currently experiencing some concerns related to my eyesight. I would like to schedule a consultation with you to discuss my symptoms and seek your professional advice.
+        
+        Could you please let me know the available time slots for a consultation? Additionally, if you require any specific information or details beforehand, feel free to ask.
+        
+        Looking forward to your guidance and expertise.`
+
+        let whatsapp="https://api.whatsapp.com/send?phone=+918004489931&text="+encodeURIComponent(message)
+        window.location.href=whatsapp
+    }
+</script>
+<style>
+  @media (max-width: 767px){
+ .logo img {
+  width:auto;
+}
+}
+  .glowing-text {
+    font-size: 2em;
+    color: #350402; /* Set text color to dark blue */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 120, 212, 0.8), 0 0 20px rgba(0, 120, 212, 0.6), 0 0 30px rgba(0, 120, 212, 0.4);
+    animation: glow 1.5s infinite alternate;
+  }
+
+  @keyframes glow {
+    to {
+      text-shadow: 0 0 20px rgba(0, 120, 212, 0.8), 0 0 30px rgba(0, 120, 212, 0.6), 0 0 40px rgba(0, 120, 212, 0.4);
+    }
+  }
+     .semicircle-text {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400%;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      margin-bottom: 5%;
+      color: #030563c2;
+      font-size: 16px;
+    }
+
+
+
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .float {
+    animation: floatAnimation 2s infinite;
+  }
+  
+  /* Add styles for the icon */
+  .my-float {
+    font-size: 24px;
+    color: #fff;
+    /* Add other styles as needed */
+  }
+  
+    .float{
+        position:fixed;
+        width:7%;
+        height:60px;
+        bottom:40px;
+        right:0%;
+        color:#FFF;
+        border-radius:50px;
+
+      z-index:100;
+    }
+    
+    .my-float{
+        margin-top:16px;
+    }
+</style>
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Nunito|Lacquer");
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  background:linear-gradient(to right, rgba(255,0,0,0), rgba(158,203,236,255));
+  color: #fff;
+  width: 100%;
+  display: flex;
+  height:80px;
+  align-items: center;
+  padding-top: 0px;
+}
+
+.navbar .logo {
+  cursor: pointer;
+  font-family: Lacquer;
+}
+a,button{
+    color: white;
+}
+
+.navbar ul.links {
+  margin-left: auto;
+  margin-right: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transition: 0.4s ease all, 0s ease background;
+  padding-top: 10px;
+}
+.navbar ul.links li {
+  text-transform: uppercase;
+  padding: 0 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease all, 0s ease margin;
+}
+.navbar ul.links li a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar ul.links li:hover {
+  background: #1985D3;
+  cursor: pointer;
+  border-radius: 25px
+}
+.navbar ul.links li:hover a {
+  color: #080808;
+}
+
+#nav-butt {
+  background: #1985D3;
+  outline: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid #223645;
+  letter-spacing: 1px;
+}
+#nav-butt:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: white;
+  background: #223645;
+  border-color: black;
+}
+
+.navbar.sticky {
+  position: fixed;
+  z-index: 40;
+  background-color: rgb(20 165 255)
+}
+.navbar.sticky ~ main {
+  position: relative;
+  z-index: 20;
+  top: 65px;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar .right {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .toggle {
+    position: absolute;
+    top: 32.5px;
+    right: 20px;
+    z-index: 99;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle > * {
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    margin: 3px 0;
+  }
+
+  .navbar.collapsed .toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+  .navbar.collapsed .toggle .line2 {
+    opacity: 0;
+  }
+  .navbar.collapsed .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .navbar.collapsed .logo {
+    position: absolute;
+    z-index: 44;
+  }
+
+  .navbar .links {
+    position: fixed;
+    background:rgba(158,203,236,255);
+    z-index: 40;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    width: 45vw;
+    height: 100vh;
+  }
+  .navbar .links li:first-child {
+    margin-top: 80px;
+  }
+
+  .navbar.collapsed .links {
+    left: 0;
+  }
+  .navbar.collapsed .links a {
+    color: #fff;
+  }
+  .navbar.collapsed .links li {
+    width: 100%;
+  }
+  .navbar.collapsed .links li:hover a {
+    color: #080808;
+  }
+
+  .navbar.collapsed .right {
+    position: fixed;
+    width: 45vw;
+    text-align: center;
+    height: auto;
+    bottom: 40px;
+    left: 22.5vw;
+    transform: translateX(-50%);
+    z-index: 45;
+  }
+
+  .navbar.collapsed ~ main {
+    filter: blur(1px);
+    opacity: 0.8;
+  }
+
+  .navbar.sticky {
+    position: fixed;
+    z-index: 40;
+    background-color: rgb(20 165 255)
+  }
+}
+</style>
+
+    <!-- header begin -->
+      <header>
+
+        <!-- menu-area -->
+        <div class="navbar">
+  
+  <div class="logo">
+    <img src="{{url_for('static',filename='images/Logo.png')}}" height=65px style="padding-top:0px;">
+  </div>
+  
+  
+  <ul class="links">
+    <li><a href="{{url_for('Home')}}">Home</a></li>
+    <li><a href="{{url_for('about')}}">About</a></li>
+    <li><a href="{{url_for('gallery')}}">Gallery</a></li>
+    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+  </ul>
+  
+  
+  <div class="right" style="padding-top:10px;">
+    <button id="nav-butt"><a href="{{url_for('appointment')}}">Appointment</a></button>
+  </div>
+  
+  <div class="toggle">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+  
+  
+</div>
+
+       
+    </header>
+    <script>
+  const navbar = document.querySelector('.navbar')
+
+navbar.querySelector('.toggle').addEventListener('click',()=>{
+  
+  navbar.classList.toggle('collapsed')
+  
+})
+
+
+
+window.addEventListener('scroll',(e)=>{
+  
+  let windowY = window.pageYOffset
+  
+  let navbarHeight = document.querySelector('.navbar').offsetHeight
+  
+  if(windowY>navbarHeight) navbar.classList.add('sticky')
+  else navbar.classList.remove('sticky')  
+  
+})
+
+</script>
+
+
+    <!-- header end -->
+
+    <main>
+        <!-- hero-area start -->
+        <section class="hero-area">
+            <div class="hero-slider">
+                <div class="slider-active">
+                    <div class="single-slider slider-height d-flex align-items-center" data-background="{{url_for('static',filename='images/slider-bg-1.jpeg')}}">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-8 col-md-10">
+                                    <div class="hero-text">
+                                        <div class="hero-slider-caption ">
+                                            <h5 data-animation="fadeInUp" data-delay=".2s">We are here for your eye care.</h5>
+                                            <h1 data-animation="fadeInUp" data-delay=".4s">Eye Care Excellence</h1>
+                                            <p data-animation="fadeInUp" data-delay=".6s">Vision perfected, smiles restored. Welcome to SitapurNethralaya, where precision meets care. See the world clearly with our expert team and cutting-edge technology.</p>
+                                        </div>
+                                        <div class="hero-slider-btn">
+                                            <a data-animation="fadeInLeft" data-delay=".6s" href="{{url_for('appointment')}}" class="btn btn-icon ml-0"><span>+</span>Make Appointment</a>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-slider slider-height d-flex align-items-center" style="background-repeat: no-repeat;" data-background="{{url_for('static',filename='images/modi_1.jpeg')}}">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-8 col-md-10">
+                                    <div class="hero-text">
+                                        <div class="hero-slider-caption ">
+                                           <img src="{{url_for('static',filename='images/Ayushman_Bharat_logo.png')}}"height=100px width=100px style="margin-bottom:4%;margin-left:23%;">
+                                            <p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">आयुष्मान भारत योजना </p>
+                                            <p class="hindi" id="hindi-text"data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;padding-left:30%;">एवं</p>
+
+<p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">पंडित दीनदयाल उपाध्याय राज्य</p>
+<p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">कर्मचारी योजना के कार्ड धारकों का</p>
+<p class="hindi" data-animation="fadeInUp" data-delay=".4s" style="color:#1985D3;font-weight: bold;">नि:शुल्क इलाज।</p>
+
+
+                                            
+                                        </div>
+                                        <div class="hero-slider-btn">
+                                            <a data-animation="fadeInLeft" data-delay=".6s" href="{{url_for('appointment')}}" class="btn btn-icon ml-0"><span>+</span>Make Appointment</a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var slider=document.getElementsByClassName('slick-next')[0]
+      console.log("hello",slider)
+       setInterval(()=>{
+        slider.click()
+
+       },10000);
+     });
+</script>
+
+        <!-- hero-area end -->
+        <!-- about-area start -->
+        <section class="about-area pt-120 pb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-5 slide-right">
+                        <div class="medical-icon-brand-2">
+                            
+                        </div>
+                        <div class="about-left-side pos-rel mb-30">
+                            <div class="about-front-img">
+                                <img src="{{url_for('static',filename='images/rahul.png')}}" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-7 slide-left">
+                        <div class="about-right-side pt-55 mb-30">
+                            <div class="about-title mb-20">
+                                <h5>Short Story</h5>
+                                <h2>About Sitapur Nethralaya</h2>
+                            </div>
+                            <div class="about-text">
+                                <p>We are dedicated to providing comprehensive eye care with a focus on personalized attention and cutting-edge treatments. Led by the expertise of Dr. Rahul Bhardwaj MBBS, M.S.  our team is committed to enhancing and preserving your vision through state-of-the-art technology and compassionate care.</p>
+                                <p>At the heart of our practice is a commitment to delivering exceptional eye care tailored to the unique needs of each patient. We strive to combine medical excellence with a warm and welcoming environment, ensuring our patients feel confident and comfortable throughout their eye care journey.</p><br>
+                            </div>
+                            <div class="about-author d-flex align-items-center">
+                                <div class="author-ava">
+                 <a href="{{ url_for('doctor_profile') }}">
+    <img class="rounded-image" src="{{ url_for('static', filename='images/rahul_profile.jpeg') }}" alt="Doctor Profile">
+</a>
+
+                                </div>
+                                <div class="author-desination">
+                                    <a href="{{ url_for('doctor_profile') }}"><h4 id="doc">DR. RAHUL BHARDWAJ </h4></a>
+                                    <h6>founder</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+          .hero-area{
+            padding-top: 0;
+          }
+          #doc:hover {
+            color: #E12454;
+          }
+          
+            .rounded-image {
+                border-radius: 50%;
+                width: 50px; /* Adjust the size as needed */
+                height: 50px; /* Adjust the size as needed */
+              }
+              .rounded-image_care {
+                border-radius: 50%;
+                width: 300px; /* Adjust the size as needed */
+                height:300px; /* Adjust the size as needed */
+              }
+            /* Add this CSS to your existing styles */
+            .slide-left {
+              opacity: 0;
+              transform: translateX(-50px);
+              transition: opacity 1s, transform 1s;
+            }
+        
+            .slide-right {
+              opacity: 0;
+              transform: translateX(50px);
+              transition: opacity 1s, transform 3s;
+            }
+        
+            .show {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          </style>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Get the elements to be animated
+              const leftElement = document.querySelector('.col-xl-6.col-lg-5');
+              const rightElement = document.querySelector('.col-xl-6.col-lg-7');
+        
+              // Function to handle the animation
+              function handleAnimation() {
+                const windowHeight = window.innerHeight;
+                const leftElementTop = leftElement.getBoundingClientRect().top;
+                const rightElementTop = rightElement.getBoundingClientRect().top;
+        
+                // Check if the elements are in the viewport
+                if (leftElementTop < windowHeight && leftElementTop > 0) {
+                  leftElement.classList.add('show');
+                }
+        
+                if (rightElementTop < windowHeight && rightElementTop > 0) {
+                  rightElement.classList.add('show');
+                }
+              }
+        
+              // Add scroll event listener to trigger the animation
+              document.addEventListener('scroll', handleAnimation);
+        
+              // Initial check in case elements are already in the viewport
+              handleAnimation();
+            });
+          </script>
+        <!-- about-area end -->
+        <!-- services-area start -->
+        <section class="servcies-area gray-bg pt-115 pb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-8 col-md-12">
+                        <div class="section-title pos-rel mb-75">
+
+                            <div class="section-text pos-rel">
+                                <h5>Services</h5>
+                                <h1>Managed Your Heathcare Services</h1>
+                            </div>
+                            <div class="section-line pos-rel">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="service-box-3 mb-30 text-center">
+                            <div class="service-thumb">
+                                <a href="{{url_for('cataract_surgery')}}"><img src="{{url_for('static',filename='images/temp_2.png')}}" width="200%" height="200%" alt=""></a>
+                            </div>
+                            <div class="service-content-box">
+                                <div class="service-content">
+                                    <h3><a href="{{url_for('cataract_surgery')}}">Cataract Surgery</a></h3>
+                                <p>Experience Clear Vision Transformation with Our Expert Team: Leading the Way in Cataract Surgery </p>
+                                
+                                </div>
+                                <a href="{{url_for('cataract_surgery')}}" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="service-box-3 mb-30 text-center">
+                            <div class="service-thumb">
+                                <a href="{{url_for('squint_surgery')}}"><img src="{{url_for('static',filename='images/squirnt_surgery.png')}}" alt=""></a>
+                            </div>
+                            <div class="service-content-box">
+                                <div class="service-content">
+                                    <h3><a href="{{url_for('squint_surgery')}}">Squint Surgery</a></h3>
+                                <p>Clearing the Way for Confidence: Expert Squint Surgery at SitapurNethralaya. Trust Us for Precise and Friendly Care.</p>
+                                
+                                </div>
+                                <a href="{{url_for('squint_surgery')}}" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="service-box-3 mb-30 text-center">
+                            <div class="service-thumb">
+                                <a href="{{url_for('galucoma_surgery')}}"><img src="{{url_for('static',filename='images/galucoma_surgery.png')}}"></a>
+                            </div>
+                            <div class="service-content-box">
+                                <div class="service-content">
+                                    <h3><a href="{{url_for('galucoma_surgery')}}">Glaucoma Surgery</a></h3>
+                                <p>Restoring Vision Expert Glaucoma Surgery at SitapurNethralaya.Discover Clear Paths to Better Eye Health</p>
+                               
+                                </div>
+                                <a href="{{url_for('galucoma_surgery')}}" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="service-box-3 mb-30 text-center">
+                            <div class="service-thumb">
+                                <a href="{{url_for('corneal_surgery')}}"><img src="{{url_for('static',filename='images/corneal.png')}}" alt=""></a>
+                            </div>
+                            <div class="service-content-box">
+                                <div class="service-content">
+                                    <h3><a href="{{url_for('corneal_surgery')}}">Corneal Surgery</a></h3>
+                                    <p>Precision in Every Layer: Specialized Corneal Surgery at SitapurNethralaya Elevate Your Vision with Expertise </p>
+                                    
+                                </div>
+                                <a href="{{url_for('corneal_surgery')}}" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="service-box-3 mb-30 text-center">
+                            <div class="service-thumb">
+                                <a href="{{url_for('refractive_surgery')}}"><img src="{{url_for('static',filename='images/refractive_surgery.png')}}" alt=""></a>
+                            </div>
+                            <div class="service-content-box">
+                                <div class="service-content">
+                                    <h3><a href="{{url_for('refractive_surgery')}}">Refractive Surgery</a></h3>
+                                    <p>Seize Crystal-Clear Vision Personalized Refractive Surgery at SitapurNethralaya Redefine Your View </p>
+                                    
+                                </div>
+                                <a href="{{url_for('refractive_surgery')}}" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="service-box-3 mb-30 text-center">
+                            <div class="service-thumb">
+                                <a href="{{url_for('retina_injection')}}"><img src="{{url_for('static',filename='images/retina_surgery.png')}}" alt=""></a>
+                            </div>
+                            <div class="service-content-box">
+                                <div class="service-content">
+                                    <h3><a href="{{url_for('retina_injection')}}">Retina Injection</a></h3>
+                                    <p>Preserving Sight One Precise Injection at a Time: Specialized Retina Injections at SitapurNethralaya</p>
+                                    
+                                </div>
+                                <a href="{{url_for('retina_injection')}}" class="service-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <style>
+          .service-box-3{
+
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out; /* Adding a transition for a smoother effect */
+        }
+        
+        .service-box-3:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+          .col-xl-4 {
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 3s, transform 3s;
+          }
+      
+          .col-xl-4.visible {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        </style>
+        
+          <!-- Your existing HTML code -->
+        
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              const serviceContainers = document.querySelectorAll('.col-xl-4');
+          
+              function handleAnimation() {
+                serviceContainers.forEach((container, index) => {
+                  const containerTop = container.getBoundingClientRect().top;
+                  const windowHeight = window.innerHeight;
+          
+                  if (containerTop < windowHeight) {
+                    setTimeout(() => {
+                      container.classList.add('visible');
+                    }, index * 200);
+                  }
+                });
+              }
+          
+              document.addEventListener('scroll', handleAnimation);
+              handleAnimation();
+            });
+          </script>
+          
+        
+        <!-- team-area end -->
+        <!-- fact-area start -->
+        <style>
+          .hindi{
+            font-size: 40px;
+          }
+          @media (max-width: 767px) {
+            .fact-map::before{
+              position: unset;
+            }
+            .float{
+              width: 20%;
+              right: 6%;
+            }
+            .hindi{
+              font-size: 16px;
+              text-align:left;
+
+            }
+            .single-slider {
+              background-size: 100% 100%; /* Adjust the values as needed */
+              background-position: center; /* Center the image */
+              height: 2vh;
+              
+          }
+        }
+        @media (max-width: 767px){
+    .hero-slider-caption h1 {
+        font-size: 30px;
+       }
+}
+@media (max-width: 767px){
+    .btn-icon{
+            padding-left: 60px;
+    padding-right: 20px;
+    }
+}
+
+        @media (max-width: 767px){
+          .slider-height {
+          min-height:500px;
+              }
+          }
+         @media (max-width: 767px) {
+            #hindi-text{
+                padding-right:10%;
+            }
+        }
+          @media (max-width: 767px) {
+            .gallery-box h2 {
+                font-size: 21px;
+            }
+        }
+
+        </style>
+        <section class="fact-area fact-map primary-bg pos-rel pt-115 pb-60">
+            <div class="container" style="margin-top: 6%;">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-10">
+                        <div class="section-title pos-rel mb-45">
+                            <div class="section-text section-text-white pos-rel">
+                             
+                                <h1 class="white-color">We Always Ready For A Challenge.</h1>
+                            </div>
+                        </div>
+                        <div class="section-button section-button-left mb-30">
+                            <a data-animation="fadeInLeft" data-delay=".6s" href="{{url_for('appointment')}}" class="btn btn-icon ml-0"><span>+</span>Make Appointment</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-lg-6 col-md-8">
+                        <div class="cta-satisfied">
+                            <div class="single-satisfied mb-50">
+                                <h1 style="color: white;">50K+</h1>
+                                <h5> <i class="fas fa-user"></i> Patients Examined</h5>
+                                <p  style="color: white;">With over 50,000 patients examined, our commitment to eye care is a testament to our experience and dedication to your vision health.
+                                </p>
+                            </div>
+                            <div class="single-satisfied mb-50">
+                                <h1  style="color: white;">30K+</h1>
+                                <h5><i class="far fa-thumbs-up"></i> Patient Treated</h5>
+                                <p  style="color: white;">
+                                  Having treated over 30,000 patients, our commitment to compassionate care and effective solutions underscores our reputation as a trusted destination for your health and well-being.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="photogallery pt-130 pb-180" style="padding-bottom: 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="about-title mb-65">
+                            <h5 class="pink-color">Photo Gallery</h5>
+                            <h1>Let’s See Latest Photo Album</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h4gallery-active">
+                    <div class="col-lg-6">
+                        <div class="gallery-box pos-rel">
+                            <img src="{{url_for('static',filename='images/home_gallery.jpeg')}}" alt="" style="border-radius:5px">
+                            <div class="gallery-content">
+                                <h2 class="f-600 theme-color" style="border:3px solid #b8e4fb">Our Services</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="gallery-box pos-rel">
+                            <img src="{{url_for('static',filename='images/optical_centre.jpeg')}}" alt="" style="border-radius:5px">
+                            <div class="gallery-content" >
+                                <h2 class="f-600 theme-color" style="border:3px solid #b4b1b1">Optical Counter</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="gallery-box pos-rel">
+                            <img src="{{url_for('static',filename='images/Doctors.png')}}" alt="" style="border-radius:5px">
+                            <div class="gallery-content">
+                                <h2 class="f-600 theme-color" style="border:3px solid #8798bf">Our Team</h2>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-lg-6">
+                        <div class="gallery-box pos-rel">
+                            <img src="{{url_for('static',filename='images/equip_1.png')}}" alt="">
+                            <div class="gallery-content">
+                                <h2 class="f-600 theme-color">Equipments</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <div class="testimonials-area pt-115 pb-120" style="margin-top:10%;padding-top: 0px;padding-bottom: 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1 col-md-10 offset-md-1">
+                        <div class="section-title text-center pos-rel mb-70">
+                            <div class="section-icon">
+                                <img class="section-back-icon" src="{{url_for('static',filename='images/test_icon.png')}}" alt=""> 
+                            </div>
+                            <div class="section-text pos-rel">
+                                <h5>Testimonials</h5>
+                                <h1>Our Happy Patients Says About Us.</h1>
+                            </div>
+                            <div class="section-line pos-rel">
+                                <img src="{{url_for('static',filename='images/line.png')}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="testimonials pt-150 pb-80" data-background="{{url_for('static',filename='images/specs_03.jpeg')}}" style="background-repeat: no-repeat;background-size: cover;">
+            <div class="container" style="margin-right: 0%;">
+                <div class="row">
+                    <div class="col-xl-7 offset-xl-5 h4testi-col">
+                        <div class="row">
+                            <div class="col-md-6 testimonials">
+                                <div class="h4testimonials-wrapper white-bg pos-rel">
+                                    <span class="h4testi-iconquato"><i class="fal fa-quote-right"></i></span>
+                                    <div class="h4testimonials-ratings">
+                                        <ul class="list-inline">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="h4testimonials-content mb-20">
+                                        <p>
+
+                                          ऑपरेशन सुखद और समर्पित था, डॉक्टर की विनम्रता ने घबराहट को दूर किया। अब स्वस्थ और सुरक्षित, जीवन रंगीन है - संवेदनशील और सफल।</p>
+                                    </div>
+                                    <div class="h4testimonials-author d-flex align-items-center">
+                                        <!-- <div class="h4testimonials--author__icon">
+                                            <img src="img/home4/testimonials/author-icon1.png" alt="">
+                                        </div> -->
+                                        <div class="h4testimonials--author__info">
+                                            <h5 class="f-600 theme-color">Mrs.Geeta Singh</h5>
+                                            <span class="f-500 pink-color">Age: 56 <br>Location: Sitapur</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="h4testimonials-wrapper white-bg pos-rel">
+                                    <span class="h4testi-iconquato"><i class="fal fa-quote-right"></i></span>
+                                    <div class="h4testimonials-ratings">
+                                        <ul class="list-inline">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="h4testimonials-content mb-20">
+                                        <p>
+                                          मोतियाबिंद ऑपरेशन ने रात्रि में मुश्किलें दूर की और दूसरे दिन से रोशनी में सुधार किया, डॉक्टर और उनकी टीम का हृदय से आभार।</p>
+                                    </div>
+                                    <div class="h4testimonials-author d-flex align-items-center">
+                                        <!-- <div class="h4testimonials--author__icon">
+                                            <img src="img/home4/testimonials/author-icon2.png" alt="">
+                                        </div> -->
+                                        <div class="h4testimonials--author__info">
+                                            <h5 class="f-600 theme-color">Mr.Sanjay Maurya</h5>
+                                            <span class="f-500 pink-color">Age: 65<br>Location: Biswan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 testimonials">
+                                <div class="h4testimonials-wrapper white-bg pos-rel">
+                                    <span class="h4testi-iconquato"><i class="fal fa-quote-right"></i></span>
+                                    <div class="h4testimonials-ratings">
+                                        <ul class="list-inline">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="h4testimonials-content mb-20">
+                                        <p>
+                                          ऑपरेशन से पहले डर था, पर डॉक्टर साहब की व्यक्तिगत देखभाल ने जीवन को सुंदरता से भर दिया। ऑपरेशन दर्दरहित और आसान रिकवरी के साथ हुआ, आभारी हूँ डॉक्टर साहब और उनकी टीम का।</p>
+                                    </div>
+                                    <div class="h4testimonials-author d-flex align-items-center">
+                                        <!-- <div class="h4testimonials--author__icon">
+                                            <img src="img/home4/testimonials/author-icon2.png" alt="">
+                                        </div> -->
+                                        <div class="h4testimonials--author__info">
+                                            <h5 class="f-600 theme-color">Mrs.Zeenat Begum</h5>
+                                            <span class="f-500 pink-color">Age: 60<br>Location: Sitapur</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 testimonials">
+                                <div class="h4testimonials-wrapper white-bg pos-rel">
+                                    <span class="h4testi-iconquato"><i class="fal fa-quote-right"></i></span>
+                                    <div class="h4testimonials-ratings">
+                                        <ul class="list-inline">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="h4testimonials-content mb-20">
+                                        <p>
+
+                                          ऑपरेशन के बाद आंखों का धुंधलापन और थोड़ा दर्द हुआ, लेकिन डॉक्टर की दवाइयों से जल्दी ठीक हो गया। अब मैं पहले से ज्यादा साफ देख सकता हूँ, ग्लूकोमा के ऑपरेशन ने मेरे आत्मविश्वास को मजबूत किया।</p>
+                                    </div>
+                                    <div class="h4testimonials-author d-flex align-items-center">
+                                        <!-- <div class="h4testimonials--author__icon">
+                                            <img src="img/home4/testimonials/author-icon2.png" alt="">
+                                        </div> -->
+                                        <div class="h4testimonials--author__info">
+                                            <h5 class="f-600 theme-color">Mr.Jagdish Kumar</h5>
+                                            <span class="f-500 pink-color">Age: 67<br>Location: Lucknow</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+  
+        <style>
+            /* Add this CSS to your existing styles */
+            .testimonials {
+                opacity: 0;
+                transform: translateX(-100%);
+                transition: opacity 2s, transform 2s;
+            }
+        
+            .testimonials.visible {
+                opacity: 1;
+    transform: translateX(0);
+            }
+          </style>
+        </head>
+        <body>
+        
+          <!-- Your existing HTML code -->
+        
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Get all testimonial containers
+              const testimonials = document.querySelectorAll('.testimonials');
+        
+              // Function to handle the animation
+              function handleAnimation() {
+                testimonials.forEach((testimonial, index) => {
+                  const testimonialTop = testimonial.getBoundingClientRect().top;
+                  const windowHeight = window.innerHeight;
+        
+                  // Check if the testimonial is in the viewport
+                  if (testimonialTop < windowHeight) {
+                    // Introduce a delay based on the index
+                    setTimeout(() => {
+                      testimonial.classList.add('visible');
+                    }, index * 200); // Adjust the delay (in milliseconds) as needed
+                  }
+                });
+              }
+        
+              // Add scroll event listener to trigger the animation
+              document.addEventListener('scroll', handleAnimation);
+        
+              // Initial check in case testimonials are already in the viewport
+              handleAnimation();
+            });
+          </script>
+
+
+
+         <footer class="main-footer">
+   <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+        <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+      </svg>
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="logo-widget footer-widget">
+                            <figure class="logo-box"><a href="#"><img src="{{url_for('static',filename='images/footer_bg.png')}}" alt=""></a></figure>
+                            <div class="text">
+                                <p>We are dedicated to providing comprehensive eye care with a focus on personalized attention and cutting-edge treatments. Led by the expertise of Dr. Rahul Bhardwaj MBBS, M.S.  our team is committed to enhancing and preserving your vision through state-of-the-art technology and compassionate care.</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 footer-widget" style="max-width:100%">
+                        <div class="contact-widget footer-widget" style="margin-left:0;">
+                            <div class="footer-title">Working Hours</div>
+                            <div class="text">
+                                <p>Monday to Saturday</p>
+                                <p>9:00AM - 6:00PM</p>
+                            </div>
+                        </div>
+                    </div>
+                            <ul class="footer-social">
+                                <li><a href="https://www.facebook.com/profile.php?id=100095115407532&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                
+                                <li><a href="https://sitapurnethralaya.com"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 offset-lg-2 footer-column">
+                        <div class="serv-widget footer-widget" style=>
+                            <div class="footer-title">Services</div>
+                            <ul class="list">
+                                <li><a href="{{url_for('cataract_surgery')}}">Cataract Surgery</a></li>
+                                <li><a href="{{url_for('squint_surgery')}}">Squint Surgery</a></li>
+                                <li><a href="{{url_for('galucoma_surgery')}}">Galucoma Surgery</a></li>
+                                <li><a href="{{url_for('refractive_surgery')}}">Refractive Surgrey</a></li>
+                                <li><a href="{{url_for('corneal_surgery')}}">Corneal Surgery</a></li>
+                                <li><a href="{{url_for('retina_injection')}}">Retina Injection</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+  
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                        <div class="contact-widget footer-widget">
+                            <div class="footer-title">Contacts</div>
+                            <div class="text" style="width:110%">
+                                <p>SITAPUR NETHRALAYA ,318 VIJAY LAXMI NAGAR ,NEAR PUNJABI DHARAMSHALA,SITAPUR ,261001 , UTTAR PRADESH</p>
+                                <p>+91 9044304604</p>
+                                <p>sitapurnethralaya.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 column" style="Display:flex;">
+                  <h4 style="color: white; margin-top:3%">Designed and Developed by</h4>
+                  <img src="{{url_for('static',filename='images/zensync.png')}}" width="30%" height="130%" style="margin-left: 10%;"/>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 column">
+                    <ul class="footer-nav">
+                        <li><a href="{{url_for('about')}}">About Us</a></li>
+                        <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        </footer>
+          <style>
+h1, h2, h3, h4, h5, h6 {
+}
+section {
+    min-height: 100vh;
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-footer{
+  position: relative;
+  background:#13232f;
+}
+
+.footer-content{
+  position: relative;
+  padding: 85px 0px 80px 0px;
+}
+.footer-wave-path {
+    fill: #fffff2;
+}
+.footer-content:before{
+  position: absolute;
+  content: '';
+  background: url(https://i.ibb.co/jyRLrBZ/world-map.png);
+  width: 744px;
+  height: 365px;
+  top: 50px;
+  right: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation-name: float-bob;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: float-bob;
+  -webkit-animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: float-bob;
+  -moz-animation-duration: 30s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: float-bob;
+  -ms-animation-duration: 30s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-animation-name: float-bob;
+  -o-animation-duration: 30s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+}
+.footer-content .logo-widget{
+  position: relative;
+  margin-top: -5px;
+}
+.footer-content .logo-widget .footer-social li{
+  position: relative;
+  display: inline-block;
+  margin-right: 9px;
+}
+.footer-content .logo-widget .footer-social li:last-child{
+  margin-right: 0px;
+}
+.footer-content .logo-widget .footer-social li a{
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  background: #2e3138;
+  color: #9ea0a9;
+  text-align: center;
+  border-radius: 50%;
+}
+.footer-content .logo-widget .footer-social li a:hover{
+  color: #ffffff;
+  background: #E12454;
+}
+.footer-content .logo-widget .logo-box{
+  margin-bottom: 25px;
+}
+.footer-content .logo-widget .text p{
+  color: #9ea0a9;
+  margin-bottom: 32px;
+}
+.footer-content .footer-title{
+  position: relative;
+  font-size: 24px;
+  line-height: 35px;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 27px;
+}
+.footer-content .serv-widget .list li{
+  display: block;
+  margin-bottom: 12px;
+}
+.footer-content .serv-widget .list li a{
+  position: relative;
+  display: inline-block;
+  color: #9ea0a9;
+}
+.footer-content .serv-widget .list li a:hover{
+  color: #E12454;
+}
+.footer-content .contact-widget p{
+  color: #9ea0a9;
+  margin-bottom: 15px;
+}
+.footer-content .contact-widget{
+  margin-left: 90px;
+}
+@media (max-width: 767px){
+.footer-content .contact-widget {
+    margin-left: 0;
+}
+.hero-area{
+  padding-bottom: 0px;
+}
+.about-area{
+  padding-top: 0px;
+}
+}
+.footer-content .contact-widget .footer-title{
+  margin-bottom: 29px;
+}
+
+/** footer-bottom **/
+
+.footer-bottom{
+  position: relative;
+  background: #13151a;
+  padding: 25px 0px 22px 0px;
+}
+.footer-bottom .copyright,
+.footer-bottom .copyright a,
+.footer-bottom .footer-nav li a{
+  position: relative;
+  color: #9ea0a9;
+}
+.footer-bottom .copyright a:hover,
+.footer-bottom .footer-nav li a:hover{
+  color: #ff5e14;
+}
+.footer-bottom .footer-nav{
+  position: relative;
+  text-align: right;
+}
+.footer-bottom .footer-nav li{
+  position: relative;
+  display: inline-block;
+  margin-left: 29px;
+}
+.footer-bottom .footer-nav li:first-child{
+  margin-left: 0px;
+}
+.footer-bottom .footer-nav li:before{
+  position: absolute;
+  content: '';
+  background: #9ea0a9;
+  width: 1px;
+  height: 14px;
+  top: 7px;
+  left: -18px;
+}
+.footer-bottom .footer-nav li:first-child:before{
+  display: none;
+}
+.logo-box img {
+    max-width: 220px;
+}
+
+</style>
+    </main>
+
+    <!-- JS here -->
+    <script src="{{url_for('static',filename='js/modernizr-3.5.0.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/one-page-nav-min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/slick.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/ajax-form.js')}}"></script>
+    <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.meanmenu.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.counterup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/waypoints.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/plugins.js')}}"></script>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+</body>
+
+</html>

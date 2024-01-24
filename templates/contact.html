@@ -1,0 +1,869 @@
+
+<!doctype html>
+<html  lang="en" manifest="../sita.appcache">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="max-age=3600, public">
+    <meta http-equiv="Expires" content="{{date}}">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sitapur Nethralaya | Contact Us</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='images/Logo.png')}}">
+    <!-- Place favicon.png in the root directory -->
+
+    <!-- CSS here -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/meanmenu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/slick.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/default.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/responsive.css')}}">
+</head>
+<style>
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .float {
+    animation: floatAnimation 2s infinite;
+  }
+  
+  /* Add styles for the icon */
+  .my-float {
+    font-size: 24px;
+    color: #fff;
+    /* Add other styles as needed */
+  }
+  
+    .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+      font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+      z-index:100;
+    }
+    
+    .my-float{
+        margin-top:16px;
+    }
+</style>
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Nunito|Lacquer");
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  background:linear-gradient(to right, rgba(255,0,0,0), rgba(158,203,236,255));
+  color: #fff;
+  width: 100%;
+  display: flex;
+  height:80px;
+  align-items: center;
+  padding-top: 0px;
+}
+
+.navbar .logo {
+  cursor: pointer;
+  font-family: Lacquer;
+}
+
+.navbar ul.links {
+  margin-left: auto;
+  margin-right: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transition: 0.4s ease all, 0s ease background;
+  padding-top: 10px;
+}
+.navbar ul.links li {
+  text-transform: uppercase;
+  padding: 0 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease all, 0s ease margin;
+}
+.navbar ul.links li a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar ul.links li:hover {
+  background: #1985D3;
+  cursor: pointer;
+  border-radius: 25px
+}
+.navbar ul.links li:hover a {
+  color: #080808;
+}
+
+#nav-butt {
+  background: #1985D3;
+  outline: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid #223645;
+  letter-spacing: 1px;
+}
+#nav-butt:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: white;
+  background: #223645;
+  border-color: black;
+}
+
+.navbar.sticky {
+  position: fixed;
+  z-index: 40;
+  background-color: rgb(20 165 255)
+}
+.navbar.sticky ~ main {
+  position: relative;
+  z-index: 20;
+  top: 65px;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar .right {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .toggle {
+    position: absolute;
+    top: 32.5px;
+    right: 20px;
+    z-index: 99;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle > * {
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    margin: 3px 0;
+  }
+
+  .navbar.collapsed .toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+  .navbar.collapsed .toggle .line2 {
+    opacity: 0;
+  }
+  .navbar.collapsed .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .navbar.collapsed .logo {
+    position: absolute;
+    z-index: 44;
+  }
+
+  .navbar .links {
+    position: fixed;
+    background:rgba(158,203,236,255);
+    z-index: 40;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    width: 45vw;
+    height: 100vh;
+  }
+  .navbar .links li:first-child {
+    margin-top: 80px;
+  }
+
+  .navbar.collapsed .links {
+    left: 0;
+  }
+  .navbar.collapsed .links a {
+    color: #fff;
+  }
+  .navbar.collapsed .links li {
+    width: 100%;
+  }
+  .navbar.collapsed .links li:hover a {
+    color: #080808;
+  }
+
+  .navbar.collapsed .right {
+    position: fixed;
+    width: 45vw;
+    text-align: center;
+    height: auto;
+    bottom: 40px;
+    left: 22.5vw;
+    transform: translateX(-50%);
+    z-index: 45;
+  }
+
+  .navbar.collapsed ~ main {
+    filter: blur(1px);
+    opacity: 0.8;
+  }
+
+  .navbar.sticky {
+    position: fixed;
+    z-index: 40;
+  }
+}
+</style>
+
+    <!-- header begin -->
+      <header>
+
+        <!-- menu-area -->
+        <div class="navbar">
+  
+  <div class="logo">
+    <img src="{{url_for('static',filename='images/Logo.png')}}" height=65px style="padding-top:0px;">
+  </div>
+  
+  
+  <ul class="links">
+    <li><a href="{{url_for('Home')}}">Home</a></li>
+    <li><a href="{{url_for('about')}}">About</a></li>
+    <li><a href="{{url_for('gallery')}}">Gallery</a></li>
+    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+  </ul>
+  
+  
+  <div class="right" style="padding-top:10px;">
+    <button id="nav-butt"><a href="{{url_for('appointment')}}">Appointment</a></button>
+  </div>
+  
+  <div class="toggle">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+  
+  
+</div>
+
+       
+    </header>
+    <style>
+        @media (max-width: 767px){
+ .logo img {
+  width:auto;
+}
+}
+    </style>
+        <script>
+  const navbar = document.querySelector('.navbar')
+
+navbar.querySelector('.toggle').addEventListener('click',()=>{
+  
+  navbar.classList.toggle('collapsed')
+  
+})
+
+
+
+window.addEventListener('scroll',(e)=>{
+  
+  let windowY = window.pageYOffset
+  
+  let navbarHeight = document.querySelector('.navbar').offsetHeight
+  
+  if(windowY>navbarHeight) navbar.classList.add('sticky')
+  else navbar.classList.remove('sticky')  
+  
+})
+</script>
+       <!-- header end -->
+
+    <main>
+        <!-- hero-area start -->
+        <section class="breadcrumb-bg pt-200 pb-180" data-background="{{url_for('static',filename='images/contact_navbar.jpeg')}}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9">
+                        <div class="page-title">
+                            <p class="small-text pb-15">We Are Here For Your Eye Care.</p>
+                            <h1>Contact Us</h1>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- hero-area end -->
+
+        <!-- contact-area start -->
+        <section class="contact-area pt-120 pb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="contact text-center mb-30" style="height:92%;">
+                            <i class="fas fa-envelope"></i>
+                            <h3>G-mail</h3>
+                            <p style="font-weight:bold;"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=sitapurnethralaya@gmail.com&subject=Request%20for%20Eye%20Consultation%20Appointment&body=Dear%20[Doctor's%20Name],%0A%0AI%20hope%20this%20message%20finds%20you%20well.%20My%20name%20is%20[Your%20Name],%20and%20I%20am%20writing%20to%20request%20a%20consultation%20with%20you%20regarding%20my%20eye%20health.%0A%0AI%20have%20been%20experiencing%20[brief%20description%20of%20your%20eye%20concerns%20or%20symptoms]%2C%20and%20I%20believe%20it%20is%20essential%20to%20seek%20professional%20advice%20to%20address%20these%20issues.%20After%20researching%20and%20considering%20various%20healthcare%20professionals%2C%20I%20am%20impressed%20with%20your%20expertise%20and%20reputation%20in%20the%20field.%0A%0AI%20would%20appreciate%20it%20if%20we%20could%20schedule%20a%20consultation%20at%20your%20earliest%20convenience%20to%20discuss%20my%20symptoms%2C%20undergo%20a%20thorough%20eye%20examination%2C%20and%20explore%20potential%20treatment%20options.%20I%20am%20available%20[mention%20your%20preferred%20days%20and%20times%2C%20if%20any%2C%20for%20the%20appointment].%20However%2C%20I%20am%20flexible%20and%20willing%20to%20adjust%20my%20schedule%20to%20accommodate%20yours.%0A%0AAdditionally%2C%20please%20let%20me%20know%20if%20there%20are%20any%20specific%20preparations%20or%20information%20you%20require%20from%20me%20before%20the%20consultation.%0A%0AThank%20you%20for%20considering%20my%20request%2C%20and%20I%20look%20forward%20to%20the%20opportunity%20to%20meet%20with%20you%20and%20discuss%20my%20eye%20health.%20Your%20guidance%20and%20expertise%20are%20highly%20valued.%0A%0ABest%20regards%2C%0A%0A[Your%20Full%20Name]%0A[Your%20Contact%20Information]" target="_blank">sitapurnethralaya@gmail.com</a>
+
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="contact text-center mb-30">
+                            <i class="fas fa-map-marker-alt"id="icon"></i>
+                            <h3>Location</h3>
+                            <p style="font-size:14px;font-weight:bold;color:black">Sitapur Nethralaya,
+                                318 Vijay Laxmi Nagar
+                                Sitapur,261001
+                          Uttar Pradesh</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4  col-lg-4 col-md-4 ">
+                        <div class="contact text-center mb-30" style="height:92%;">
+                            <i class="fas fa-phone"></i>
+                            <h3 >Phone no</h3>
+                            <h6 style="font-weight:bold; color:black"><a href="tel:+919044304604">+91 9044304604</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-area end -->
+        <style>
+            /* Add this CSS to your existing styles */
+            .contact {
+              opacity: 0;
+              transform: translateY(20px);
+              transition: opacity 1s, transform 1s;
+            }
+          
+            .contact.visible {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          </style>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Get all contact divs
+              const contacts = document.querySelectorAll('.contact');
+          
+              function isElementInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                  rect.top >= 0 &&
+                  rect.left >= 0 &&
+                  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+              }
+          
+              function handleAnimation() {
+                contacts.forEach((contact, index) => {
+                  const contactTop = contact.getBoundingClientRect().top;
+                  const windowHeight = window.innerHeight;
+          
+                  // Check if the contact div is in the viewport
+                  if (contactTop < windowHeight) {
+                    // Introduce a delay based on the index
+                    setTimeout(() => {
+                      contact.classList.add('visible');
+                    }, index * 1000); // Adjust the delay (in milliseconds) as needed
+                  }
+                });
+              }
+          
+              // Add scroll event listener to trigger the animation
+              document.addEventListener('scroll', handleAnimation);
+          
+              // Initial check in case contact divs are already in the viewport
+              handleAnimation();
+            });
+          </script>
+                    
+        <!-- contact-form-area start -->
+        <section class="contact-form-area gray-bg pt-100 pb-100">
+            <div class="container">
+                <div class="form-wrapper">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-lg-8">
+                            <div class="section-title mb-55">
+                                <p><span></span>Suggestions</p>
+                                <h1>Estimate Your Idea</h1>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-3 d-none d-xl-block ">
+                            <div class="section-link mb-80 text-right">
+                                <a data-animation="fadeInLeft" data-delay=".6s" href="{{url_for('appointment')}}" class="btn btn-icon ml-0"><span>+</span>Make
+                                    Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contact-form" action="{{url_for('suggestion')}}" method="POST">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-box user-icon mb-30">
+                                        <input type="text" name="name" placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-box email-icon mb-30">
+                                        <input type="text" name="email" placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-box phone-icon mb-30">
+                                        <input type="text" name="phone" placeholder="Your Phone">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-box subject-icon mb-30">
+                                        <input type="text" name="subject" placeholder="Your Subject">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-box message-icon mb-30">
+                                        <textarea name="message" id="message" cols="30" rows="10"
+                                            placeholder="Your Message"></textarea>
+                                    </div>
+                                    <div class="contact-btn text-center">
+                                        <button class="btn btn-icon ml-0" type="submit"><span>+</span>Send</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-form-area end -->
+        <style>
+            /* Add this CSS to your existing styles */
+            .form-box {
+              opacity: 0;
+              transform: translateX(-20px);
+              transition: opacity 4s, transform 4s;
+            }
+          
+            .form-box.visible {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          
+            .section-link {
+              opacity: 0;
+              transform: translateX(20px);
+              transition: opacity 4s, transform 4s;
+            }
+          
+            .section-link.visible {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          </style>
+          
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Get form elements and section link button
+              const formBoxes = document.querySelectorAll('.form-box');
+              const sectionLink = document.querySelector('.section-link');
+          
+              function isElementInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                  rect.top >= 0 &&
+                  rect.left >= 0 &&
+                  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+              }
+          
+              function handleAnimation() {
+                formBoxes.forEach((formBox) => {
+                  const formBoxTop = formBox.getBoundingClientRect().top;
+                  const windowHeight = window.innerHeight;
+          
+                  // Check if the form box is in the viewport
+                  if (formBoxTop < windowHeight) {
+                    formBox.classList.add('visible');
+                  }
+                });
+          
+                const sectionLinkTop = sectionLink.getBoundingClientRect().top;
+          
+                // Check if the section link is in the viewport
+                if (sectionLinkTop < window.innerHeight) {
+                  sectionLink.classList.add('visible');
+                }
+              }
+          
+              // Add scroll event listener to trigger the animation
+              document.addEventListener('scroll', handleAnimation);
+          
+              // Initial check in case form boxes and section link are already in the viewport
+              handleAnimation();
+            });
+          </script>
+          
+                    
+        <section class="map-area">
+            <div id="contact-map" class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.989360259849!2d80.67984167529532!3d27.562840676265672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399ed7e1edec62ff%3A0x7e53be5efe97b1d1!2sSITAPUR%20NETRALAYA!5e0!3m2!1sen!2sin!4v1704177353229!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer start -->
+      
+<footer class="footer-section">
+  <div class="container">
+      <div class="footer-cta pt-5 pb-5" style="margin-left: 8%;">
+          <div class="row">
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <div class="cta-text">
+                          <h4>Find us</h4>
+                            <span>318 VIJAY LAXMI NAGAR ,<br>NEAR PUNJABI DHARAMSHALA,<br>SITAPUR,UTTAR PRADESH - 261001</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-phone"></i>
+                      <div class="cta-text">
+                          <h4>Call us</h4>
+                          <span>+91 9044304604</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="far fa-envelope-open"></i>
+                      <div class="cta-text">
+                          <h4>Mail us</h4>
+                          <span>sitapurnethralaya@gmail.com</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+          <div class="row">
+              <div class="col-xl-4 col-lg-4 mb-50" style="margin-bottom: 0;">
+                  <div class="footer-widget">
+                      <div class="footer-logo">
+                          <a href="index.html"><img src="{{url_for('static',filename='images/footer_bg.png')}}" alt=""></a>
+                      </div>
+                      <div class="footer-text">
+                          <p>We are dedicated to providing comprehensive eye care with a focus on personalized attention and cutting-edge treatments. Led by the expertise of Dr. Rahul Bhardwaj MBBS, M.S.  our team is committed to enhancing and preserving your vision through state-of-the-art technology and compassionate care.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Useful Links</h3>
+                      </div>
+                      <ul class="foot">
+                          <li><a href="{{url_for('Home')}}">Home</a></li>
+                          <li><a href="{{url_for('about')}}">About Us</a></li>
+                          <li><a href="{{url_for('gallery')}}">Gallery</a></li>
+                          <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                          <li><a href="{{url_for('appointment')}}">Appointment</a></li>
+
+                      </ul>
+                       <div class="footer-widget-heading" style="margin-top:50%;">
+                          <h3>Working Hours</h3>
+                      </div>
+                      <ul class="foot">
+                          <li>Monday to Saturday</li><br>
+                          <li style="margin-right:10%;">9:00AM - 6:00PM</li>
+
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Services</h3>
+                          <ul class="foot">
+                            <li><a href="{{url_for('cataract_surgery')}}">Cataract Surgery</a></li>
+                            <li><a href="{{url_for('squint_surgery')}}">Squint Surgery</a></li>
+                            <li><a href="{{url_for('galucoma_surgery')}}">Galucoma Surgery</a></li>
+                            <li><a href="{{url_for('refractive_surgery')}}">Refractive Surgrey</a></li>
+                            <li><a href="{{url_for('corneal_surgery')}}">Corneal Surgery</a></li>
+                            <li><a href="{{url_for('retina_injection')}}">Retina Injection</a></li>
+                     </ul>
+                      </div>
+                       <div class="footer-social-icon" style="margin-top:50%;">
+                          <span>Follow us</span>
+                          <a href="https://www.facebook.com/profile.php?id=100095115407532&mibextid=ZbWKwL"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                          <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                          <a href="https://sitapurnethralaya.com"><i class="fab fa-google-plus-g google-bg"></i></a>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</footer>
+
+<style>
+  .foot {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #13232f;
+  position: relative;
+}
+.footer-content:before{
+  position: absolute;
+  content: '';
+  background: url(https://i.ibb.co/jyRLrBZ/world-map.png);
+  width: 744px;
+  height: 365px;
+  top: 50px;
+  right: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation-name: float-bob;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: float-bob;
+  -webkit-animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: float-bob;
+  -moz-animation-duration: 30s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: float-bob;
+  -ms-animation-duration: 30s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-animation-name: float-bob;
+  -o-animation-duration: 30s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #E12454;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #E12454;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #E12454;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #E12454;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+</style>
+    <!-- footer end -->
+
+    <!-- JS here -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{url_for('static',filename='js/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/one-page-nav-min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/slick.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.scrollUp.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.meanmenu.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.counterup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/waypoints.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/plugins.js')}}"></script>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

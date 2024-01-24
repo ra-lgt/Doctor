@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eye Link</title>
+  <style>
+    /* Basic styling for the link */
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 16px;
+      display: inline-block;
+      position: relative;
+      padding: 10px 20px;
+      border-radius: 50%;
+      background-color: #fff; /* Background color for the eye */
+      transition: background-color 0.3s ease;
+    }
+
+    /* Eye styling */
+    a::before,
+    a::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #333;
+      border-radius: 50%;
+      transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    }
+
+    a::before {
+      width: 50px;
+      height: 30px;
+    }
+
+    a::after {
+      width: 30px;
+      height: 50px;
+    }
+
+    /* Styling for the eye when hovered */
+    a:hover {
+      background-color: #333; /* Change background color when hovered */
+    }
+
+    a:hover::before,
+    a:hover::after {
+      width: 50px;
+      height: 50px;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#">Hover me</a>
+
+</body>
+</html>

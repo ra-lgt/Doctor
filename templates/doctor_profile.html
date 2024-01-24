@@ -1,0 +1,914 @@
+
+<!doctype html>
+<html class="no-js"  lang="en" manifest="../sita.appcache">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="max-age=3600, public">
+    <meta http-equiv="Expires" content="{{date}}">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sitapur Nethralaya | About Dr</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='images/Logo.png')}}">
+    <!-- Place favicon.png in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/meanmenu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/slick.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/default.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/responsive.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.css')}}">
+</head>
+<style>
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .float {
+    animation: floatAnimation 2s infinite;
+  }
+  
+  /* Add styles for the icon */
+  .my-float {
+    font-size: 24px;
+    color: #fff;
+    /* Add other styles as needed */
+  }
+  
+    .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+      font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+      z-index:100;
+    }
+    
+    .my-float{
+        margin-top:16px;
+    }
+</style>
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Nunito|Lacquer");
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  background:linear-gradient(to right, rgba(255,0,0,0), rgba(158,203,236,255));
+  color: #fff;
+  width: 100%;
+  display: flex;
+  height:80px;
+  align-items: center;
+  padding-top: 0px;
+}
+
+.navbar .logo {
+  cursor: pointer;
+  font-family: Lacquer;
+}
+a,button{
+    color: white;
+}
+
+.navbar ul.links {
+  margin-left: auto;
+  margin-right: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transition: 0.4s ease all, 0s ease background;
+  padding-top: 10px;
+}
+.navbar ul.links li {
+  text-transform: uppercase;
+  padding: 0 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease all, 0s ease margin;
+}
+.navbar ul.links li a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar ul.links li:hover {
+  background: #1985D3;
+  cursor: pointer;
+  border-radius: 25px
+}
+.navbar ul.links li:hover a {
+  color: #080808;
+}
+
+#nav-butt {
+  background: #1985D3;
+  outline: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid #223645;
+  letter-spacing: 1px;
+}
+#nav-butt:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: white;
+  background: #223645;
+  border-color: black;
+}
+
+.navbar.sticky {
+  position: fixed;
+  z-index: 40;
+  background-color: rgb(20 165 255)
+}
+.navbar.sticky ~ main {
+  position: relative;
+  z-index: 20;
+  top: 65px;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar .right {
+    height: 0;
+    overflow: hidden;
+  }
+   .logo img {
+  width:auto;
+}
+
+  .toggle {
+    position: absolute;
+    top: 32.5px;
+    right: 20px;
+    z-index: 99;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle > * {
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    margin: 3px 0;
+  }
+
+  .navbar.collapsed .toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+  .navbar.collapsed .toggle .line2 {
+    opacity: 0;
+  }
+  .navbar.collapsed .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .navbar.collapsed .logo {
+    position: absolute;
+    z-index: 44;
+  }
+
+  .navbar .links {
+    position: fixed;
+    background:rgba(158,203,236,255);
+    z-index: 40;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    width: 45vw;
+    height: 100vh;
+  }
+  .navbar .links li:first-child {
+    margin-top: 80px;
+  }
+
+  .navbar.collapsed .links {
+    left: 0;
+  }
+  .navbar.collapsed .links a {
+    color: #fff;
+  }
+  .navbar.collapsed .links li {
+    width: 100%;
+  }
+  .navbar.collapsed .links li:hover a {
+    color: #080808;
+  }
+
+  .navbar.collapsed .right {
+    position: fixed;
+    width: 45vw;
+    text-align: center;
+    height: auto;
+    bottom: 40px;
+    left: 22.5vw;
+    transform: translateX(-50%);
+    z-index: 45;
+  }
+
+  .navbar.collapsed ~ main {
+    filter: blur(1px);
+    opacity: 0.8;
+  }
+
+  .navbar.sticky {
+    position: fixed;
+    z-index: 40;
+  }
+}
+</style>
+
+    <!-- header begin -->
+      <header>
+
+        <!-- menu-area -->
+        <div class="navbar">
+  
+  <div class="logo">
+    <img src="{{url_for('static',filename='images/Logo.png')}}" height=65px style="padding-top:0px;">
+  </div>
+  
+  
+  <ul class="links">
+    <li><a href="{{url_for('Home')}}">Home</a></li>
+    <li><a href="{{url_for('about')}}">About</a></li>
+    <li><a href="{{url_for('gallery')}}">Gallery</a></li>
+    <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+  </ul>
+  
+  
+  <div class="right" style="padding-top:10px;">
+    <button id="nav-butt"><a href="{{url_for('appointment')}}">Appointment</a></button>
+  </div>
+  
+  <div class="toggle">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+  
+  
+</div>
+
+       
+    </header>
+        <script>
+  const navbar = document.querySelector('.navbar')
+
+navbar.querySelector('.toggle').addEventListener('click',()=>{
+  
+  navbar.classList.toggle('collapsed')
+  
+})
+
+
+
+window.addEventListener('scroll',(e)=>{
+  
+  let windowY = window.pageYOffset
+  
+  let navbarHeight = document.querySelector('.navbar').offsetHeight
+  
+  if(windowY>navbarHeight) navbar.classList.add('sticky')
+  else navbar.classList.remove('sticky')  
+  
+})
+</script>
+    <!-- header end -->
+
+    <main>
+        <!-- hero-area start -->
+        <section class="breadcrumb-bg pt-200 pb-180" data-background="{{url_for('static',filename='images/page_bg.jpeg')}}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9">
+                        <div class="page-title">
+                            <p class="small-text pb-15">We Are Here For Your Eye Care.</p>
+                            <h1>Doctor Details</h1>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- hero-area end -->
+        <!-- service-details-area start -->
+        <div class="doctor-details-area pt-115 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-8">
+                        <article class="doctor-details-box">
+                            <div class="section-title pos-rel mb-25">
+                                <div class="section-icon">
+                                    <img class="section-back-icon back-icon-left" src="img/section/section-back-icon-sky.png"
+                                        alt="">
+                                </div>
+                                <div class="section-text pos-rel">
+                                    <h5 class="green-color text-up-case">introducing my self</h5>
+                                    <h1>Personal Profile</h1>
+                                </div>
+                                <div class="section-line pos-rel">
+                                    <img src="img/shape/section-title-line.png" alt="">
+                                </div>
+                            </div>
+                            <div class="service-details-text mb-40">
+                                <p>Dr. Rahul Bhardwaj MBBS, M.S.  is a highly skilled and experienced ophthalmologist with a passion for improving and maintaining optimal eye health. With a focus on precision and a commitment to staying at the forefront of advancements in ophthalmic care, Dr. Rahul Bhardwaj MBBS, M.S.  is dedicated to providing the highest standard of care for patients of all ages.</p>
+                            </div>
+                            <div class="section-title pos-rel mb-25">
+                                <div class="section-text pos-rel">
+                                    <h1>Here Is Skills</h1>
+                                </div>
+                                <div class="section-line pos-rel">
+                                    <img src="img/shape/section-title-line.png" alt="">
+                                </div>
+                            </div>
+                            <div class="service-details-text mb-35">
+                                <p>As an accomplished Associate Professor and Glaucoma Consultant at TSM Medical College in Lucknow, I bring a wealth of expertise in a spectrum of eye care disciplines. With a primary focus on Glaucoma, Cataract, and Refractive surgery, I am a high-volume proficient Phaco surgeon, adept in the intricacies of Topical, Multifocal, Toric, and premium IOLs. My proficiency extends to a range of surgical techniques, including Small Incision Cataract Surgery (SICS), Phaco with Trabeculectomy, and SICS with Trabeculectomy. I am well-versed in complex glaucoma interventions, such as Trabeculectomy and Glaucoma tube surgeries, employing advanced techniques like Ahmed valve and AADI. Additionally, my expertise encompasses specialized procedures for paediatric glaucoma, such as Trabeculectomy with Trabeculectomy. I am also skilled in Angle surgeries in glaucoma (GATT) and various corrective surgeries, including External DCR, Ptosis correction, Ectropion, and Entropion. With a commitment to precision and a passion for advancing eye care, I also specialize in all-laser procedures in glaucoma. My comprehensive skill set reflects my dedication to providing state-of-the-art eye care solutions, contributing to both academic excellence and patient well-being.</p>
+                            </div>
+                            <div class="service-details-feature fix mb-30">
+                                <div class="ser-fea-box f-left">
+                                    <div class="ser-fea-icon f-left">
+                                        <img src="img/services/ser-fea-icon-1.png" alt="">
+                                    </div>
+                                    <div class="ser-fea-list fix">
+                                        <h3>Clinical & Surgical Skills</h3>
+                                        <ul>
+                                            <li><i class="fas fa-check"></i>High volume proficient Phaco surgeon (Topical, Multifocal, Toric and other premium IOLs).</li>
+                                            <li><i class="fas fa-check"></i>SICS (Small Incision Cataract Surgery).</li>
+                                            <li><i class="fas fa-check"></i>Phaco with Trabeculectomy and SICS with Trabeculectomy</li>
+                                            <li><i class="fas fa-check"></i>Trabeculectomy and Glaucoma tube surgeries (Ahmed valve and AADI)</li>
+                                            <li><i class="fas fa-check"></i>Trabeculectomy with Trabeculectomy for paediatric glaucoma</li>
+                                            <li><i class="fas fa-check"></i>Angle surgeries in glaucoma (GATT)</li>
+                                            <li><i class="fas fa-check"></i> External DCR, Ptosis correction, Ectropion and Entropion correction surgeries</li>
+                                            <li><i class="fas fa-check"></i> All laser procedures in glaucoma</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ser-fea-box f-left mr-0">
+                                    <div class="ser-fea-icon f-left">
+                                        <img src="img/services/ser-fea-icon-2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-title pos-rel mb-25">
+                                <div class="section-text pos-rel">
+                                    <h1>Care Coverage</h1>
+                                </div>
+                                <div class="section-line pos-rel">
+                                    <img src="img/shape/section-title-line.png" alt="">
+                                </div>
+                            </div>
+                            <div class="service-details-text mb-30">
+                                <p>Our patient-centric approach ensures a positive and personalized experience for every individual. Dr. Bhardwaj and his experienced team prioritize patient comfort and well-being, offering a warm and welcoming environment. The practice is equipped with state-of-the-art diagnostic and treatment technologies, ensuring accurate and effective care. Beyond individualized attention, the clinic actively participates in community involvement, promoting eye health awareness and education.</p>
+                            </div>
+                              
+                            <div id="contact-map" class="service-map mb-55">
+                                 <div id="contact-map" class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.989360259849!2d80.67984167529532!3d27.562840676265672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399ed7e1edec62ff%3A0x7e53be5efe97b1d1!2sSITAPUR%20NETRALAYA!5e0!3m2!1sen!2sin!4v1704177353229!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-xl-5 col-lg-4">
+                        <div class="service-widget mb-50">
+                            <div class="team-wrapper team-box-2 team-box-3 text-center mb-30">
+                                <div class="team-thumb">
+                                    <img src="{{url_for('static',filename='images/rahul.png')}}" height=450px alt="">
+                                </div>
+                                <div class="team-member-info mt-35 mb-35">
+                                    <h3><a href="{{doctor_profile}}">DR. RAHUL BHARDWAJ </a></h3>
+                                    <h6 class="f-500 text-up-case letter-spacing pink-color">MBBS, MS Ophthalmologist.</h6>
+                                </div>
+                                <div class="team-social-profile">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/rahul.bharadwaj.77377?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-widget mb-50">
+                            <div class="widget-title-box mb-30">
+                                <h3 class="widget-title">Qualifications</h3>
+                            </div>
+                            <div class="more-service-list">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="more-service-icon"><img src="data:image/png;base64,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"></div>
+                                            <div class="more-service-title doctor-details-title">MBBS <span>IMS, BHU, Varanasi (2011 - 2014)</span></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="more-service-icon"><img src="data:image/png;base64,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"></div>
+                                            <div class="more-service-title doctor-details-title">M.S. Ophthalmology  <span>IMS, BHU, Varanasi (2015 - 2018)</span></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-widget mb-80">
+                            <div class="widget-title-box mb-30">
+                                <h3 class="widget-title">Get Some Advice?</h3>
+                            </div>
+                            <form class="service-contact-form" action="{{url_for('request_call')}}" method="POST">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="contact-input contact-icon contact-user mb-20">
+                                            <input name="name" type="text" placeholder="Enter your name">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="contact-input contact-icon contact-mail mb-20">
+                                            <input name="email" type="text" placeholder="Enter your email">
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="col-xl-12">
+                                        <div class="contact-input contact-icon contact-hourglass">
+                                            <select name="service" id="service-option">
+                                                <option disabled selected value="">Select type of care</option>
+                                                <option value="Eye Examination">Eye Examination</option>
+                                                <option value="Diagnosis and Treatment">Diagnosis and Treatment</option>
+                                                <option value="Prescription and Fitting">Prescription and Fitting</option>
+                                                <option value="Surgical Procedures">Surgical Procedures</option>
+                                                <option value="Medical Conditions">Medical Conditions</option>
+                                                <option value="Pediatric Eye Care">Pediatric Eye Care</option>
+                                                <option value="Emergency Eye Care">Emergency Eye Care</option>
+                                                <option value="Specialized Testing">Specialized Testing</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            <div class="ser-form-btn text-center mt-40">
+                               <button data-animation="fadeInLeft" data-delay=".6s" href="#" class="btn btn-icon ml-0"
+                               style="animation-delay: 0.6s;" tabindex="0"><span>+</span>Request for call</button>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="service-widget mb-50">
+                            <div class="widget-title-box mb-30">
+                                <h3 class="widget-title">Languages</h3>
+                            </div>
+                            <div class="doctor-detials-lan">
+                                <ul>
+                                    <li><a href="#">en</a></li>
+                                    <li><a href="#">hi</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .more-service-list li {
+              opacity: 0;
+              transition: opacity 0.8s ease-in-out;
+            }
+          
+            .more-service-list li.visible {
+              opacity: 1;
+            }
+          </style>
+          
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              var listItems = document.querySelectorAll('.more-service-list li');
+          
+              var observer = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(function (entry, index) {
+                  if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+                    setTimeout(function () {
+                      entry.target.classList.add('visible');
+                    }, index * 300); // Adjust the delay as needed (e.g., 300 milliseconds)
+                    observer.unobserve(entry.target);
+                  }
+                });
+              }, { threshold: 0.5 }); // Adjust the threshold as needed
+          
+              listItems.forEach(function (item) {
+                observer.observe(item);
+              });
+          
+              // Check if the section is in the viewport initially
+              var section = document.querySelector('.your-section-class'); // Replace with the actual class or ID of your section
+              var sectionObserver = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting) {
+                  // If the section is in the viewport, trigger the animation
+                  listItems.forEach(function (item, index) {
+                    setTimeout(function () {
+                      item.classList.add('visible');
+                    }, index * 2000); // Adjust the delay as needed (e.g., 300 milliseconds)
+                  });
+                  // Disconnect the observer once the animation is triggered
+                  sectionObserver.disconnect();
+                }
+              }, { threshold: 0.5 }); // Adjust the threshold as needed
+          
+              // Observe the section
+              sectionObserver.observe(section);
+            });
+          </script>
+          
+          
+        <!-- service-details-area end -->
+    </main>
+    <style>
+        .doctor-detials-lan ul li a:hover{
+            background-color: #1985D3;
+
+        }
+    </style>
+
+    <!-- footer start -->
+       
+<footer class="footer-section">
+  <div class="container">
+      <div class="footer-cta pt-5 pb-5" style="margin-left: 8%;">
+          <div class="row">
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <div class="cta-text">
+                          <h4>Find us</h4>
+                           <span>318 VIJAY LAXMI NAGAR ,<br>NEAR PUNJABI DHARAMSHALA,<br>SITAPUR,UTTAR PRADESH - 261001</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-phone"></i>
+                      <div class="cta-text">
+                          <h4>Call us</h4>
+                          <span>+91 9044304604</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="far fa-envelope-open"></i>
+                      <div class="cta-text">
+                          <h4>Mail us</h4>
+                          <span>sitapurnethralaya@gmail.com</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+          <div class="row">
+              <div class="col-xl-4 col-lg-4 mb-50" style="margin-bottom: 0;">
+                  <div class="footer-widget">
+                      <div class="footer-logo">
+                          <a href="index.html"><img src="{{url_for('static',filename='images/footer_bg.png')}}" alt=""></a>
+                      </div>
+                      <div class="footer-text">
+                          <p>We are dedicated to providing comprehensive eye care with a focus on personalized attention and cutting-edge treatments. Led by the expertise of Dr. Rahul Bhardwaj MBBS, M.S.  our team is committed to enhancing and preserving your vision through state-of-the-art technology and compassionate care.</p>
+                      </div>
+                  </div>
+              </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Useful Links</h3>
+                      </div>
+                      <ul class="foot">
+                          <li><a href="{{url_for('Home')}}">Home</a></li>
+                          <li><a href="{{url_for('about')}}">About Us</a></li>
+                          <li><a href="{{url_for('gallery')}}">Gallery</a></li>
+                          <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                          <li><a href="{{url_for('appointment')}}">Appointment</a></li>
+
+                      </ul>
+                       <div class="footer-widget-heading" style="margin-top:50%;">
+                          <h3>Working Hours</h3>
+                      </div>
+                      <ul class="foot">
+                          <li>Monday to Saturday</li><br>
+                          <li style="margin-right:10%;">9:00AM - 6:00PM</li>
+
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Services</h3>
+                          <ul class="foot">
+                            <li><a href="{{url_for('cataract_surgery')}}">Cataract Surgery</a></li>
+                            <li><a href="{{url_for('squint_surgery')}}">Squint Surgery</a></li>
+                            <li><a href="{{url_for('galucoma_surgery')}}">Galucoma Surgery</a></li>
+                            <li><a href="{{url_for('refractive_surgery')}}">Refractive Surgrey</a></li>
+                            <li><a href="{{url_for('corneal_surgery')}}">Corneal Surgery</a></li>
+                            <li><a href="{{url_for('retina_injection')}}">Retina Injection</a></li>
+                     </ul>
+                      </div>
+                       <div class="footer-social-icon" style="margin-top:50%;">
+                          <span>Follow us</span>
+                          <a href="https://www.facebook.com/profile.php?id=100095115407532&mibextid=ZbWKwL"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                          <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                          <a href="https://sitapurnethralaya.com"><i class="fab fa-google-plus-g google-bg"></i></a>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</footer>
+
+<style>
+  .foot {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #13232f;
+  position: relative;
+}
+.footer-content:before{
+  position: absolute;
+  content: '';
+  background: url(https://i.ibb.co/jyRLrBZ/world-map.png);
+  width: 744px;
+  height: 365px;
+  top: 50px;
+  right: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation-name: float-bob;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: float-bob;
+  -webkit-animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: float-bob;
+  -moz-animation-duration: 30s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: float-bob;
+  -ms-animation-duration: 30s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-animation-name: float-bob;
+  -o-animation-duration: 30s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #E12454;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-content:before{
+  position: absolute;
+  content: '';
+  background: url(https://i.ibb.co/jyRLrBZ/world-map.png);
+  width: 744px;
+  height: 365px;
+  top: 50px;
+  right: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation-name: float-bob;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: float-bob;
+  -webkit-animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: float-bob;
+  -moz-animation-duration: 30s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: float-bob;
+  -ms-animation-duration: 30s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-animation-name: float-bob;
+  -o-animation-duration: 30s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #E12454;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #E12454;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #E12454;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+</style>
+    <!-- footer end -->
+
+    <!-- JS here -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{{url_for('static',filename='js/modernizr-3.5.0.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/one-page-nav-min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/slick.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/ajax-form.js')}}"></script>
+    <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.scrollUp.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.meanmenu.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.counterup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/waypoints.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/plugins.js')}}"></script>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+</body>
+
+</html>
