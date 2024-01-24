@@ -270,7 +270,7 @@ a,button{
         <div class="navbar">
   
   <div class="logo">
-    <img src="{{url_for('static',filename='images/Logo.png')}}" height=65px style="padding-top:0px;">
+    <a href="{{url_for('Home')}}">  <img src="{{url_for('static',filename='images/Logo.png')}}" height=65px style="padding-top:0px;"></a>
   </div>
   
   
@@ -423,6 +423,7 @@ a,button{
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                         <select name="service">
                                             <option disabled selected value="">Services</option>
+                                            <option value="Cataract Surgery">Cataract Surgery</option>
                                             <option value="Squint Surgery">Squint Surgery</option>
                                             <option value="Galucoma Surgery">Galucoma Surgery</option>
                                             <option value="Corneal Surgery">Corneal Surgery</option>
