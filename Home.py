@@ -5,6 +5,8 @@ from email.mime.multipart import MIMEMultipart
 import smtplib
 from datetime import datetime, timedelta
 from email.utils import formatdate
+import threading
+import time
 
 today = datetime.utcnow()
 
@@ -143,7 +145,7 @@ def galucoma_surgery():
 ]
     services = [
     "<strong>AGV</strong> (Ahmed Glaucoma Valve)",
-    "<strong>AADI</strong> (Argon Anterior Direct Iridoplasty)",
+    "<strong>AADI</strong> (Aurolab Aqueous Drainage Implant)",
     "<strong>Trabe + Trabe</strong> (Trabeculectomy)",
     "<strong>Trabeculectomy</strong>",
     "<strong>Trabeculectomy + MMC</strong> (Mitomycin C)",
@@ -483,5 +485,11 @@ def appointment():
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('404.html'), 404
+def run_inf():
+    while True:
+        print("running server....")
+        time.sleep(6000)
 if __name__ == '__main__':
+    thread = threading.Thread(target=run_inf)
+    thread.start()
     app.run(debug=True)
